@@ -20,3 +20,40 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Young Serif', serif;
     font-weight: 400;
 }
+
+
+/* Navbar */
+
+.logo {
+    color: var(--light-color);
+}
+
+.logo:hover {
+    color: var(--warning-color);
+}
+
+.navbar-button {
+    background: var(--warning-color);
+    border-radius: 1rem;
+    color: var(--light-color);
+    font-size: 1.2rem;
+    max-width: 12rem;
+}
+
+.dropdown-menu {
+    background: var(--dark-color);
+    color: var(--light-color); 
+}
+
+.dropdown-menu a {
+    color: var(--warning-color);
+    font-size: 1.2rem;
+}
+
+.dropdown-divider {
+    background: var(--light-color);
+}
+
+.toggler-special {
+    background: var(--warning-color);
+}

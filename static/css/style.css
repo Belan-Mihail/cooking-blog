@@ -21,6 +21,9 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
+.main-body {
+    min-height: 50rem;
+}
 
 /* Navbar */
 
@@ -56,4 +59,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .toggler-special {
     background: var(--warning-color);
+}
+
+
+/* Footer */
+.social-links a {
+    font-size: 2rem;
+    color: var(--light-color);
+    margin-right: .5rem;
+    margin: 1rem;
+}
+
+.social-links a:hover {
+    color: var(--warning-color);
 }

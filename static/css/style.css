@@ -8,13 +8,11 @@
     --text-accent-color:#11d83f80;
 }
 
-
 * {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     transition: all .2s ease;
 }
-
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Young Serif', serif;
@@ -23,6 +21,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-body {
     min-height: 50rem;
+}
+
+.main-container {
+    margin: 2rem 1rem;
 }
 
 /* Navbar */
@@ -59,6 +61,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .toggler-special {
     background: var(--warning-color);
+}
+
+/* Slogan */
+.slogan {
+    font-size: 3rem;
+    margin: 6rem 0;
+    text-align: center;
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+
+.slogan:hover {
+    background: transparent;
+}
+
+
+.slogan-container:hover>h2 {
+    color: var(--dark-color);   
 }
 
 /* Blog Posts */

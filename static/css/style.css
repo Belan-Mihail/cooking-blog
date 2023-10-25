@@ -112,6 +112,26 @@ h1, h2, h3, h4, h5, h6 {
     object-fit: contain;    
 }
 
+.post-link {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+.link-accent-color {
+    color: var(--text-accent-color);
+    font-family: 'Young Serif', serif;
+    font-weight: 400;
+}
+  
+.link-accent-color:hover {
+    color: var(--dark-color);
+}
+
+.blog-post-title:hover {
+    color: var(--warning-color);
+    opacity: .9;
+}
+
 /* Footer */
 .social-links a {
     font-size: 2rem;

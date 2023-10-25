@@ -132,6 +132,34 @@ h1, h2, h3, h4, h5, h6 {
     opacity: .9;
 }
 
+/* Blog Post Detail */
+.post-detail {
+    margin: 1rem 0.5rem;
+}
+  
+.post-title-detail {
+    font-size: 3rem;
+    margin: 3rem 0;
+    text-align: center;
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+
+.post-title-detail:hover {
+    background: transparent;
+    color: var(--dark-color);
+}
+
+.card-img-detail-page {
+    width: 30rem;
+    max-height: max-content;
+    object-fit: contain;
+    float: left;
+    margin-right: 1.5rem;
+    border: .5rem solid var(--warning-color);
+    border-radius: 2rem;  
+}
+
 /* Footer */
 .social-links a {
     font-size: 2rem;

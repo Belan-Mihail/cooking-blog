@@ -11,7 +11,12 @@
         <article class="blog-post">
             <a class="post-link" href="#">
                 <div class="image-container-home-page">
-                    <img class="card-img-home-page" src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1696967358/project/lgzihdcgkyvtnpwmpugr.jpg" alt="recipe photo">
+                    {% if "placeholder" in post.cooking_recipe_image.url %}
+                    <img class="card-img-home-page"
+                        src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1696967358/project/lgzihdcgkyvtnpwmpugr.jpg">
+                    {% else %}
+                    <img class="card-img-home-page" src=" {{ post.cooking_recipe_image.url }}">
+                    {% endif %}
                 </div>
                 <h3 class="blog-post-title">{{ post.cooking_recipe_title }}</h3>
             </a>
@@ -26,6 +31,20 @@
             <p class="card-text text-muted h6"> Post updated {{ post.updated_on}}</p>
         </article>
         {% endfor %}
+
+        {% if is_paginated %}
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                    <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+                {% endif %}
+                </ul>
+            </nav>
+        {% endif %}
+        
     </div>
     <div class="col-12 col-sm-5 col-md-4">
         <div class="position-sticky" style="top: 2rem;">

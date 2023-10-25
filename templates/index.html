@@ -1,9 +1,50 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% for post in cooking_recipes_post_list %}
-<p><i class="far fa-heart"></i>{{ post.cooking_recipe_title }}</p> 
-{% endfor%}    
+<div class="row main-row">
+    <div class="col-12 col-sm-7 col-md-8">
+        {% for post in cooking_recipes_post_list %}
+        <article class="blog-post">
+            <a class="post-link" href="#">
+                <div class="image-container-home-page">
+                    <img src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1696967358/project/lgzihdcgkyvtnpwmpugr.jpg" alt="recipe photo">
+                </div>
+                <h3 class="blog-post-title">{{ post.cooking_recipe_title }}</h3>
+            </a>
+
+            <p class="blog-post-meta text-muted"> Post creaeted {{ post.created_on}} by 
+                <a class="link-accent-color" href="#"><strong>{{ post.cooking_recipe_author}}</strong></a>
+            </p>
+
+            <p>{{ post.excerpt }}</p>
+            <hr>
+
+            <p class="card-text text-muted h6"> Post updated {{ post.updated_on}}</p>
+        </article>
+        {% endfor %}
+    </div>
+    <div class="col-12 col-sm-5 col-md-4">
+        <div class="position-sticky" style="top: 2rem;">
+            <div class="p-4 mb-3 bg-light rounded">
+                <h3 class="fst-italic">Categories</h3>
+            </div>
+          
+            <div class="p-4">
+                <h4 class="fst-italic">Archives</h4>
+            </div>
+    
+            <div class="p-4">
+                <h4 class="fst-italic">Elsewhere</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 {%endblock%}

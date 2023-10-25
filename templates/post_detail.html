@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2 class="post-title-detail">{{ post.cooking_recipe_title }}</h2>
+
+<article class="post-detail">
+    
+
+    <div class="image-container-detail-page">
+        {% if "placeholder" in post.cooking_recipe_image.url %}
+        <img class="card-img-detail-page"
+            src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1696967358/project/lgzihdcgkyvtnpwmpugr.jpg">
+        {% else %}
+        <img class="card-img-detail-page" src=" {{ post.cooking_recipe_image.url }}">
+        {% endif %}
+    </div>
+
+    
+
+    <p> {{ post.cooking_recipe_body | safe | linebreaksbr }}</p>
+    
+    <hr>
+    <p class="blog-post-meta text-muted"> Post creaeted {{ post.created_on}} by 
+        <a class="link-accent-color" href="#"><strong>{{ post.cooking_recipe_author}}</strong></a>
+    </p>
+    
+    <p class="card-text text-muted h6"> Post updated {{ post.updated_on}} </p>
+    <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
+
+{%endblock%}

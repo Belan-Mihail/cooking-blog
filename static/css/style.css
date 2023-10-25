@@ -185,6 +185,22 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+@media screen and (max-width: 760px) {
+    .card-img-detail-page {
+      float: unset;
+      margin: 0 auto;
+      width: 80%;
+    }
+  
+    .image-container-detail-page {
+      margin-left: 15%;
+    }
+  
+    .post-title-detail {
+      font-size: 2rem;
+    }
+}
+
 @media screen and (max-width: 620px) {
     .slogan {
         font-size: 1.5rem;
@@ -204,5 +220,9 @@ h1, h2, h3, h4, h5, h6 {
 
     .blog-post-title {
         font-size: 1rem;
+    }
+
+    .post-title-detail {
+        font-size: 1.5rem;
     }
 }

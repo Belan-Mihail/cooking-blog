@@ -4,7 +4,8 @@ from .models import CookingRecipePost
 from .forms import (
     Comment, 
     CommentForm,
-    CookingRecipePostCreateForm
+    CookingRecipePostCreateForm,
+    CookingRecipePostUpdateForm
 ) 
 from django.http import HttpResponseRedirect
 from django.views.generic import (
@@ -13,6 +14,7 @@ from django.views.generic import (
     DeleteView
 )
 from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.mixins import UserPassesTestMixin
 
 
 
@@ -113,3 +115,28 @@ class CookingRecipePostCreateView(SuccessMessageMixin, CreateView):
         form.instance.cooking_recipe_author = self.request.user
         form.save()
         return super().form_valid(form)
+
+
+class CookingRecipePostUpdateView(SuccessMessageMixin,
+                          UserPassesTestMixin,
+                          UpdateView):
+    """
+    A class view to update user posts
+    """
+    model = CookingRecipePost
+    template_name = 'recipe_update.html'
+    form_class = CookingRecipePostUpdateForm
+    success_url = '/'
+    success_message = 'Your updated recipe is awaiting administrator approval'
+
+
+    def form_valid(self, form):
+        form.instance.cooking_recipe_author = self.request.user
+        form.instance.status = 0
+        return super().form_valid(form)
+
+    def test_func(self):
+        if self.request.user != self.get_object().cooking_recipe_author:
+                messages.info(request, 'Editing an article is available only to the author')
+                return False
+        return True

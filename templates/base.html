@@ -67,6 +67,7 @@
         </div>
     </nav>
 
+    
     <!-- Main -->
     <main class="main-bg main-body">
         {% if user.is_authenticated %}
@@ -74,6 +75,22 @@
             <span>you login as <strong>{{ user }}</strong></span>
         </div>    
         {% endif %}
+    
+        <!-- Action Notifications -->
+        <div class="container messages-container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="messages" role="alert">
+                        {{ message | safe }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    
+    
     {% block content %}
 
     {% endblock content %}

@@ -98,9 +98,9 @@ class PostLike(View):
         return HttpResponseRedirect(reverse('cooking_recipe_post_detail', args=[slug]))
 
 
-class RecipePostCreateView(SuccessMessageMixin, CreateView):
+class CookingRecipePostCreateView(SuccessMessageMixin, CreateView):
     """
-    Viea for create new post
+    View for create new post
     """
     model = CookingRecipePost
     template_name = 'recipe_create.html'

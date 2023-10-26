@@ -22,8 +22,25 @@
         <a class="link-accent-color" href="#"><strong>{{ post.cooking_recipe_author}}</strong></a>
     </p>
     
-    <p class="card-text text-muted h6"> Post updated {{ post.updated_on}} </p>
-    <strong class="text-secondary"><i class="far fa-heart"></i> {{ post.number_of_likes }} </strong>
+    <div class="d-flex wrapper-post-likes">
+        <p class="card-text text-muted h6"> Post updated {{ post.updated_on}} </p>
+        <strong>
+            {% if user.is_authenticated %}
+            <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
+                <span>{{ post.number_of_likes }} </span>
+                {% csrf_token %}
+                {% if liked %}
+                <button type="submit" value="{{post.slug}}" class="btn"><i class="fas fa-heart"></i></button>
+                {% else %}
+                <button type="submit" name="blogpost_id" value="{{post.slug}}" class="btn"><i class="far fa-heart"></i></button>
+                {% endif %}
+            </form>
+            {% else %}
+            <span>{{ post.number_of_likes }} </span>
+            <span><i class="far fa-heart"></i></span>
+            {% endif %}
+        </strong>
+    </div>
 
 </article>
 

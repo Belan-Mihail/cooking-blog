@@ -189,8 +189,7 @@ h1, h2, h3, h4, h5, h6 {
 .comments-row {
     margin: 1.5rem 0;
     gap: 1rem;
-    
-  }
+}
 
 .post-comments-card {
     margin: 1rem;
@@ -222,6 +221,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .submit-comments {
     margin-top: 1rem;
+}
+
+.wrapper-post-likes {
+    gap: 1rem;
+    align-items: baseline;
 }
 
 /* Footer */

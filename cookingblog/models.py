@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
+from django.template.defaultfilters import slugify
 
 # Field status from CookingRecipeModel
 STATUS = ((0, "Draft"), (1, "Published"))
@@ -32,6 +33,12 @@ class CookingRecipePost(models.Model):
 
     def __str__(self):
         return self.cooking_recipe_title
+    
+
+    def save(self, *args, **kwargs):  
+        if not self.slug:
+            self.slug = slugify(self.cooking_recipe_title)
+        return super().save(*args, **kwargs)
 
 
     def number_of_likes(self):

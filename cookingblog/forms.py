@@ -1,6 +1,6 @@
-from .models import Comment
+from .models import Comment, CookingRecipePost
 from django import forms
-from .models import CookingRecipePost
+
 
 
 class CommentForm(forms.ModelForm):
@@ -10,3 +10,12 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('body',)
+
+
+class CookingRecipePostCreateForm(forms.ModelForm):
+    """
+    Form for posting posts  to the site
+    """
+    class Meta:
+        model = CookingRecipePost
+        fields = ('cooking_recipe_title', 'cat', 'cooking_recipe_image', 'excerpt', 'cooking_recipe_body')

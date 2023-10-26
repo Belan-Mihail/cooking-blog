@@ -41,6 +41,11 @@
             {% endif %}
         </strong>
     </div>
+    {% if post.cooking_recipe_author == user %}
+    <div class="div">
+         <a class="btn mt-1 mb-1" href="{% url 'recipe_update' post.slug %}">Update Recipe</a>
+    </div>
+    {% endif %}
 
 </article>
 

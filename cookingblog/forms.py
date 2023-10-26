@@ -27,4 +27,4 @@ class CookingRecipePostUpdateForm(forms.ModelForm):
     """
     class Meta:
         model = CookingRecipePost
-        fields = ('cooking_recipe_title', 'cat', 'cooking_recipe_image', 'cooking_excerpt', 'cooking_recipe_body')
+        fields = ('cooking_recipe_title', 'cat', 'cooking_recipe_image', 'excerpt', 'cooking_recipe_body')

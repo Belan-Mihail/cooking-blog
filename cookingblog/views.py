@@ -133,6 +133,7 @@ class CookingRecipePostUpdateView(SuccessMessageMixin,
     def form_valid(self, form):
         form.instance.cooking_recipe_author = self.request.user
         form.instance.status = 0
+        form.instance.slug = ''
         return super().form_valid(form)
 
     def test_func(self):

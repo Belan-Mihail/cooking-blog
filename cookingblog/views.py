@@ -75,13 +75,13 @@ class CookingRecipePostDetail(View):
 
 class PostLike(View):
     """
-    View for add or remove a likes
+    View for add or remove likes
     """
     def post(self, request, slug, *args, **kwargs):
-        post = get_object_or_404(RecipePost, slug=slug)
+        post = get_object_or_404(CookingRecipePost, slug=slug)
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
         else:
             post.likes.add(request.user)
 
-        return HttpResponseRedirect(reverse('recipe_post_detail', args=[slug]))
+        return HttpResponseRedirect(reverse('cooking_recipe_post_detail', args=[slug]))

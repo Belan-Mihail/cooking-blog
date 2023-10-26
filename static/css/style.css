@@ -19,6 +19,16 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
 
+.btn {
+    background: var(--warning-color);
+    color: var(--dark-color); 
+}
+  
+.btn:hover {
+    background: var(--dark-color);
+    color: var(--light-color); 
+}
+
 
 /* Navbar */
 .logo {

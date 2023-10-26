@@ -186,6 +186,44 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 2rem;  
 }
 
+.comments-row {
+    margin: 1.5rem 0;
+    gap: 1rem;
+    
+  }
+
+.post-comments-card {
+    margin: 1rem;
+}
+
+.comments-form {
+    margin-top: 1rem;
+}
+  
+.comment-title {
+    width: max-content;
+    background-color: var(--success-color);
+    opacity: .5;
+    color: var(--light-color);
+    padding-inline-end: 1rem;
+    
+}
+
+.comment-title a {
+    color: var(--dark-color);
+    font-family: 'Young Serif', serif;
+    font-weight: 400;
+    
+}
+
+.comment-title a:hover {
+    color: var(--light-color);
+}
+
+.submit-comments {
+    margin-top: 1rem;
+}
+
 /* Footer */
 .social-links a {
     font-size: 2rem;

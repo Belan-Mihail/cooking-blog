@@ -141,3 +141,23 @@ class CookingRecipePostUpdateView(SuccessMessageMixin,
                 messages.info(request, 'Editing an article is available only to the author')
                 return False
         return True
+
+
+class CookingRecipePostDeleteView(SuccessMessageMixin,
+                          UserPassesTestMixin,
+                          DeleteView):
+    """
+    A class view to delete post
+    """
+    model = CookingRecipePost
+    success_url = '/'
+    template_name = 'recipe_delete.html'
+    context_object_name = 'recipe'
+    success_message = 'Your post has been deleted successfully!'
+
+
+    def test_func(self):
+        if self.request.user != self.get_object().cooking_recipe_author:
+                messages.info(request, 'Deleting an article is available only to the author')
+                return False
+        return True

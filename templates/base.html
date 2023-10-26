@@ -69,6 +69,11 @@
 
     <!-- Main -->
     <main class="main-bg main-body">
+        {% if user.is_authenticated %}
+        <div class="user-greeting">
+            <span>you login as <strong>{{ user }}</strong></span>
+        </div>    
+        {% endif %}
     {% block content %}
 
     {% endblock content %}

@@ -1,8 +1,19 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from .models import CookingRecipePost
-from .forms import Comment, CommentForm
+from .forms import (
+    Comment, 
+    CommentForm,
+    CookingRecipePostCreateForm
+) 
 from django.http import HttpResponseRedirect
+from django.views.generic import (
+    CreateView,
+    UpdateView,
+    DeleteView
+)
+from django.contrib.messages.views import SuccessMessageMixin
+
 
 
 class CookingRecipesPostList(generic.ListView):
@@ -85,3 +96,20 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('cooking_recipe_post_detail', args=[slug]))
+
+
+class RecipePostCreateView(SuccessMessageMixin, CreateView):
+    """
+    Viea for create new post
+    """
+    model = CookingRecipePost
+    template_name = 'recipe_create.html'
+    form_class = CookingRecipePostCreateForm
+    success_url = '/'
+    success_message = 'Your recipe is is awaiting administrator approval'
+
+
+    def form_valid(self, form):
+        form.instance.cooking_recipe_author = self.request.user
+        form.save()
+        return super().form_valid(form)

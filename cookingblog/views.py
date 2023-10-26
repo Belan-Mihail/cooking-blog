@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from .models import CookingRecipePost
 from .forms import Comment, CommentForm
+from django.http import HttpResponseRedirect
 
 
 class CookingRecipesPostList(generic.ListView):
@@ -16,7 +17,9 @@ class CookingRecipesPostList(generic.ListView):
 
 
 class CookingRecipePostDetail(View):
-
+    """
+    View for displaying a single post
+    """
     model = CookingRecipePost
 
     def get(self, request, slug, *args, **kwargs):
@@ -68,3 +71,17 @@ class CookingRecipePostDetail(View):
                 "comment_form": CommentForm()
             },
         )
+
+
+class PostLike(View):
+    """
+    View for add or remove a likes
+    """
+    def post(self, request, slug, *args, **kwargs):
+        post = get_object_or_404(RecipePost, slug=slug)
+        if post.likes.filter(id=request.user.id).exists():
+            post.likes.remove(request.user)
+        else:
+            post.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('recipe_post_detail', args=[slug]))

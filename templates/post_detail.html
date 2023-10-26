@@ -45,6 +45,9 @@
     <div class="div">
          <a class="btn mt-1 mb-1" href="{% url 'recipe_update' post.slug %}">Update Recipe</a>
     </div>
+    <div class="div">
+        <a class="btn mt-1 mb-1" href="{% url 'recipe_delete' post.slug %}">Delete Recipe</a>
+   </div>
     {% endif %}
 
 </article>

@@ -2,7 +2,8 @@ from . import views
 from django.urls import path
 from .views import (
     CookingRecipePostCreateView,
-    CookingRecipePostUpdateView
+    CookingRecipePostUpdateView,
+    CookingRecipePostDeleteView
 )
 
 
@@ -12,4 +13,5 @@ urlpatterns = [
     path('like/<slug:slug>', views.PostLike.as_view(), name='post_like'),
     path('recipe/create/', CookingRecipePostCreateView.as_view(), name='recipe_create'),
     path('recipe/<slug:slug>/update/', CookingRecipePostUpdateView.as_view(), name='recipe_update'),
+    path('recipe/<slug:slug>/delete/', CookingRecipePostDeleteView.as_view(), name='recipe_delete'),
 ]

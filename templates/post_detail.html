@@ -41,8 +41,38 @@
                 
                 <p>{{ comment.body }}</p>
                 <hr>
-        </div>
+            </div>
             {% endfor %}
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="post-comments-card">
+            {% if commented %}
+            <div class="alert alert-success" role="alert">
+                Your comment is awaiting approval
+            </div>
+
+            <h3>Leave a comment:</h3>
+            <p>Posting as: {{ user.username }}</p>
+            <form method="post" class="comments-form">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn submit-comments">Submit</button>
+            </form>
+            {% else %}
+
+            {% if user.is_authenticated %}
+
+            <h3>Leave a comment:</h3>
+            <p>Posting as: {{ user.username }}</p>
+            <form method="post" class="comments-form">
+                {{ comment_form | crispy }}
+                {% csrf_token %}
+                <button type="submit" class="btn submit-comments">Submit</button>
+            </form>
+            {% endif %}
+            {% endif %}
+        </div> 
     </div> 
 </div>
 {%endblock%}

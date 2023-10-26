@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import CookingRecipePost
+from .forms import Comment, CommentForm
 
 
 class CookingRecipesPostList(generic.ListView):
@@ -32,5 +33,6 @@ class CookingRecipePostDetail(View):
             {
                 "post": post,
                 "comments": comments,
+                "comment_form": CommentForm()
             },
         )

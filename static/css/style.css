@@ -234,10 +234,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.comments-wrapper {
+.flex-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-right: 1rem;
+}
+
+.button-wrapper {
+    gap: .2rem;
 }
 
 /* Footer */

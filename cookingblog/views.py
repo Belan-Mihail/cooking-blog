@@ -176,3 +176,17 @@ def deletemycomment(request, id):
     comment.delete()
     success_message = 'Your comment has been deleted successfully!'
     return redirect(comment.cooking_recipe_post.get_absolute_url()) 
+
+
+class CookingRecipePostCategory(generic.ListView):
+    model = CookingRecipePost
+    template_name = 'index.html'
+    context_object_name = 'cooking_recipes_post_list'
+    
+    def get_context_data(self,**kwargs):
+        context = super(CookingRecipePostCategory, self).get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
+ 
+    def get_queryset(self):
+        return CookingRecipePost.objects.filter(cat__slug=self.kwargs['cat_slug'])

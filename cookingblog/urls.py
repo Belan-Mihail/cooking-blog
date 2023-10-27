@@ -3,7 +3,8 @@ from django.urls import path
 from .views import (
     CookingRecipePostCreateView,
     CookingRecipePostUpdateView,
-    CookingRecipePostDeleteView
+    CookingRecipePostDeleteView,
+    CookingRecipePostCategory
 )
 
 
@@ -15,4 +16,5 @@ urlpatterns = [
     path('recipe/<slug:slug>/update/', CookingRecipePostUpdateView.as_view(), name='recipe_update'),
     path('recipe/<slug:slug>/delete/', CookingRecipePostDeleteView.as_view(), name='recipe_delete'),
     path('comment/<int:id>', views.deletemycomment, name='commentdelete'),
+    path('category/<slug:cat_slug>/', CookingRecipePostCategory.as_view(), name='selectedcategory'),
 ]

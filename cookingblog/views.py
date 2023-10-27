@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from .models import CookingRecipePost
+from .models import CookingRecipePost, Category
 from .forms import (
     Comment, 
     CommentForm,
@@ -27,6 +27,11 @@ class CookingRecipesPostList(generic.ListView):
     template_name = "index.html"
     paginate_by = 5
     context_object_name = 'cooking_recipes_post_list'
+
+    def get_context_data(self,**kwargs):
+        context = super(CookingRecipesPostList, self).get_context_data(**kwargs)
+        context['categories'] = Category.objects.all()
+        return context
 
 
 class CookingRecipePostDetail(View):

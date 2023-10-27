@@ -233,6 +233,13 @@ h1, h2, h3, h4, h5, h6 {
     align-items: baseline;
 }
 
+
+.comments-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /* Footer */
 .social-links a {
     font-size: 2rem;

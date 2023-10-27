@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from .models import CookingRecipePost
 from .forms import (
@@ -161,3 +161,13 @@ class CookingRecipePostDeleteView(SuccessMessageMixin,
                 messages.info(request, 'Deleting an article is available only to the author')
                 return False
         return True
+
+
+def deletemycomment(request, id):
+    """
+    Function for deleting comments
+    """
+    comment = get_object_or_404(Comment, id=id)
+    comment.delete()
+    success_message = 'Your comment has been deleted successfully!'
+    return redirect(comment.cooking_recipe_post.get_absolute_url()) 

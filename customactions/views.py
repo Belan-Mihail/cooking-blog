@@ -4,8 +4,8 @@ from django.views import View
 from django.views.generic import (CreateView, DetailView, UpdateView)
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
-from .forms import ProfileForm
-from .models import Profile
+from .forms import ProfileForm, ContactForm
+from .models import Profile, Contact
 from cookingblog.models import CookingRecipePost
 
 
@@ -62,3 +62,24 @@ class UpdateProfile(SuccessMessageMixin, UpdateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
+
+
+def contact(request):
+    """
+    View for feedback
+    """
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(
+            request,
+            'customactions/thanks.html'
+            )
+    else:
+        form = ContactForm()
+    return render(
+        request,
+        'customactions/contact.html',
+        {'form': form}
+    )

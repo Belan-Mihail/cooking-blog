@@ -26,13 +26,13 @@ class CreateProfileView(SuccessMessageMixin, CreateView):
         return super().form_valid(form)
 
 
-class UserProfilePageView(DetailView):
+class ProfilePageView(DetailView):
     """
     A class view to see detail
     of user profile
     """
     model = Profile
-    template_name = 'profile_page.html'
+    template_name = 'customactions/profile_page.html'
     
     
     def get_object(self, *args, **kwargs):
@@ -40,6 +40,6 @@ class UserProfilePageView(DetailView):
 
 
     def get_context_data(self,**kwargs):
-        context = super(UserProfilePageView, self).get_context_data(**kwargs)
+        context = super(ProfilePageView, self).get_context_data(**kwargs)
         context['cooking_recipes_post'] = CookingRecipePost.objects.filter(status=1).order_by("-created_on")
         return context

@@ -16,7 +16,7 @@
 <p>{{user.profile.birth_date}}</p>
 
 <div class="div">
-    <a class="btn mt-1 mb-1" href="#">Update Profile</a>
+    <a class="btn mt-1 mb-1" href="{% url 'update_profile' %}">Update Profile</a>
 </div>
 
 {% for post in cooking_recipes_post %}

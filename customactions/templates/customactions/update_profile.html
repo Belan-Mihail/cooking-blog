@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+{% load crispy_forms_tags %}
+
+<div class="card mb-3">
+    <div class="recipe-title">
+        <h2>Update Your Profile</h2>
+    </div>
+    <form method="post" action="" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="mt-2">
+            <button type="submit" class="btn">Update Profile</button>
+        </div>
+    </form>
+</div>
+
+{%endblock%}

@@ -22,6 +22,12 @@ class ProfileForm(forms.ModelForm):
                     'placeholder': 'A few words about yourself'
                 }
             ),
+            'birth_date': forms.DateInput(
+                format='%Y-%m-%d',
+                attrs={
+                    'placeholder': 'year-month-date (1988-08-14)'
+                }
+            ),
             'region': forms.TextInput(
                 attrs={
                     'placeholder': 'Your region'

@@ -20,3 +20,11 @@ class Profile(models.Model):
         return self.user.username
 
 
+class Contact(models.Model):
+    name = models.CharField(max_length=120)
+    email = models.EmailField()
+    message = models.TextField(max_length=1000)
+
+
+    def __str__(self):
+        return self.name

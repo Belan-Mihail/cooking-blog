@@ -43,3 +43,22 @@ class ProfilePageView(DetailView):
         context = super(ProfilePageView, self).get_context_data(**kwargs)
         context['cooking_recipes_post'] = CookingRecipePost.objects.filter(status=1).order_by("-created_on")
         return context
+
+
+class UpdateProfile(SuccessMessageMixin, UpdateView):
+    """
+    A class view to update
+    user profile
+    """
+    model = Profile
+    form_class = ProfileForm
+    success_url = '/profile_page/profile_page'
+    template_name = 'customactions/update_profile.html'
+    success_message = 'Your profile has been updated successfully!'
+
+    def get_object(self, *args, **kwargs):
+        return self.request.user.profile
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)

@@ -16,7 +16,7 @@ class CreateProfileView(SuccessMessageMixin, CreateView):
     """
     model = Profile
     form_class = ProfileForm
-    success_url = '/'
+    success_url = '/profile_page/profile_page'
     template_name = 'customactions/create_profile.html'
     success_message = 'Your profile has been created successfully!'
 
@@ -72,10 +72,10 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return render(
+        return render(
             request,
             'customactions/thanks.html'
-            )
+        )
     else:
         form = ContactForm()
     return render(

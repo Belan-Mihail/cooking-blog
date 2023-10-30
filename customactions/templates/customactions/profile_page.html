@@ -1,5 +1,69 @@
 {% extends 'base.html' %} {% block content %}
 
-<p>1</p>
+<h2 class="h4 text-capitalize font-weight-bold">{{user.username}}</h2>
+
+{% if user.profile.bio == '' %}
+<p>dates are empted</p>
+{% else %}
+<p>{{ user.profile.bio }}</p>
+
+{% endif %}
+
+<div>
+    <img src="{{ user.profile.avatar.url }}" alt="default1">
+</div>
+
+<p>{{user.profile.birth_date}}</p>
+
+<div class="div">
+    <a class="btn mt-1 mb-1" href="#">Update Profile</a>
+</div>
+
+{% for post in cooking_recipes_post %}
+{% if post.cooking_recipe_author == user %}
+
+<h2 class="post-title-detail">{{ post.cooking_recipe_title }}</h2>
+
+<article class="blog-post">
+    <a class="post-link" href="{% url 'cooking_recipe_post_detail' post.slug  %}">
+        <div class="image-container-home-page">
+            {% if "placeholder" in post.cooking_recipe_image.url %}
+            <img class="card-img-home-page"
+                src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1696967358/project/lgzihdcgkyvtnpwmpugr.jpg">
+            {% else %}
+            <img class="card-img-home-page" src=" {{ post.cooking_recipe_image.url }}">
+            {% endif %}
+        </div>
+        <h3 class="blog-post-title">{{ post.cooking_recipe_title }}</h3>
+    </a>
+
+    <p class="blog-post-meta text-muted"> Post creaeted {{ post.created_on}} by 
+        <a class="link-accent-color" href="#"><strong>{{ post.cooking_recipe_author}}</strong></a>
+    </p>
+
+    <p>{{ post.excerpt }}</p>
+    <hr>
+
+    <p class="card-text text-muted h6"> Post updated {{ post.updated_on}}
+        <i class="far fa-heart"></i>{{ post.number_of_likes }}
+    </p>
+</article>
+
+
+{% if is_paginated %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+        {% endif %}
+        </ul>
+    </nav>
+{% endif %}
+{% endif %}
+{% endfor %}
+
 
 {%endblock%}

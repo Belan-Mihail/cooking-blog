@@ -21,6 +21,9 @@ class Profile(models.Model):
 
 
 class Contact(models.Model):
+    """
+    Model for feedback messages 
+    """
     name = models.CharField(max_length=120)
     email = models.EmailField()
     message = models.TextField(max_length=1000)

@@ -27,7 +27,7 @@ class ProfileForm(forms.ModelForm):
                     'placeholder': 'Your region'
                 }
             ),
-            'nickname': forms.TextInput(
+            'occupation': forms.TextInput(
                 attrs={
                     'placeholder': 'Your occupation'
                 }

@@ -15,7 +15,7 @@ class CreateProfileView(SuccessMessageMixin, CreateView):
     """
     model = Profile
     form_class = ProfileForm
-    success_url = '/profile_page'
+    success_url = '/'
     template_name = 'customactions/create_profile.html'
     success_message = 'Your profile has been created successfully!'
 

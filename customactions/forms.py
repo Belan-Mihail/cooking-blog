@@ -4,7 +4,7 @@ from .models import Profile
 
 class ProfileForm(forms.ModelForm):
     """
-    A form class for the profile
+    A form class for the profile models
     """
 
     class Meta:

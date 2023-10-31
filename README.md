@@ -45,3 +45,21 @@ A simple, colorful and interesting website with delicious culinary recipes, wher
 - Interactive interaction with the user (reaction to user actions)
 - Fully adaptive and beautiful design
 - Accessible navigation, links working as expected
+
+### User Stories 
+
+1. As User I can use navigation bar so that I can easy to navigate the site.
+2. As a site user, I want to be able to see a list of all site posts on the main page
+3. As a user of the site, I want to be able to view my posts as well as the posts of other users
+4. As a site user, I want the post to contain a photo of the dish and a description of the cooking process
+5. As a registered user of the site, I want to be able to post, update and delete posts in which I am the author
+6. As a registered user of the site, I want to be able to rate posts
+7. As a registered user of the site, I want to be able to comment on posts, as well as the ability to delete comments
+
+
+### Site Owner Stories
+
+1. As the owner of the site, I want only authorized users to have access to all the functionality of the site
+2. As the owner of the site, I want the registered user to be able to update and delete posts only if he is the author
+3. As a site owner, I want to be able to pre-approve user posts and comments to avoid publishing inappropriate content
+4. As the owner of the site, I want the post to contain a photo of the dish and a description of the cooking process

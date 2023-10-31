@@ -6,7 +6,6 @@ $.ajax({
     headers: { 'X-Api-Key': 'eNB8L18RTwR2FWqjPxFP9Q==swzK4Ndsww2aGENA'},
     contentType: 'application/json',
     success: function(result) {
-        console.log(result[0].quote);
         $('#quote').html(result[0].quote);
     },
     error: function ajaxError(jqXHR) {
@@ -23,7 +22,6 @@ if ($('#quote').length > 0){
         headers: { 'X-Api-Key': 'eNB8L18RTwR2FWqjPxFP9Q==swzK4Ndsww2aGENA'},
         contentType: 'application/json',
         success: function(result) {
-            console.log(result[0].quote);
             $('#quote').html(result[0].quote);
         },
         error: function ajaxError(jqXHR) {
@@ -39,7 +37,6 @@ $('#quote-btn').click(function() {
         headers: { 'X-Api-Key': 'eNB8L18RTwR2FWqjPxFP9Q==swzK4Ndsww2aGENA'},
         contentType: 'application/json',
         success: function(result) {
-            console.log(result[0].quote);
             $('#quote').html(result[0].quote);
         },
         error: function ajaxError(jqXHR) {

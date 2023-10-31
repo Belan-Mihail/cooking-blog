@@ -17,7 +17,8 @@
     4. [Site Owner Stories](#site-owner-stories)
 4. [Design](#design)
     1. [Design Choices](#design-choices)
-    2. 
+    2. [Colors](#colors)
+    3. [Fonts](#fonts)
 
 
 
@@ -65,6 +66,7 @@ A simple, colorful and interesting website with delicious culinary recipes, wher
 10. As a registered user of the site I can create and update profile page
 11. As a registered user of the site, I can see all my published posts on the portfolio page
 12. As a user of the site I can see interesting quotes and aphorisms about food
+13. As a user of the site, I would like to receive notifications about my actions
 
 
 ### Site Owner Stories

@@ -13,6 +13,11 @@
 3. [User Experience](#user-experience)
     1. [Target Audience](#target-audience)
     2. [User Requrements and Expectations](#user-requrements-and-expectations)
+    3. [User Stories](#user-stories)
+    4. [Site Owner Stories](#site-owner-stories)
+4. [Design](#design)
+    1. [Design Choices](#design-choices)
+    2. 
 
 
 
@@ -70,3 +75,21 @@ A simple, colorful and interesting website with delicious culinary recipes, wher
 4. As the owner of the site, I want the post to contain a photo of the dish and a description of the cooking process
 5. As the owner of the site I can receive feedback from registered users
 6. As the owner of the site, I can place links to the project’s social pages on every page of the site
+
+## Design
+
+### Design Choices
+
+The site was created in such a way as to maximize the interest of users and provide the opportunity to easily and simply use the functionality of the site.
+
+### Colors
+
+The main color palette was chosen in accordance with the basic colors of the bootstrap framework. The dark background includes contrasting white font. To draw attention to certain content on the site, two bright accent colors are used
+
+<details><summary>Add</summary>
+<img src="add">
+</details>
+
+### Fonts
+
+For plain text, the Mulish font is used, connected using google fonts. For headings, Young Serif font was used. Inter font used for other text. Used fonts are well combined with each other

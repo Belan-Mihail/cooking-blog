@@ -133,3 +133,63 @@ For plain text, the Mulish font is used, connected using google fonts. For headi
 <img src="docs/wireframe-images/detail-page-iphone.png">
 </details>
 </details>
+
+<details><summary>Add Post Page Wireframes</summary>
+
+<details><summary>Add Post Page Fullscreen</summary>
+<img src="docs/wireframe-images/add-post-page.png">
+</details>
+
+<details><summary>Add Post Page Ipad</summary>
+<img src="docs/wireframe-images/add-post-page-ipad.png">
+</details>
+
+<details><summary>Add Post Page Mobile</summary>
+<img src="docs/wireframe-images/add-post-page-iphone.png">
+</details>
+</details>
+
+<details><summary>Update Post Page Wireframes</summary>
+
+<details><summary>Update Post Page Fullscreen</summary>
+<img src="docs/wireframe-images/update-post-page.png">
+</details>
+
+<details><summary>Update Post Page Ipad</summary>
+<img src="docs/wireframe-images/update-post-page-ipad.png">
+</details>
+
+<details><summary>Update Post Page Mobile</summary>
+<img src="docs/wireframe-images/update-post-page-iphone.png">
+</details>
+</details>
+
+<details><summary>Delete Post Page Wireframes</summary>
+
+<details><summary>Delete Post Page Fullscreen</summary>
+<img src="docs/wireframe-images/delete-post-page.png">
+</details>
+
+<details><summary>Delete Post Page Ipad</summary>
+<img src="docs/wireframe-images/delete-post-page-ipad.png">
+</details>
+
+<details><summary>Delete Post Page Mobile</summary>
+<img src="docs/wireframe-images/delete-post-page-iphone.png">
+</details>
+</details>
+
+<details><summary>Profile Page Wireframes</summary>
+
+<details><summary>Profile Page Fullscreen</summary>
+<img src="docs/wireframe-images/profile-page.png">
+</details>
+
+<details><summary>Profile Page Ipad</summary>
+<img src="docs/wireframe-images/profile-page-ipad.png">
+</details>
+
+<details><summary>Profile Page Mobile</summary>
+<img src="docs/wireframe-images/profile-page-iphone.png">
+</details>
+</details>

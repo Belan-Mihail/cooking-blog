@@ -1,54 +1,74 @@
 {% extends 'base.html' %} {% block content %}
 
-<h2 class="h4 text-capitalize font-weight-bold">{{user.username}}</h2>
-
-{% if user.profile.bio == '' %}
-<p>dates are empted</p>
-{% else %}
-<p>{{ user.profile.bio }}</p>
-
-{% endif %}
-
-<div>
-    <img src="{{ user.profile.avatar.url }}" alt="default1">
-</div>
-
-<p>{{user.profile.birth_date}}</p>
-
-<div class="div">
-    <a class="btn mt-1 mb-1" href="{% url 'update_profile' %}">Update Profile</a>
-</div>
-
-{% for post in cooking_recipes_post %}
-{% if post.cooking_recipe_author == user %}
-
-<h2 class="post-title-detail">{{ post.cooking_recipe_title }}</h2>
-
-<article class="blog-post">
-    <a class="post-link" href="{% url 'cooking_recipe_post_detail' post.slug  %}">
+<div class="row main-row">
+    <div class="col-12 col-sm-6 col-md-4">
         <div class="image-container-home-page">
-            {% if "placeholder" in post.cooking_recipe_image.url %}
+            {% if "placeholder" in user.profile.avatar.url %}
             <img class="card-img-home-page"
-                src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1696967358/project/lgzihdcgkyvtnpwmpugr.jpg">
+            src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1698877007/pkqxehru83pznky2pksv.jpg"
+            alt="user-profile-avatar">
             {% else %}
-            <img class="card-img-home-page" src=" {{ post.cooking_recipe_image.url }}">
+            <img class="card-img-home-page" src=" {{ user.profile.avatar.url }}" alt="user-profile-avatar">
             {% endif %}
         </div>
-        <h3 class="blog-post-title">{{ post.cooking_recipe_title }}</h3>
-    </a>
+    </div>
+    <div class="col-12 col-sm-6 col-md-8">
+        <strong>User Name:</strong><h2 class="h4 text-capitalize font-weight-bold">{{user.username}}</h2>
 
-    <p class="blog-post-meta text-muted"> Post creaeted {{ post.created_on}} by 
-        <a class="link-accent-color" href="#"><strong>{{ post.cooking_recipe_author}}</strong></a>
-    </p>
+        {% if user.profile.bio == '' %}
+        <p><strong>User bio:</strong>dates are empted</p>
+        {% else %}
+        <p><strong>User bio:</strong>{{ user.profile.bio }}</p>
+        {% endif %}
 
-    <p>{{ post.excerpt }}</p>
-    <hr>
+        <p><strong>User birth date:</strong>{{user.profile.birth_date}}</p>
+        <p><strong>User Region:</strong>{{user.profile.region}}</p>
+        <p><strong>User Occupation:</strong>{{user.profile.occupation}}</p>
+    </div>
+    <div class="">
+        <a class="btn mt-1 mb-1" href="{% url 'update_profile' %}">Update Profile</a>
+    </div>
 
-    <p class="card-text text-muted h6"> Post updated {{ post.updated_on}}
-        <i class="far fa-heart"></i>{{ post.number_of_likes }}
-    </p>
-</article>
+    <h3>User Posts:</h3>
 
+   
+
+    {% for post in cooking_recipes_post %}
+    <!-- {% if not post %}
+    <p>You have no post</p>
+    <div class="">
+        <a class="btn mt-1 mb-1" href="{% url 'recipe_create' %}">Add Post</a>
+    </div>
+    {% else %} -->
+    {% if post.cooking_recipe_author == user %}
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-2">
+            <a class="post-link" href="{% url 'cooking_recipe_post_detail' post.slug  %}">
+                <div class="image-container-home-page">
+                    {% if "placeholder" in post.cooking_recipe_image.url %}
+                    <img class="card-img-home-page"
+                        src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1696967358/project/lgzihdcgkyvtnpwmpugr.jpg">
+                    {% else %}
+                    <img class="card-img-home-page" src=" {{ post.cooking_recipe_image.url }}">
+                    {% endif %}
+                </div>
+            </a>
+        </div>
+        <div class="col-12 col-sm-6 col-md-10">
+            <h2 class="post-title-detail">{{ post.cooking_recipe_title }}</h2>
+            <p class="blog-post-meta text-muted"> Post creaeted {{ post.created_on}} by 
+                <a class="link-accent-color" href="#"><strong>{{ post.cooking_recipe_author}}</strong></a>
+            </p>
+        
+            <p>{{ post.excerpt }}</p>
+            <hr>
+        
+            <p class="card-text text-muted h6"> Post updated {{ post.updated_on}}
+                <i class="far fa-heart"></i>{{ post.number_of_likes }}
+            </p>
+        </div>
+    </div>
+</div>
 
 {% if is_paginated %}
     <nav aria-label="Page navigation">
@@ -62,7 +82,13 @@
         </ul>
     </nav>
 {% endif %}
+    
+    
+    
+
+<!-- {% endif %} -->
 {% endif %}
+
 {% endfor %}
 
 

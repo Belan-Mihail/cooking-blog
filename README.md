@@ -19,6 +19,8 @@
     1. [Design Choices](#design-choices)
     2. [Colors](#colors)
     3. [Fonts](#fonts)
+    4. [Structure](#structure)
+    5. [Wireframes](#wireframes)
 
 
 
@@ -95,3 +97,39 @@ The main color palette was chosen in accordance with the basic colors of the boo
 ### Fonts
 
 For plain text, the Mulish font is used, connected using google fonts. For headings, Young Serif font was used. Inter font used for other text. Used fonts are well combined with each other
+
+
+### Structure
+
+### Wireframes
+
+
+<details><summary>Home Page Wireframes</summary>
+
+<details><summary>Home Page Fullscreen</summary>
+<img src="docs/wireframe-images/home-page.png">
+</details>
+
+<details><summary>Home Page Ipad</summary>
+<img src="docs/wireframe-images/home-page-ipad.png">
+</details>
+
+<details><summary>Home Page Mobile</summary>
+<img src="docs/wireframe-images/home-page-iphone.png">
+</details>
+</details>
+
+<details><summary>Detail Page Wireframes</summary>
+
+<details><summary>Detail Page Fullscreen</summary>
+<img src="docs/wireframe-images/detail-page.png">
+</details>
+
+<details><summary>Deatail Page Ipad</summary>
+<img src="docs/wireframe-images/detail-page-ipad.png">
+</details>
+
+<details><summary>Detail Page Mobile</summary>
+<img src="docs/wireframe-images/detail-page-iphone.png">
+</details>
+</details>

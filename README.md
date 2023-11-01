@@ -193,3 +193,93 @@ For plain text, the Mulish font is used, connected using google fonts. For headi
 <img src="docs/wireframe-images/profile-page-iphone.png">
 </details>
 </details>
+
+<details><summary>Update Profile Page Wireframes</summary>
+
+<details><summary>Update Profile Page Fullscreen</summary>
+<img src="docs/wireframe-images/update-profile-page.png">
+</details>
+
+<details><summary>Update Profile Page Ipad</summary>
+<img src="docs/wireframe-images/update-profile-page-ipad.png">
+</details>
+
+<details><summary>Update Profile Page Mobile</summary>
+<img src="docs/wireframe-images/update-profile-page-iphone.png">
+</details>
+</details>
+
+<details><summary>Contact Page Wireframes</summary>
+
+<details><summary>Contact Page Fullscreen</summary>
+<img src="docs/wireframe-images/contact-page.png">
+</details>
+
+<details><summary>Contact Page Ipad</summary>
+<img src="docs/wireframe-images/contact-page-ipad.png">
+</details>
+
+<details><summary>Contact Page Mobile</summary>
+<img src="docs/wireframe-images/contact-page-iphone.png">
+</details>
+</details>
+
+<details><summary>Thanks Page Wireframes</summary>
+
+<details><summary>Thanks Page Fullscreen</summary>
+<img src="docs/wireframe-images/thanks-page.png">
+</details>
+
+<details><summary>Thanks Page Ipad</summary>
+<img src="docs/wireframe-images/thanks-page-ipad.png">
+</details>
+
+<details><summary>Thanks Page Mobile</summary>
+<img src="docs/wireframe-images/thanks-page-iphone.png">
+</details>
+</details>
+
+<details><summary>SignUp Page Wireframes</summary>
+
+<details><summary>SignUp Page Fullscreen</summary>
+<img src="docs/wireframe-images/signup-page.png">
+</details>
+
+<details><summary>SignUp Page Ipad</summary>
+<img src="docs/wireframe-images/signup-page-ipad.png">
+</details>
+
+<details><summary>SignUp Page Mobile</summary>
+<img src="docs/wireframe-images/signup-page-iphone.png">
+</details>
+</details>
+
+<details><summary>Login Page Wireframes</summary>
+
+<details><summary>Login Page Fullscreen</summary>
+<img src="docs/wireframe-images/login-page.png">
+</details>
+
+<details><summary>Login Page Ipad</summary>
+<img src="docs/wireframe-images/login-page-ipad.png">
+</details>
+
+<details><summary>Login Page Mobile</summary>
+<img src="docs/wireframe-images/login-page-iphone.png">
+</details>
+</details>
+
+<details><summary>Logout Page Wireframes</summary>
+
+<details><summary>Logout Page Fullscreen</summary>
+<img src="docs/wireframe-images/logout-page.png">
+</details>
+
+<details><summary>Logout Page Ipad</summary>
+<img src="docs/wireframe-images/logout-page-ipad.png">
+</details>
+
+<details><summary>Logout Page Mobile</summary>
+<img src="docs/wireframe-images/logout-page-iphone.png">
+</details>
+</details>

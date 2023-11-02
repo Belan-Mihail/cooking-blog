@@ -28,20 +28,17 @@
     <div class="">
         <a class="btn mt-1 mb-1" href="{% url 'update_profile' %}">Update Profile</a>
     </div>
-
-    <h3>User Posts:</h3>
+</div>
+    <h3 class="profile-posts-title">User Posts:</h3>
 
    
-
+<div id="user-posts-wrapper">
     {% for post in cooking_recipes_post %}
-    <!-- {% if not post %}
-    <p>You have no post</p>
-    <div class="">
-        <a class="btn mt-1 mb-1" href="{% url 'recipe_create' %}">Add Post</a>
-    </div>
-    {% else %} -->
+    
+
+
     {% if post.cooking_recipe_author == user %}
-    <div class="row">
+    <div class="row row-profile-posts">
         <div class="col-12 col-sm-6 col-md-2">
             <a class="post-link" href="{% url 'cooking_recipe_post_detail' post.slug  %}">
                 <div class="image-container-home-page">
@@ -55,7 +52,7 @@
             </a>
         </div>
         <div class="col-12 col-sm-6 col-md-10">
-            <h2 class="post-title-detail">{{ post.cooking_recipe_title }}</h2>
+            <h2 class="post-profile-title">{{ post.cooking_recipe_title }}</h2>
             <p class="blog-post-meta text-muted"> Post creaeted {{ post.created_on}} by 
                 <a class="link-accent-color" href="#"><strong>{{ post.cooking_recipe_author}}</strong></a>
             </p>
@@ -68,7 +65,7 @@
             </p>
         </div>
     </div>
-</div>
+
 
 {% if is_paginated %}
     <nav aria-label="Page navigation">
@@ -82,14 +79,15 @@
         </ul>
     </nav>
 {% endif %}
-    
-    
-    
+    {% else %}
+    {{ cooking_recipes_rest }}
+    {{return}}
 
-<!-- {% endif %} -->
+  
+
+
 {% endif %}
 
 {% endfor %}
-
-
+</div>
 {%endblock%}

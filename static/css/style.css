@@ -254,6 +254,30 @@ h1, h2, h3, h4, h5, h6 {
     margin: 1rem 0;
 }
 
+/* Profile page */
+.profile-posts-title {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.post-profile-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: var(--dark-color);
+    color: var(--light-color);
+}
+
+.post-profile-title:hover {
+    background: transparent;
+    color: var(--dark-color);
+}
+
+.row-profile-posts {
+    margin-left: .5rem;
+    margin-bottom: 1rem;
+}
+
 /* Footer */
 .social-links a {
     font-size: 2rem;

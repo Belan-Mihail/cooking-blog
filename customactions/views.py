@@ -42,6 +42,7 @@ class ProfilePageView(DetailView):
     def get_context_data(self,**kwargs):
         context = super(ProfilePageView, self).get_context_data(**kwargs)
         context['cooking_recipes_post'] = CookingRecipePost.objects.filter(status=1).order_by("-created_on")
+        context['cooking_recipes_rest'] = '<p>1</p>'
         return context
 
 

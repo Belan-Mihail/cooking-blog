@@ -58,9 +58,39 @@ class TestCookingRecipePostModel(TestCase):
         obj = self.post
         self.assertEqual(obj.get_absolute_url(), '/post-1/')
 
+
     def test_post_has_correctly_category_name(self):
         """
         Check category name correctly
         """
         obj = self.post
         self.assertEqual(obj.cat.name, 'soups')
+
+
+class TestCommentModel(TestCase):
+    """
+    Test for Comment Model
+    """
+    def setUp(self):
+        Category.objects.create(name='soups',),
+        User.objects.create(username='admin',),
+        self.post = CookingRecipePost.objects.create(
+            cooking_recipe_title="post 1",
+            cooking_recipe_author_id=1,
+            cooking_recipe_body = "content",
+            cat_id=1,
+            )
+        self.com = Comment.objects.create(
+            cooking_recipe_post=self.post,
+            name='John',
+            email='test@gmail.com',
+            body='test',
+        )
+
+
+    def test_comment_str(self):
+        """
+        Checks str for Comment Model
+        """
+        obj = self.com
+        self.assertEqual(str(obj), "Comment test by John")

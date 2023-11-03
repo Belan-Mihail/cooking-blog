@@ -106,7 +106,7 @@ class TestCommentModel(TestCase):
 
     def test_comment_has_correctly_name(self):
         """
-        Check title correctly
+        Check comment name correctly
         """
         obj = self.com
         self.assertEqual(obj.name, 'John')
@@ -142,3 +142,11 @@ class TestCategoryModel(TestCase):
         """
         obj = self.categor
         self.assertEqual(obj.get_absolute_url(), '/category/soups/')
+    
+
+    def test_category_has_correctly_name(self):
+        """
+        Check category name correctly
+        """
+        obj = self.categor
+        self.assertEqual(obj.name, 'soups')

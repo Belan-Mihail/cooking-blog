@@ -25,61 +25,61 @@
         <p><strong>User Region:</strong>{{user.profile.region}}</p>
         <p><strong>User Occupation:</strong>{{user.profile.occupation}}</p>
     </div>
-    <div class="">
+    <div class="btn-wrapper">
         <a class="btn mt-1 mb-1" href="{% url 'update_profile' %}">Update Profile</a>
     </div>
 </div>
+
     <h3 class="profile-posts-title">User Posts:</h3>
 
-   
-
-    {% for post in cooking_recipes_post %}
-    
-
-
-    {% if post.cooking_recipe_author == user %}
-    <div class="row row-profile-posts">
-        <div class="col-12 col-sm-6 col-md-2">
-            <a class="post-link" href="{% url 'cooking_recipe_post_detail' post.slug  %}">
-                <div class="image-container-home-page">
-                    {% if "placeholder" in post.cooking_recipe_image.url %}
-                    <img class="card-img-home-page"
-                        src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1696967358/project/lgzihdcgkyvtnpwmpugr.jpg">
-                    {% else %}
-                    <img class="card-img-home-page" src=" {{ post.cooking_recipe_image.url }}">
-                    {% endif %}
-                </div>
-            </a>
-        </div>
-        <div class="col-12 col-sm-6 col-md-10">
-            <h2 class="post-profile-title">{{ post.cooking_recipe_title }}</h2>
-            <p class="blog-post-meta text-muted"> Post creaeted {{ post.created_on}} by 
-                <a class="link-accent-color" href="#"><strong>{{ post.cooking_recipe_author}}</strong></a>
-            </p>
-        
-            <p>{{ post.excerpt }}</p>
-            <hr>
-        
-            <p class="card-text text-muted h6"> Post updated {{ post.updated_on}}
-                <i class="far fa-heart"></i>{{ post.number_of_likes }}
-            </p>
-        </div>
+{% for post in cooking_recipes_post %}
+<div class="row row-profile-posts">
+    <div class="col-12 col-sm-6 col-md-2">
+        <a class="post-link" href="{% url 'cooking_recipe_post_detail' post.slug  %}">
+            <div class="image-container-home-page">
+                {% if "placeholder" in post.cooking_recipe_image.url %}
+                <img class="card-img-home-page"
+                    src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1696967358/project/lgzihdcgkyvtnpwmpugr.jpg">
+                {% else %}
+                <img class="card-img-home-page" src=" {{ post.cooking_recipe_image.url }}">
+                {% endif %}
+            </div>
+        </a>
     </div>
-
+    <div class="col-12 col-sm-6 col-md-10">
+        <h2 class="post-profile-title">{{ post.cooking_recipe_title }}</h2>
+        <p class="blog-post-meta text-muted"> Post creaeted {{ post.created_on}} by 
+            <a class="link-accent-color" href="#"><strong>{{ post.cooking_recipe_author}}</strong></a>
+        </p>
+    
+        <p>{{ post.excerpt }}</p>
+        <hr>
+    
+        <p class="card-text text-muted h6"> Post updated {{ post.updated_on}}
+            <i class="far fa-heart"></i>{{ post.number_of_likes }}
+        </p>
+    </div>
+</div>
 
 {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-        {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-        {% endif %}
-        {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-        {% endif %}
-        </ul>
-    </nav>
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+    {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+    {% endif %}
+    {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+    {% endif %}
+    </ul>
+</nav>
 {% endif %}
-{% endif %}
+{% empty %}
+<div class="advice-message">
+    <p class="mt-4">Unfortunately you don't have any posts yet. But you can easily add one</p>
+    <div class="btn-wrapper mt-4">
+        <a class="btn mt-1 mb-1" href="{% url 'recipe_create' %}">Add Post</a>
+    </div>
+</div>
 
 {% endfor %}
 

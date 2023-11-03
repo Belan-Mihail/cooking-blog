@@ -16,12 +16,29 @@ class TestProfileModel(TestCase):
             occupation='developper',
             )
 
+
     def test_profile_str(self):
         """
         Checks str for Profile Model
         """
         obj = self.profile
         self.assertEqual(str(obj), "admin")
+    
+
+    def test_checking_object_profile(self):
+        """
+        Check test model belongs profile Model 
+        """
+        obj = self.profile
+        self.assertTrue(isinstance(obj, Profile))
+    
+
+    def test_profile_has_correctly_nickname(self):
+        """
+        Check profile nickname correctly
+        """
+        obj = self.profile
+        self.assertEqual(obj.nickname, 'administrator')
     
 
    

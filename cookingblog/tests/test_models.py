@@ -49,3 +49,8 @@ class TestCookingRecipePostModel(TestCase):
         """
         obj = self.post
         self.assertEqual(str(obj), "post 1")
+    
+
+    def test_post_absolute_url(self):
+        obj = self.post
+        self.assertEqual(obj.get_absolute_url(), '/post-1/')

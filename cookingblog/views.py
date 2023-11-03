@@ -178,6 +178,7 @@ def deletemycomment(request, id):
     return redirect(comment.cooking_recipe_post.get_absolute_url()) 
 
 
+
 class CookingRecipePostCategory(generic.ListView):
     model = CookingRecipePost
     template_name = 'index.html'

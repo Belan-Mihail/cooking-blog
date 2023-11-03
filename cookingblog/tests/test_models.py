@@ -20,7 +20,16 @@ class TestCookingRecipePostModel(TestCase):
 
 
     def test_checking_object(self):
-        
+        """
+        Check test model belongs CookingRecipePost Model class
+        """
         obj = self.post
         self.assertTrue(isinstance(obj, CookingRecipePost))
 
+
+    def test_post_has_slug(self):
+        """
+        Check slugs correctly
+        """
+        obj = self.post
+        self.assertEqual(obj.slug, slugify(obj.cooking_recipe_title))

@@ -39,6 +39,40 @@ class TestProfileModel(TestCase):
         """
         obj = self.profile
         self.assertEqual(obj.nickname, 'administrator')
+
+
+class TestContactModel(TestCase):
+    """
+    Test for Contact Model
+    """
+    def setUp(self):
+        self.contact = Contact.objects.create(
+            name='mike',
+            email='test@gmail.com',
+            message='message',
+            )
+
+
+    def test_contact_str(self):
+        """
+        Checks str for Contact Model
+        """
+        obj = self.contact
+        self.assertEqual(str(obj), "mike")
     
 
-   
+    def test_checking_object_contact(self):
+        """
+        Check test model belongs contact Model 
+        """
+        obj = self.contact
+        self.assertTrue(isinstance(obj, Contact))
+    
+
+    def test_contact_has_correctly_message(self):
+        """
+        Check contact message correctly
+        """
+        obj = self.contact
+        self.assertEqual(obj.message, 'message')
+    

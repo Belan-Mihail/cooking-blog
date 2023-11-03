@@ -9,7 +9,7 @@ class TestCookingRecipePostModel(TestCase):
     Test for CookingRecipePost Model
     """
     def setUp(self):
-        Category.objects.create(name='soups', slug='soups'),
+        Category.objects.create(name='soups',),
         User.objects.create(username='admin',),
         self.post = CookingRecipePost.objects.create(
             cooking_recipe_title="post 1",
@@ -41,3 +41,11 @@ class TestCookingRecipePostModel(TestCase):
         """
         obj = self.post
         self.assertEqual(obj.cooking_recipe_title, 'post 1')
+    
+
+    def test_post_str(self):
+        """
+        Checks str for CookingRecipePost Model
+        """
+        obj = self.post
+        self.assertEqual(str(obj), "post 1")

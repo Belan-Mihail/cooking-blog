@@ -21,7 +21,7 @@ class TestCookingRecipePostModel(TestCase):
 
     def test_checking_object(self):
         """
-        Check test model belongs CookingRecipePost Model class
+        Check test model belongs CookingRecipePost Model 
         """
         obj = self.post
         self.assertTrue(isinstance(obj, CookingRecipePost))
@@ -98,7 +98,7 @@ class TestCommentModel(TestCase):
 
     def test_checking_object_comment(self):
         """
-        Check test model belongs Comment Model class
+        Check test model belongs Comment Model 
         """
         obj = self.com
         self.assertTrue(isinstance(obj, Comment))
@@ -126,3 +126,19 @@ class TestCategoryModel(TestCase):
         """
         obj = self.categor
         self.assertEqual(str(obj), "soups")
+    
+
+    def test_checking_object_category(self):
+        """
+        Check test model belongs Comment Model 
+        """
+        obj = self.categor
+        self.assertTrue(isinstance(obj, Category))
+    
+
+    def test_get_absolute_url_category(self):
+        """
+        Checks get_absolute_url for Category Model
+        """
+        obj = self.categor
+        self.assertEqual(obj.get_absolute_url(), '/category/soups/')

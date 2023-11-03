@@ -110,3 +110,19 @@ class TestCommentModel(TestCase):
         """
         obj = self.com
         self.assertEqual(obj.name, 'John')
+
+
+class TestCategoryModel(TestCase):
+    """
+    Test for Category Model
+    """
+    def setUp(self):
+        self.categor = Category.objects.create(name='soups', slug='soups')
+    
+
+    def test_category_str(self):
+        """
+        Checks str for Category Model
+        """
+        obj = self.categor
+        self.assertEqual(str(obj), "soups")

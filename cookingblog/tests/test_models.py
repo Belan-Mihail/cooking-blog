@@ -94,3 +94,19 @@ class TestCommentModel(TestCase):
         """
         obj = self.com
         self.assertEqual(str(obj), "Comment test by John")
+    
+
+    def test_checking_object_comment(self):
+        """
+        Check test model belongs Comment Model class
+        """
+        obj = self.com
+        self.assertTrue(isinstance(obj, Comment))
+    
+
+    def test_comment_has_correctly_name(self):
+        """
+        Check title correctly
+        """
+        obj = self.com
+        self.assertEqual(obj.name, 'John')

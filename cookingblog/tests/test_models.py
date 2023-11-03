@@ -51,6 +51,16 @@ class TestCookingRecipePostModel(TestCase):
         self.assertEqual(str(obj), "post 1")
     
 
-    def test_post_absolute_url(self):
+    def test_get_absolute_url(self):
+        """
+        Checks get_absolute_url for CookingRecipePost Model
+        """
         obj = self.post
         self.assertEqual(obj.get_absolute_url(), '/post-1/')
+
+    def test_post_has_correctly_category_name(self):
+        """
+        Check category name correctly
+        """
+        obj = self.post
+        self.assertEqual(obj.cat.name, 'soups')

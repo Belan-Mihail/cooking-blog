@@ -1,6 +1,7 @@
 from django.test import TestCase
 from cookingblog.models import CookingRecipePost, Comment, Category
 from django.contrib.auth.models import User
+from django.template.defaultfilters import slugify
 
 
 class TestCookingRecipePostModel(TestCase):
@@ -8,19 +9,18 @@ class TestCookingRecipePostModel(TestCase):
     Test for CookingRecipePost Model
     """
     def setUp(self):
-        post = CookingRecipePost.objects.create(
+        Category.objects.create(name='soups', slug='soups'),
+        User.objects.create(username='admin',),
+        self.post = CookingRecipePost.objects.create(
             cooking_recipe_title="post 1",
-            cooking_recipe_author="admin",
+            cooking_recipe_author_id=1,
             cooking_recipe_body = "content",
+            cat_id=1,
             )
 
 
-    def test_1(self):
+    def test_checking_object(self):
         
-        data = self.post
-        self.assertTrue(isinstance(data, CookingRecipePost))
+        obj = self.post
+        self.assertTrue(isinstance(obj, CookingRecipePost))
 
-    # @classmethod
-    # def setUpTestData(cls):
-    #     #Set up non-modified objects used by all test methods
-    #     Author.objects.create(first_name='Big', last_name='Bob')

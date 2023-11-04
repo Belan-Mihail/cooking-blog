@@ -5,6 +5,14 @@ from cookingblog.forms import CommentForm, CookingRecipePostCreateForm, CookingR
 class TestCommentForm(TestCase):
     """Test CommentForm"""
 
-    def test_form_fields(self):
+    def test_commentform_fields(self):
         form = CommentForm()
         self.assertTrue(form.fields['body'])
+    
+
+    def test_commentform_with_valid_data(self):
+        """test Commentform with valid data"""
+        form = CommentForm(data={
+            'body': 'test comment',
+        })
+        self.assertTrue(form.is_valid())

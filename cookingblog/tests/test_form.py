@@ -35,12 +35,14 @@ class TestCookingRecipePostCreateForm(TestCase):
         self.assertIn("excerpt", form.fields)
         self.assertIn("cooking_recipe_body", form.fields)
 
+
     # def test_cookingrecipepostcreateform_with_valid_data(self):
     #     """test CookingRecipePostCreateForm with valid data"""
     #     form = CookingRecipePostCreateForm(data={
     #         'cooking_recipe_title': 'test title',
-    #         'cat': 'desserts',
-    #         'cooking_recipe_image': ,
+    #         'cat': 'soups',
+    #         'cooking_recipe_image': SimpleUploadedFile("face.jpg", b"file data"),
+    #         'excerpt': 'test',
     #         'cooking_recipe_body': 'content',
 
     #     })

@@ -16,3 +16,9 @@ class TestCommentForm(TestCase):
             'body': 'test comment',
         })
         self.assertTrue(form.is_valid())
+    
+
+    def test_commentform_with_invalid_data(self):
+        """test Commentform with invalid data"""
+        form = CommentForm(data={})
+        self.assertFalse(form.is_valid())

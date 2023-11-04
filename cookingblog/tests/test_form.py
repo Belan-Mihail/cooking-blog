@@ -59,3 +59,29 @@ class TestCookingRecipePostCreateForm(TestCase):
         """
         form = CookingRecipePostCreateForm()
         self.assertFalse(isinstance(form, CookingRecipePostUpdateForm))
+
+
+class CookingRecipePostUpdateForm(TestCase):
+    """Test CookingRecipePostUpdateForm"""
+
+    def test_cookingrecipepostupdateform_fields(self):
+        form = CookingRecipePostCreateForm()
+        self.assertIn("cooking_recipe_title", form.fields)
+        self.assertIn("cat", form.fields)
+        self.assertIn("cooking_recipe_image", form.fields)
+        self.assertIn("excerpt", form.fields)
+        self.assertIn("cooking_recipe_body", form.fields)
+    
+
+    def test_cookingrecipepostupdateform_with_invalid_data(self):
+        """test CookingRecipePostUpdateForm with invalid data"""
+        form = CookingRecipePostCreateForm(data={})
+        self.assertFalse(form.is_valid())
+    
+
+    def test_cookingrecipepostupdateform_is_not_cookingrecipepostcreateform(self):
+        """
+        test CookingRecipePostUpdateForm  is not CookingRecipePostCreateForm
+        """
+        form = CookingRecipePostUpdateForm()
+        self.assertFalse(isinstance(form, CookingRecipePostCreateForm))

@@ -67,51 +67,51 @@ class TestProfileForm(TestCase):
         self.assertFalse(form.is_valid())
     
 
-# class TestCookingRecipePostCreateForm(TestCase):
-#     """Test CookingRecipePostCreateForm"""
+class TestContactForm(TestCase):
+    """Test ContactForm"""
 
+    def test_contactform_fields(self):
+        """
+        test ContactForm fields
+        """
+
+        form = ContactForm()
+        self.assertIn("name", form.fields)
+        self.assertIn("email", form.fields)
+        self.assertIn("message", form.fields)
     
 
-# def test_commentform_fields(self):
-    #     form = CommentForm()
-    #     self.assertTrue(form.fields['body'])
+    def test_contactform_with_valid_data(self):
+        """test ContactForm with valid data"""
+        form = ContactForm(data={
+            'name': 'test name',
+            'email': 'test@mail.gcom',
+            'message': 'test message',
+        })
+        self.assertTrue(form.is_valid())
     
 
-    # def test_commentform_with_valid_data(self):
-    #     """test Commentform with valid data"""
-    #     form = CommentForm(data={
-    #         'body': 'test comment',
-    #     })
-    #     self.assertTrue(form.is_valid())
+    def test_contactform_with_invalid_data(self):
+        """test ContactForm with invalid data"""
+        form = ContactForm(data={})
+        self.assertFalse(form.is_valid())
     
 
-    # def test_commentform_with_invalid_data(self):
-    #     """test Commentform with invalid data"""
-    #     form = CommentForm(data={})
-    #     self.assertFalse(form.is_valid())
-
-
-# class CookingRecipePostUpdateForm(TestCase):
-#     """Test CookingRecipePostUpdateForm"""
-
-#     def test_cookingrecipepostupdateform_fields(self):
-#         form = CookingRecipePostCreateForm()
-#         self.assertIn("cooking_recipe_title", form.fields)
-#         self.assertIn("cat", form.fields)
-#         self.assertIn("cooking_recipe_image", form.fields)
-#         self.assertIn("excerpt", form.fields)
-#         self.assertIn("cooking_recipe_body", form.fields)
+    def test_contactform_name_more_then_max_length(self):
+        """test ContactForm with name length 121 symbol"""
+        form = ContactForm(data={
+            'name': 't'*121,
+            'email': 'test@mail.gcom',
+            'message': 'test message',
+        })
+        self.assertFalse(form.is_valid())
     
 
-#     def test_cookingrecipepostupdateform_with_invalid_data(self):
-#         """test CookingRecipePostUpdateForm with invalid data"""
-#         form = CookingRecipePostCreateForm(data={})
-#         self.assertFalse(form.is_valid())
-    
-
-#     def test_cookingrecipepostupdateform_is_not_cookingrecipepostcreateform(self):
-#         """
-#         test CookingRecipePostUpdateForm  is not CookingRecipePostCreateForm
-#         """
-#         form = CookingRecipePostUpdateForm()
-#         self.assertFalse(isinstance(form, CookingRecipePostCreateForm))
+    def test_contactform_message_more_then_max_length(self):
+        """test ContactForm with name length 121 symbol"""
+        form = ContactForm(data={
+            'name': 't',
+            'email': 'test@mail.gcom',
+            'message': 't'*1001,
+        })
+        self.assertFalse(form.is_valid())

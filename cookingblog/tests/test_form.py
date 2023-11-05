@@ -51,6 +51,22 @@ class TestCookingRecipePostCreateForm(TestCase):
         self.assertTrue(form.is_valid())
     
 
+    def test_cookingrecipepostcreateform_with_blank_recipe_title_data(self):
+        """
+        test CookingRecipePostCreateForm with blank_recipe_title_data
+        must return false
+        """
+        cat1 = Category.objects.create(name='soups',)
+        form = CookingRecipePostCreateForm(data={
+            'cat':cat1,
+            'cooking_recipe_image': SimpleUploadedFile("image.jpg", b"file data"),
+            'excerpt': 'test',
+            'cooking_recipe_body': 'content',
+
+        })
+        self.assertFalse(form.is_valid())
+    
+
     def test_cookingrecipepostcreateform_with_invalid_data(self):
         """test CookingRecipePostCreateForm with invalid data"""
         form = CookingRecipePostCreateForm(data={})

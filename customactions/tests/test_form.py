@@ -8,6 +8,9 @@ class TestProfileForm(TestCase):
     """Test ProfileForm"""
 
     def test_profileform_fields(self):
+        """
+        test ProfileForm fields
+        """
         form = ProfileForm()
         self.assertIn("nickname", form.fields)
         self.assertIn("avatar", form.fields)

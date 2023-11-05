@@ -31,18 +31,29 @@ class TestProfileForm(TestCase):
         self.assertTrue(form.is_valid())
     
 
-#     def test_cookingrecipepostcreateform_with_invalid_data(self):
-#         """test CookingRecipePostCreateForm with invalid data"""
-#         form = CookingRecipePostCreateForm(data={})
-#         self.assertFalse(form.is_valid())
-    
+    def test_profileform_with_invalid_data(self):
+        """test ProfileForm with invalid data"""
+        form = ProfileForm(data={
+            'nickname': 'test nickname',
+            'avatar': SimpleUploadedFile("image.jpg", b"file data"),
+            'bio': 'test',
+            # add invilid format of birth_date
+            'birth_date': '14-08-1988',
+            'region': 'test-region',
+            'occupation': 'test-occupation'
 
-#     def test_cookingrecipepostcreateform_is_not_cookingrecipepostupdateform(self):
-#         """
-#         test CookingRecipePostCreateForm is not CookingRecipePostUpdateForm
-#         """
-#         form = CookingRecipePostCreateForm()
-#         self.assertFalse(isinstance(form, CookingRecipePostUpdateForm))
+        })
+        self.assertFalse(form.is_valid())
+
+
+    def test_profileform_invalid_format_of_birth_date(self):
+        """test ProfileForm with invalid data"""
+        form = ProfileForm(data={
+            # add invilid format of birth_date
+            'birth_date': '1988-08-41',
+        })
+        self.assertFalse(form.is_valid())
+    
 
 # class TestCookingRecipePostCreateForm(TestCase):
 #     """Test CookingRecipePostCreateForm"""

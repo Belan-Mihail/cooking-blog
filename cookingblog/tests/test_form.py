@@ -75,7 +75,7 @@ class CookingRecipePostUpdateForm(TestCase):
         self.assertIn("cooking_recipe_image", form.fields)
         self.assertIn("excerpt", form.fields)
         self.assertIn("cooking_recipe_body", form.fields)
-    
+
 
     def test_cookingrecipepostupdateform_with_invalid_data(self):
         """test CookingRecipePostUpdateForm with invalid data"""

@@ -17,18 +17,18 @@ class TestProfileForm(TestCase):
         self.assertIn("occupation", form.fields)
 
 
-#     def test_cookingrecipepostcreateform_with_valid_data(self):
-#         """test CookingRecipePostCreateForm with valid data"""
-#         cat1 = Category.objects.create(name='soups',)
-#         form = CookingRecipePostCreateForm(data={
-#             'cooking_recipe_title': 'test title',
-#             'cat':cat1,
-#             'cooking_recipe_image': SimpleUploadedFile("image.jpg", b"file data"),
-#             'excerpt': 'test',
-#             'cooking_recipe_body': 'content',
+    def test_profileform_with_valid_data(self):
+        """test ProfileForm with valid data"""
+        form = ProfileForm(data={
+            'nickname': 'test nickname',
+            'avatar': SimpleUploadedFile("image.jpg", b"file data"),
+            'bio': 'test',
+            'birth_date': '1988-08-14',
+            'region': 'test-region',
+            'occupation': 'test-occupation'
 
-#         })
-#         self.assertTrue(form.is_valid())
+        })
+        self.assertTrue(form.is_valid())
     
 
 #     def test_cookingrecipepostcreateform_with_invalid_data(self):

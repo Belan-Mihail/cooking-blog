@@ -1,6 +1,7 @@
 from django.test import TestCase
 from cookingblog.forms import CommentForm, CookingRecipePostCreateForm, CookingRecipePostUpdateForm
 from django.core.files.uploadedfile import SimpleUploadedFile
+from cookingblog.models import Category
 
 class TestCommentForm(TestCase):
     """Test CommentForm"""
@@ -36,17 +37,18 @@ class TestCookingRecipePostCreateForm(TestCase):
         self.assertIn("cooking_recipe_body", form.fields)
 
 
-    # def test_cookingrecipepostcreateform_with_valid_data(self):
-    #     """test CookingRecipePostCreateForm with valid data"""
-    #     form = CookingRecipePostCreateForm(data={
-    #         'cooking_recipe_title': 'test title',
-    #         'cat': 'soups',
-    #         'cooking_recipe_image': SimpleUploadedFile("face.jpg", b"file data"),
-    #         'excerpt': 'test',
-    #         'cooking_recipe_body': 'content',
+    def test_cookingrecipepostcreateform_with_valid_data(self):
+        """test CookingRecipePostCreateForm with valid data"""
+        cat1 = Category.objects.create(name='soups',)
+        form = CookingRecipePostCreateForm(data={
+            'cooking_recipe_title': 'test title',
+            'cat':cat1,
+            'cooking_recipe_image': SimpleUploadedFile("image.jpg", b"file data"),
+            'excerpt': 'test',
+            'cooking_recipe_body': 'content',
 
-    #     })
-    #     self.assertTrue(form.is_valid())
+        })
+        self.assertTrue(form.is_valid())
     
 
     def test_cookingrecipepostcreateform_with_invalid_data(self):

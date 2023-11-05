@@ -34,6 +34,15 @@ class TestProfileForm(TestCase):
         self.assertTrue(form.is_valid())
     
 
+    def test_profileform_with_blank_fields_data(self):
+        """
+        test ProfileForm with blank data
+        must return True since it is allowed by the model
+        """
+        form = ProfileForm(data={})
+        self.assertTrue(form.is_valid())
+
+
     def test_profileform_with_invalid_data(self):
         """test ProfileForm with invalid data"""
         form = ProfileForm(data={

@@ -149,6 +149,14 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The header and footer sections are standard for the entire site.
 
+## Update Profile Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for updating the profile.
+
+- The header and footer sections are standard for the entire site.
+
 ### Wireframes
 
 

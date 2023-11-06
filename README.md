@@ -374,6 +374,8 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - For this Django app I ve used PostgreSQL relational database management system.
 
+[Scheme](add)
+
 ### Models Used
 
 #### User
@@ -381,6 +383,52 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 - standard Django user model which contains username, password and email fields
 
 #### CookingRecipePost
+
+- The model was created to provide the user with the ability to create, view, edit and delete posts on the site. this model contains the following fields
+
+- cooking_recipe_title
+   - type: CharField
+   - validation: max_length=200, unique=True
+
+- slug
+   - type: SlugField
+   - validation: max_length=200, unique=True 
+
+- cooking_recipe_author
+    - type: ForeignKey
+    - validation: User, on_delete=models.CASCADE,
+
+- cooking_recipe_image
+   - type: CloudinaryField
+   - validation: 'image', default='placeholder' 
+
+- excerpt
+   - type: TextField
+   - validation: blank=True 
+
+- cooking_recipe_body
+   - type: TextField
+   - validation: -
+
+- updated_on
+   - type: DateTimeField
+   - validation: auto_now=True 
+
+- created_on
+   - type: DateTimeField
+   - validation: auto_now_add=True 
+
+- slug
+   - type: SlugField
+   - validation: max_length=200, unique=True 
+
+- likes
+   - type: ManyToManyField
+   - validation: User, blank=True
+
+- cat
+   - type: ForeignKey
+   - validation: 'Category', on_delete=models.PROTECT
 
 #### Comment
 
@@ -392,48 +440,6 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 #### Contact
 
-
-<!-- class CookingRecipePost(models.Model):
-    """
-    Model for posts
-    """
-    cooking_recipe_title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
-    cooking_recipe_author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="cooking_recipe_blog_posts"
-    )
-    cooking_recipe_image = CloudinaryField('image', default='placeholder')
-    excerpt = models.TextField(blank=True)
-    cooking_recipe_body = models.TextField()
-    updated_on = models.DateTimeField(auto_now=True)
-    created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(
-        User, related_name='cookingrecipepost_like', blank=True)
-    cat = models.ForeignKey('Category', on_delete=models.PROTECT, related_name="categories")
-    
-
-    class Meta:
-        ordering = ["-created_on"]
-        verbose_name = "recipe"
-        verbose_name_plural = "recipes"
-
-    def __str__(self):
-        return self.cooking_recipe_title
-    
-
-    def get_absolute_url(self):
-        return reverse('cooking_recipe_post_detail', kwargs={'slug': self.slug})
-
-
-    def save(self, *args, **kwargs):  
-        if not self.slug:
-            self.slug = slugify(self.cooking_recipe_title)
-        return super().save(*args, **kwargs)
-
-
-    def number_of_likes(self):
-        return self.likes.count()
 
 
 class Comment(models.Model):

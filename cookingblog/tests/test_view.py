@@ -72,17 +72,17 @@ class TestView(TestCase):
         self.assertTemplateUsed(response, 'recipe_create.html', 'base.html')
 
 
-    # def test_update_page_used_template(self):
-    #     """
-    #     This tests display of the post detail page
-    #     # """
+    def test_update_page_used_template(self):
+        """
+        This tests display of the post detail page
+        """
         
-    #     login = self.client.login(username='admin', password='abc564!')
-    #     post = self.post
-    #     response = self.client.get(reverse('recipe_update', kwargs={'slug': self.post.slug}))
+        login = self.client.login(username='admin', password='abc564!')
+        post = self.post
+        response = self.client.get(reverse('recipe_update', kwargs={'slug': self.post.slug}))
         
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertTemplateUsed(response, 'recipe_update.html')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'recipe_update.html')
         
     
 

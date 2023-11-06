@@ -101,6 +101,10 @@ For plain text, the Mulish font is used, connected using google fonts. For headi
 
 ### Structure
 
+The site structure is designed to ensure maximum ease of use. Also, much attention is paid to the stylistic beauty of the site. All pages of the site have the same header with a navigation menu and a footer containing links to social networks
+
+## Home Page
+
 ### Wireframes
 
 

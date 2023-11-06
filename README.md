@@ -111,15 +111,11 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - Additional rights section contains a list of post categories, as well as a block with quotes about food.
 
-- The header and footer sections are standard for the entire site.
-
 ## Post Detail Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site
 
 - The main section displays the full text of the post with a cover image on the left and a description on the right. Below is a block with the date the post was created and the author. Below is a block with comments and a comment form for authorized users.
-
-- The header and footer sections are standard for the entire site.
 
 ## Update Post Detail Page
 
@@ -127,15 +123,11 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The main section of the page displays a form with various fields for updating the post.
 
-- The header and footer sections are standard for the entire site.
-
 ## Delete Post Detail Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page is a warning about deleting a post and buttons for deleting and canceling
-
-- The header and footer sections are standard for the entire site.
 
 ## Categories Page
 
@@ -147,7 +139,6 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The main page is conditionally divided into two parts. The first part contains the user's avatar and brief information about him. The second part contains a list of the user’s posts with a picture and a brief description or, if the user has no posts display a message about the presence and a button to add a post.
 
-- The header and footer sections are standard for the entire site.
 
 ## Update Profile Page
 
@@ -155,7 +146,14 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The main section of the page displays a form with various fields for updating the profile.
 
-- The header and footer sections are standard for the entire site.
+
+## Create Profile Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for creating profile.
+
+
 
 ### Wireframes
 

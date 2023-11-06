@@ -103,7 +103,7 @@ For plain text, the Mulish font is used, connected using google fonts. For headi
 
 The site structure is designed to ensure maximum ease of use. Also, much attention is paid to the stylistic beauty of the site. All pages of the site have the same header with a navigation menu and a footer containing links to social networks
 
-## Home Page
+#### Home Page
 
 - The main page consists of three sections: navigation menu, main section, right additional section and footer.
 
@@ -111,85 +111,83 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - Additional rights section contains a list of post categories, as well as a block with quotes about food.
 
-## Create Post Page
+#### Create Post Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page displays a form with various fields for updating the post.
 
-## Post Detail Page
+#### Post Detail Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site
 
 - The main section displays the full text of the post with a cover image on the left and a description on the right. Below is a block with the date the post was created and the author. Below is a block with comments and a comment form for authorized users.
 
-## Update Post Detail Page
+#### Update Post Detail Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page displays a form with various fields for updating the post.
 
-## Delete Post Detail Page
+#### Delete Post Detail Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page is a warning about deleting a post and buttons for deleting and canceling
 
-## Categories Page
+#### Categories Page
 
 - This page uses the home page template, but only displays posts from a specific category
 
-## Profile Page
+#### Profile Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main page is conditionally divided into two parts. The first part contains the user's avatar and brief information about him. The second part contains a list of the user’s posts with a picture and a brief description or, if the user has no posts display a message about the presence and a button to add a post.
 
-
-## Update Profile Page
+#### Update Profile Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page displays a form with various fields for updating the profile.
 
-## Create Profile Page
+#### Create Profile Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page displays a form with various fields for creating post.
 
-## Contact Page
+#### Contact Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page displays a form with various fields for creating message.
 
-## Thanks Page
+#### Thanks Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page is notification of sending a message and buttons to return to the main page and to write a new message
 
-## SignUp Page
+#### SignUp Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page displays a form with various fields for registrate on the site.
 
-## LogIn Page
+#### LogIn Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page displays a form with various fields for log in on the site.
 
-## LogOut Page
+#### LogOut Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page is notification of leaving the site and buttons for confirmation and cancellation
 
 ### Wireframes
-
 
 <details><summary>Home Page Wireframes</summary>
 
@@ -370,3 +368,131 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 <img src="docs/wireframe-images/logout-page-iphone.png">
 </details>
 </details>
+
+
+## Database
+
+- For this Django app I ve used PostgreSQL relational database management system.
+
+### Models Used
+
+#### User
+
+- standard Django user model which contains username, password and email fields
+
+#### CookingRecipePost
+
+#### Comment
+
+
+#### Category
+
+
+#### Profile
+
+#### Contact
+
+
+<!-- class CookingRecipePost(models.Model):
+    """
+    Model for posts
+    """
+    cooking_recipe_title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True)
+    cooking_recipe_author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="cooking_recipe_blog_posts"
+    )
+    cooking_recipe_image = CloudinaryField('image', default='placeholder')
+    excerpt = models.TextField(blank=True)
+    cooking_recipe_body = models.TextField()
+    updated_on = models.DateTimeField(auto_now=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    status = models.IntegerField(choices=STATUS, default=0)
+    likes = models.ManyToManyField(
+        User, related_name='cookingrecipepost_like', blank=True)
+    cat = models.ForeignKey('Category', on_delete=models.PROTECT, related_name="categories")
+    
+
+    class Meta:
+        ordering = ["-created_on"]
+        verbose_name = "recipe"
+        verbose_name_plural = "recipes"
+
+    def __str__(self):
+        return self.cooking_recipe_title
+    
+
+    def get_absolute_url(self):
+        return reverse('cooking_recipe_post_detail', kwargs={'slug': self.slug})
+
+
+    def save(self, *args, **kwargs):  
+        if not self.slug:
+            self.slug = slugify(self.cooking_recipe_title)
+        return super().save(*args, **kwargs)
+
+
+    def number_of_likes(self):
+        return self.likes.count()
+
+
+class Comment(models.Model):
+    """
+    Model for comments
+    """
+    cooking_recipe_post = models.ForeignKey(CookingRecipePost, on_delete=models.CASCADE, related_name="comments")
+    name = models.CharField(max_length=80)
+    email = models.EmailField()
+    body = models.TextField(max_length=500)
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ["created_on"]
+        verbose_name = "comment"
+        verbose_name_plural = "comments"
+
+    def __str__(self):
+        return f"Comment {self.body} by {self.name}"
+
+
+class Category(models.Model):
+    """
+    Model for Category
+    """
+    name = models.CharField(max_length=100, db_index=True)
+    slug = models.SlugField(max_length=255, unique=True, db_index=True)
+
+    def __str__(self):
+        return self.name -->
+
+
+
+<!-- class Profile(models.Model):
+    """
+    Profile Model
+    """
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    nickname = models.CharField(blank=True, max_length=50)
+    avatar = CloudinaryField('image', default='placeholder')
+    bio = models.TextField(max_length=500, blank=True)
+    birth_date = models.DateField(null=True, blank=True)
+    region = models.CharField(blank=True, max_length=50)
+    occupation = models.CharField(blank=True, max_length=50)
+
+
+    def __str__(self):
+        return self.user.username
+
+
+class Contact(models.Model):
+    """
+    Model for feedback messages 
+    """
+    name = models.CharField(max_length=120)
+    email = models.EmailField()
+    message = models.TextField(max_length=1000)
+
+
+    def __str__(self):
+        return self.name -->

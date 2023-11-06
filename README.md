@@ -501,16 +501,16 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 #### Contact
 
+- The model was created to allow user interaction with comments on posts. this model contains the following fields
 
+- name
+   - type: CharField
+   - validation: max_length=120 
 
-class Contact(models.Model):
-    """
-    Model for feedback messages 
-    """
-    name = models.CharField(max_length=120)
-    email = models.EmailField()
-    message = models.TextField(max_length=1000)
+- email
+    - type: EmailField
+    - validation: -
 
-
-    def __str__(self):
-        return self.name -->
+- message
+   - type: TextField
+   - validation: max_length=1000 

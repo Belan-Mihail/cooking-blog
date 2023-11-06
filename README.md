@@ -469,27 +469,38 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 #### Profile
 
+- The model was created to allow the user to create a profile with personal information and an avatar, which improves the quality of the user’s interaction with the site. this model contains the following fields
+
+- user
+   - type: OneToOneField
+   - validation: User, on_delete=models.CASCADE
+
+- nickname
+   - type: CharField
+   - validation: blank=True, max_length=50
+
+- avatars
+   - type: CloudinaryField
+   - validation: 'image', default='placeholder'
+
+- bio
+   - type: TextField
+   - validation: max_length=500, blank=True
+
+- birth_date
+   - type: DateField
+   - validation: null=True, blank=True
+
+- region
+   - type: CharField
+   - validation: blank=True, max_length=50
+
+- occupation
+   - type: CharField
+   - validation: blank=True, max_length=50
+
 #### Contact
 
-
-
-
-
-<!-- class Profile(models.Model):
-    """
-    Profile Model
-    """
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    nickname = models.CharField(blank=True, max_length=50)
-    avatar = CloudinaryField('image', default='placeholder')
-    bio = models.TextField(max_length=500, blank=True)
-    birth_date = models.DateField(null=True, blank=True)
-    region = models.CharField(blank=True, max_length=50)
-    occupation = models.CharField(blank=True, max_length=50)
-
-
-    def __str__(self):
-        return self.user.username
 
 
 class Contact(models.Model):

@@ -111,6 +111,12 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - Additional rights section contains a list of post categories, as well as a block with quotes about food.
 
+## Create Post Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for updating the post.
+
 ## Post Detail Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site

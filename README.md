@@ -170,6 +170,24 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The main section of the page is notification of sending a message and buttons to return to the main page and to write a new message
 
+## SignUp Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for registrate on the site.
+
+## LogIn Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for log in on the site.
+
+## LogOut Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page is notification of leaving the site and buttons for confirmation and cancellation
+
 ### Wireframes
 
 

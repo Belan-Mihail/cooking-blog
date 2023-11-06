@@ -129,6 +129,26 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The header and footer sections are standard for the entire site.
 
+## Delete Post Detail Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page is a warning about deleting a post and buttons for deleting and canceling
+
+- The header and footer sections are standard for the entire site.
+
+## Categories Page
+
+- This page uses the home page template, but only displays posts from a specific category
+
+## Profile Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main page is conditionally divided into two parts. The first part contains the user's avatar and brief information about him. The second part contains a list of the user’s posts with a picture and a brief description or, if the user has no posts display a message about the presence and a button to add a post.
+
+- The header and footer sections are standard for the entire site.
+
 ### Wireframes
 
 

@@ -113,6 +113,21 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The header and footer sections are standard for the entire site.
 
+## Post Detail Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site
+
+- The main section displays the full text of the post with a cover image on the left and a description on the right. Below is a block with the date the post was created and the author. Below is a block with comments and a comment form for authorized users.
+
+- The header and footer sections are standard for the entire site.
+
+## Update Post Detail Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for updating the post.
+
+- The header and footer sections are standard for the entire site.
 
 ### Wireframes
 

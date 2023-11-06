@@ -374,7 +374,9 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - For this Django app I ve used PostgreSQL relational database management system.
 
-[Scheme](add)
+<details><summary>Database model</summary>
+<img src="docs/db-diagram.jpg">
+</details>
 
 ### Models Used
 
@@ -416,6 +418,10 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - created_on
    - type: DateTimeField
+   - validation: auto_now_add=True 
+
+- status
+   - type: IntegerField
    - validation: auto_now_add=True 
 
 - likes

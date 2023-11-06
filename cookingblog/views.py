@@ -15,6 +15,7 @@ from django.views.generic import (
 )
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import UserPassesTestMixin
+from django.contrib import messages
 
 
 
@@ -143,7 +144,7 @@ class CookingRecipePostUpdateView(SuccessMessageMixin,
 
     def test_func(self):
         if self.request.user != self.get_object().cooking_recipe_author:
-                messages.info(request, 'Editing an article is available only to the author')
+                messages.info(self.request, 'Editing an article is available only to the author')
                 return False
         return True
 

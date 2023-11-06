@@ -19,6 +19,7 @@ class TestView(TestCase):
             cooking_recipe_author_id=1,
             cooking_recipe_body = "content",
             cat_id=1,
+            status=1,
             
             )
         self.com = Comment.objects.create(
@@ -47,16 +48,16 @@ class TestView(TestCase):
 
 
 
-    # def test_detail_page_used_template(self):
-    #     """
-    #     This tests display of the post detail page
-    #     """
+    def test_detail_page_used_template(self):
+        """
+        This tests display of the post detail page
+        """
         
-    #     post = self.post
-    #     response = self.client.get(reverse('cooking_recipe_post_detail', kwargs={'slug': self.post.slug}))
+        post = self.post
+        response = self.client.get(reverse('cooking_recipe_post_detail', kwargs={'slug': self.post.slug}))
         
-    #     self.assertEqual(response.status_code, 200)
-    #     self.assertTemplateUsed(response, 'post_detail.html')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'post_detail.html')
         
     
 
@@ -69,7 +70,16 @@ class TestView(TestCase):
         self.assertTemplateUsed(response, 'recipe_create.html', 'base.html')
 
 
-
+    # def test_update_page_used_template(self):
+        # """
+        # This tests display of the post detail page
+        # # """
+        
+        # post = self.post
+        # response = self.client.get(reverse('recipe_update', kwargs={'slug': self.post.slug}))
+        
+        # self.assertEqual(response.status_code, 200)
+        # self.assertTemplateUsed(response, 'recipe_update.html')
         
     
 

@@ -105,6 +105,15 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 ## Home Page
 
+- The main page consists of three sections: navigation menu, main section, right additional section and footer.
+
+- The main section displays posts published by site users (main picture, short description of the recipe, date of creation, author and number of likes)
+
+- Additional rights section contains a list of post categories, as well as a block with quotes about food.
+
+- The header and footer sections are standard for the entire site.
+
+
 ### Wireframes
 
 

@@ -418,10 +418,6 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
    - type: DateTimeField
    - validation: auto_now_add=True 
 
-- slug
-   - type: SlugField
-   - validation: max_length=200, unique=True 
-
 - likes
    - type: ManyToManyField
    - validation: User, blank=True
@@ -431,6 +427,32 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
    - validation: 'Category', on_delete=models.PROTECT
 
 #### Comment
+
+- The model was created to allow user interaction with comments on posts. this model contains the following fields
+
+- cooking_recipe_post
+   - type: ForeignKey
+   - validation: CookingRecipePost, on_delete=models.CASCADE,
+
+- name
+   - type: CharField
+   - validation: max_length=80 
+
+- email
+    - type: EmailField
+    - validation: -
+
+- body
+   - type: TextField
+   - validation: max_length=500 
+
+- created_on
+   - type: DateTimeField
+   - validation: auto_now_add=True 
+
+- approved
+   - type: BooleanField
+   - validation: default=False
 
 
 #### Category
@@ -446,12 +468,7 @@ class Comment(models.Model):
     """
     Model for comments
     """
-    cooking_recipe_post = models.ForeignKey(CookingRecipePost, on_delete=models.CASCADE, related_name="comments")
-    name = models.CharField(max_length=80)
-    email = models.EmailField()
-    body = models.TextField(max_length=500)
-    created_on = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
+    
 
     class Meta:
         ordering = ["created_on"]

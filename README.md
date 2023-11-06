@@ -152,14 +152,23 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The main section of the page displays a form with various fields for updating the profile.
 
-
 ## Create Profile Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
-- The main section of the page displays a form with various fields for creating profile.
+- The main section of the page displays a form with various fields for creating post.
 
+## Contact Page
 
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for creating message.
+
+## Thanks Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page is notification of sending a message and buttons to return to the main page and to write a new message
 
 ### Wireframes
 

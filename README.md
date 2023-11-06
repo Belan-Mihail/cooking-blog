@@ -457,37 +457,21 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 #### Category
 
+- The model was created to provide the ability to define categories of posts for their subsequent filtering. this model contains the following fields
+
+- name
+   - type: CharField
+   - validation: max_length=100, db_index=True
+
+- slug
+   - type: SlugField
+   - validation: max_length=255, unique=True, db_index=True
 
 #### Profile
 
 #### Contact
 
 
-
-class Comment(models.Model):
-    """
-    Model for comments
-    """
-    
-
-    class Meta:
-        ordering = ["created_on"]
-        verbose_name = "comment"
-        verbose_name_plural = "comments"
-
-    def __str__(self):
-        return f"Comment {self.body} by {self.name}"
-
-
-class Category(models.Model):
-    """
-    Model for Category
-    """
-    name = models.CharField(max_length=100, db_index=True)
-    slug = models.SlugField(max_length=255, unique=True, db_index=True)
-
-    def __str__(self):
-        return self.name -->
 
 
 

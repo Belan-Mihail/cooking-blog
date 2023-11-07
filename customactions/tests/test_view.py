@@ -49,3 +49,14 @@ class TestView(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response, 'customactions/update_profile.html' in (t.name for t in response.templates))
         self.assertTrue(response, 'base.html' in (t.name for t in response.templates))
+    
+
+    def test_contact_used_template(self):
+        """
+        This tests display of the create_post page
+        """
+
+        response = self.client.get(reverse('contact'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response, 'customactions/contact.html' in (t.name for t in response.templates))
+        self.assertTrue(response, 'base.html' in (t.name for t in response.templates))

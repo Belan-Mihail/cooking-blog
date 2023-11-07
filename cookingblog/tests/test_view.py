@@ -27,6 +27,7 @@ class TestView(TestCase):
             email='test@gmail.com',
             body='test',
         )
+        
     
 
     def test_home_page_used_template(self):
@@ -102,6 +103,16 @@ class TestView(TestCase):
         response = self.client.get(reverse('selectedcategory', args=[self.post.cat.slug]))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html', 'base.html')
+    
+
+    def test_comment_delete_used_template(self):
+        """
+        This tests display of the post detail page
+        """
+
+        response = self.client.get(reverse('commentdelete', args=[self.post.id]))
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('cooking_recipe_post_detail', kwargs={'slug': self.post.slug}))
     
 
     

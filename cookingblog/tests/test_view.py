@@ -2,8 +2,7 @@ from django.test import TestCase, Client
 from cookingblog.models import CookingRecipePost, Comment, Category
 from django.contrib.auth.models import User
 from django.urls import reverse
-from django.test import RequestFactory
-from cookingblog.views import CookingRecipesPostList, CookingRecipePostDetail
+
 
 
 class TestView(TestCase):
@@ -115,7 +114,7 @@ class TestView(TestCase):
         self.assertRedirects(response, reverse('cooking_recipe_post_detail', kwargs={'slug': self.post.slug}))
     
 
-    def test_likes_used_template(self):
+    def test_postlike_status_and_redirect(self):
         """
         This tests display of the post detail page
         """

@@ -36,4 +36,16 @@ class TestView(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response, 'customactions/profile_page.html' in (t.name for t in response.templates))
         self.assertTrue(response, 'base.html' in (t.name for t in response.templates))
-        
+    
+
+    def test_update_profile_used_template(self):
+        """
+        This tests display of the create_post page
+        """
+        login = self.client.login(username='admin', password='abc564!')
+        self.assertTrue(login)
+
+        response = self.client.get(reverse('update_profile'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response, 'customactions/update_profile.html' in (t.name for t in response.templates))
+        self.assertTrue(response, 'base.html' in (t.name for t in response.templates))

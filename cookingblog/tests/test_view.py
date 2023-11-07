@@ -82,6 +82,18 @@ class TestView(TestCase):
         self.assertTemplateUsed(response, 'recipe_update.html', 'base.html')
     
 
+    def test_delete_page_used_template(self):
+        """
+        This tests display of the post detail page
+        """
+        login = self.client.login(username='admin', password='abc564!')
+        self.assertTrue(login)
+        post = self.post
+        response = self.client.get(reverse('recipe_delete', kwargs={'slug': self.post.slug}))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'recipe_delete.html', 'base.html')
+
+    
 
     
 

@@ -26,4 +26,14 @@ class TestView(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response, 'customactions/create_profile.html' in (t.name for t in response.templates))
         self.assertTrue(response, 'base.html' in (t.name for t in response.templates))
+    
+
+    def test_view_profile_used_template(self):
+        """
+        This tests display of the create_post page
+        """
+        response = self.client.get(reverse('profile_page'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response, 'customactions/profile_page.html' in (t.name for t in response.templates))
+        self.assertTrue(response, 'base.html' in (t.name for t in response.templates))
         

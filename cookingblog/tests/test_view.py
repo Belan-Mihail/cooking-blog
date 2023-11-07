@@ -12,7 +12,7 @@ class TestView(TestCase):
     """
     def setUp(self):
         Category.objects.create(name='soups', slug='soups'),
-        User.objects.create(username='admin',),
+        self.user = User.objects.create_user(username='admin', password='abc564!')
         self.post = CookingRecipePost.objects.create(
             cooking_recipe_title="post 1",
             slug='post_1',
@@ -20,8 +20,6 @@ class TestView(TestCase):
             cooking_recipe_body = "content",
             cat_id=1,
             status=1,
-            
-            
             )
         self.com = Comment.objects.create(
             cooking_recipe_post=self.post,
@@ -57,7 +55,6 @@ class TestView(TestCase):
         post = self.post
         
         response = self.client.get(reverse('cooking_recipe_post_detail', kwargs={'slug': self.post.slug}))
-        
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'post_detail.html')
         
@@ -67,6 +64,7 @@ class TestView(TestCase):
         """
         This tests display of the create_post page
         """
+        login = self.client.login(username='admin', password='abc564!')
         response = self.client.get(reverse('recipe_create'))
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'recipe_create.html', 'base.html')
@@ -76,13 +74,22 @@ class TestView(TestCase):
         """
         This tests display of the post detail page
         """
-        
         login = self.client.login(username='admin', password='abc564!')
+        self.assertTrue(login)
         post = self.post
         response = self.client.get(reverse('recipe_update', kwargs={'slug': self.post.slug}))
-        
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'recipe_update.html')
+        self.assertTemplateUsed(response, 'recipe_update.html', 'base.html')
+    
+
+
+    
+
+    
+
+
+
+
         
     
 

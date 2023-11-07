@@ -164,7 +164,7 @@ class CookingRecipePostDeleteView(SuccessMessageMixin,
 
     def test_func(self):
         if self.request.user != self.get_object().cooking_recipe_author:
-                messages.info(request, 'Deleting an article is available only to the author')
+                messages.info(self.request, 'Deleting an article is available only to the author')
                 return False
         return True
 

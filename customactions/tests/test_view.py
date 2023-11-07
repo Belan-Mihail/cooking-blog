@@ -9,7 +9,7 @@ class TestView(TestCase):
     Class for test views
     """
     def setUp(self):
-        User.objects.create(username='admin', password='abc564!'),
+        self.user = User.objects.create_user(username='admin', password='abc564!')
         self.profile = Profile.objects.create(
             nickname="administrator",
             bio='bio',
@@ -17,3 +17,13 @@ class TestView(TestCase):
             region = "Germany",
             occupation='developper',
     )
+
+    def test_create_profile_used_template(self):
+        """
+        This tests display of the create_post page
+        """
+        response = self.client.get(reverse('create_profile'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(response, 'customactions/create_profile.html' in (t.name for t in response.templates))
+        self.assertTrue(response, 'base.html' in (t.name for t in response.templates))
+        

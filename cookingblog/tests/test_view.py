@@ -115,6 +115,18 @@ class TestView(TestCase):
         self.assertRedirects(response, reverse('cooking_recipe_post_detail', kwargs={'slug': self.post.slug}))
     
 
+    def test_likes_used_template(self):
+        """
+        This tests display of the post detail page
+        """
+        login = self.client.login(username='admin', password='abc564!')
+        self.assertTrue(login)
+        post = self.post
+        response = self.client.post(reverse('post_like', kwargs={'slug': self.post.slug}))
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, reverse('cooking_recipe_post_detail', args=[self.post.slug]))
+    
+
     
 
 

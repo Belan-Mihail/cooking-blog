@@ -94,7 +94,14 @@ class TestView(TestCase):
         self.assertTemplateUsed(response, 'recipe_delete.html', 'base.html')
 
     
-
+    def test_selectedcategory_used_template(self):
+        """
+        This tests display of the post detail page
+        """
+        post = self.post
+        response = self.client.get(reverse('selectedcategory', args=[self.post.cat.slug]))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'index.html', 'base.html')
     
 
     

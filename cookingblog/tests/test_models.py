@@ -9,6 +9,7 @@ class TestCookingRecipePostModel(TestCase):
     Test for CookingRecipePost Model
     """
     def setUp(self):
+        """ Create testing post """
         Category.objects.create(name='soups',),
         User.objects.create(username='admin',),
         self.post = CookingRecipePost.objects.create(
@@ -16,7 +17,7 @@ class TestCookingRecipePostModel(TestCase):
             cooking_recipe_author_id=1,
             cooking_recipe_body = "content",
             cat_id=1,
-            )
+        )
 
 
     def test_checking_object(self):
@@ -72,6 +73,7 @@ class TestCommentModel(TestCase):
     Test for Comment Model
     """
     def setUp(self):
+        """ Create testing post and comment"""
         Category.objects.create(name='soups',),
         User.objects.create(username='admin',),
         self.post = CookingRecipePost.objects.create(
@@ -79,7 +81,7 @@ class TestCommentModel(TestCase):
             cooking_recipe_author_id=1,
             cooking_recipe_body = "content",
             cat_id=1,
-            )
+        )
         self.com = Comment.objects.create(
             cooking_recipe_post=self.post,
             name='John',
@@ -117,6 +119,7 @@ class TestCategoryModel(TestCase):
     Test for Category Model
     """
     def setUp(self):
+        """ Create testing category """
         self.categor = Category.objects.create(name='soups', slug='soups')
     
 
@@ -130,7 +133,7 @@ class TestCategoryModel(TestCase):
 
     def test_checking_object_category(self):
         """
-        Check test model belongs Comment Model 
+        Check test model belongs Category Model 
         """
         obj = self.categor
         self.assertTrue(isinstance(obj, Category))

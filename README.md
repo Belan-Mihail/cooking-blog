@@ -758,15 +758,29 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ![Profile Page](docs/features/profile/profile-2.jpg)
 ![Profile Page](docs/features/profile/profile-3.jpg)
 
-<!-- #### Home Page
 
 
-
-#### Profile Page
+#### Update Profile Page (Features)
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
-- The main page is conditionally divided into two parts. The first part contains the user's avatar and brief information about him. The second part contains a list of the user’s posts with a picture and a brief description or, if the user has no posts display a message about the presence and a button to add a post.
+- The main section of the page displays a form with various fields for updating the profile.
+
+- Due to the fact that the link to the page button is located on the profile page, access to the page is possible only for an authorized user who is the owner of the profile
+
+
+- User history covered by this feature: 10
+- History of the site owner covered by this function: 1,
+
+
+![Update Profile Page](docs/features/update-profile/update-profile-1.jpg)
+![Update Profile Page](docs/features/update-profile/update-profile-2.jpg)
+![Update Profile Page](docs/features/update-profile/update-profile-3.jpg)
+
+
+<!-- #### Home Page
+
+
 
 #### Update Profile Page
 

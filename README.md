@@ -562,3 +562,111 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 
 - This project was the first time I used agile development methods. The importance of these principles is beyond doubt. There may have been certain inaccuracies in the use of all the principles of this methodology.
+
+
+## Features
+
+### Blocks are typical for all pages
+
+#### Logo and Navbar
+
+- A navigation bar is displayed on all pages for easy navigation around the site.
+- The navigation bar consists of the site logo (which is a link to the main page) and a drop-down link containing links to the login and registration pages.
+- An authenticated user (without a profile) sees other links in the drop-down link block:
+      - Profile creation page
+      - Link to the exit page from the site
+      - Add post page
+- Additionally, for an authorized user, a link to the contact page appears
+- An authenticated user (having a profile), instead of a link to the profile creation page, sees a link to the profile page in the drop-down link block
+- The navigation bar is adaptive and turns into a “hamburger menu” on small screens.
+
+![Logo an Navbar](docs/features/navbars/logo-and-navigation-1.jpg)
+![Logo an Navbar for authenticated user (without a profile)](docs/features/navbars/logo-and-navigation-2.jpg)
+![Logo an Navbar for authenticated user (with a profile)](docs/features/navbars/logo-and-navigation-3.jpg)
+![Logo an Navbar addaptive size](docs/features/navbars/logo-and-navigation-4.jpg)
+
+
+
+<!-- #### Home Page
+
+- The main page consists of three sections: navigation menu, main section, right additional section and footer.
+
+- The main section displays posts published by site users (main picture, short description of the recipe, date of creation, author and number of likes)
+
+- Additional rights section contains a list of post categories, as well as a block with quotes about food.
+
+#### Create Post Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for updating the post.
+
+#### Post Detail Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site
+
+- The main section displays the full text of the post with a cover image on the left and a description on the right. Below is a block with the date the post was created and the author. Below is a block with comments and a comment form for authorized users.
+
+#### Update Post Detail Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for updating the post.
+
+#### Delete Post Detail Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page is a warning about deleting a post and buttons for deleting and canceling
+
+#### Categories Page
+
+- This page uses the home page template, but only displays posts from a specific category
+
+#### Profile Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main page is conditionally divided into two parts. The first part contains the user's avatar and brief information about him. The second part contains a list of the user’s posts with a picture and a brief description or, if the user has no posts display a message about the presence and a button to add a post.
+
+#### Update Profile Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for updating the profile.
+
+#### Create Profile Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for creating post.
+
+#### Contact Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for creating message.
+
+#### Thanks Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page is notification of sending a message and buttons to return to the main page and to write a new message
+
+#### SignUp Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for registrate on the site.
+
+#### LogIn Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for log in on the site.
+
+#### LogOut Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page is notification of leaving the site and buttons for confirmation and cancellation -->

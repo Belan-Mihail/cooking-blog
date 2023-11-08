@@ -33,7 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cookingblognew-0b91b3c6b01a.herokuapp.com', 'localhost', '8000-belanmihail-cookingblog-0mjo0zedycj.ws-eu105.gitpod.io', '8000-belanmihail-cookingblog-nkthurm7uq0.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['cookingblognew-0b91b3c6b01a.herokuapp.com', 'localhost', '8000-belanmihail-cookingblog-0mjo0zedycj.ws-eu105.gitpod.io', '8000-belanmihail-cookingblog-nkthurm7uq0.ws-eu105.gitpod.io', '8000-belanmihail-cookingblog-nkthurm7uq0.ws-eu106.gitpod.io']
 
 
 # Application definition
@@ -108,15 +108,15 @@ WSGI_APPLICATION = 'cookingproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 # DATABASES = {
-#     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
 # }
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

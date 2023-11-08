@@ -7,9 +7,10 @@ from django.urls import reverse
 
 class TestView(TestCase):
     """
-    Class for test views
+    Class for test views cookingblog app
     """
     def setUp(self):
+        """ Create testing post with comment and category"""
         Category.objects.create(name='soups', slug='soups'),
         self.user = User.objects.create_user(username='admin', password='abc564!')
         self.post = CookingRecipePost.objects.create(
@@ -19,7 +20,7 @@ class TestView(TestCase):
             cooking_recipe_body = "content",
             cat_id=1,
             status=1,
-            )
+        )
         self.com = Comment.objects.create(
             cooking_recipe_post=self.post,
             name='John',
@@ -29,40 +30,35 @@ class TestView(TestCase):
         
     
 
-    def test_home_page_used_template(self):
+    def test_cookingrecipespostlist_status_and_used_template(self):
         """
-        This tests display of the home page
+        This tests check status code and used template CookingRecipesPostList
+        and check context object name in response.context
         """
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html', 'base.html')
-        self.assertTrue('categories' in response.context)
+        self.assertTrue('cooking_recipes_post_list' in response.context)
     
 
-    # def test_(self):
-    #     request = RequestFactory().get('/')
-    #     view = CookingRecipesPostList.as_view(template_name = "index.html")
-    #     response = view(request)
-    #     self.assertEqual(response.status_code, 200)
-
-
-
-    def test_detail_page_used_template(self):
+    def test_cookingrecipepostdetail_status_and_used_template(self):
         """
-        This tests display of the post detail page
+        This tests check status code 
+        and used template CookingRecipePostDetail
         """
-        
         post = self.post
-        
-        response = self.client.get(reverse('cooking_recipe_post_detail', kwargs={'slug': self.post.slug}))
+        response = self.client.get(
+            reverse('cooking_recipe_post_detail', kwargs={'slug': self.post.slug})
+        )
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'post_detail.html')
         
     
 
-    def test_create_post_used_template(self):
+    def test_cookingrecipepostcreate_status_and_used_template(self):
         """
-        This tests display of the create_post page
+        This tests check status code 
+        and used template CookingRecipePostCreateView
         """
         login = self.client.login(username='admin', password='abc564!')
         response = self.client.get(reverse('recipe_create'))
@@ -70,9 +66,10 @@ class TestView(TestCase):
         self.assertTemplateUsed(response, 'recipe_create.html', 'base.html')
 
 
-    def test_update_page_used_template(self):
+    def test_cookingrecipepostupdate_status_and_used_template(self):
         """
-        This tests display of the post detail page
+        This tests check status code 
+        and used template CookingRecipePostUpdateView
         """
         login = self.client.login(username='admin', password='abc564!')
         self.assertTrue(login)
@@ -82,9 +79,10 @@ class TestView(TestCase):
         self.assertTemplateUsed(response, 'recipe_update.html', 'base.html')
     
 
-    def test_delete_page_used_template(self):
+    def test_cookingrecipepostdelete_status_and_used_template(self):
         """
-        This tests display of the post detail page
+        This tests check status code 
+        and used template CookingRecipePostDeleteView
         """
         login = self.client.login(username='admin', password='abc564!')
         self.assertTrue(login)
@@ -94,9 +92,10 @@ class TestView(TestCase):
         self.assertTemplateUsed(response, 'recipe_delete.html', 'base.html')
 
     
-    def test_selectedcategory_used_template(self):
+    def test_cookingrecipepostcategory_status_and_used_template(self):
         """
-        This tests display of the post detail page
+        This tests check status code 
+        and used template CookingRecipePostCategory
         """
         post = self.post
         response = self.client.get(reverse('selectedcategory', args=[self.post.cat.slug]))
@@ -104,19 +103,24 @@ class TestView(TestCase):
         self.assertTemplateUsed(response, 'index.html', 'base.html')
     
 
-    def test_comment_delete_used_template(self):
+    def test_deletemycomment_status_and_redirect(self):
         """
-        This tests display of the post detail page
+        This tests check status code 
+        and correctly redirect deletemycomment
         """
-
         response = self.client.get(reverse('commentdelete', args=[self.post.id]))
         self.assertEqual(response.status_code, 302)
-        self.assertRedirects(response, reverse('cooking_recipe_post_detail', kwargs={'slug': self.post.slug}))
+        self.assertRedirects(
+            response, reverse(
+                'cooking_recipe_post_detail', kwargs={'slug': self.post.slug}
+            )
+        )
     
 
     def test_postlike_status_and_redirect(self):
         """
-        This tests display of the post detail page
+        This tests check status code 
+        and correctly redirect PostLike
         """
         login = self.client.login(username='admin', password='abc564!')
         self.assertTrue(login)

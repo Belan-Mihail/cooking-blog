@@ -669,7 +669,25 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ![Detail Post Page](docs/features/detail-post/detail-post-6.jpg)
 
 
-#### Update Detail Post Page (Features)
+#### Update Post Page (Features)
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard throughout the site.
+
+- The main section of the page displays a form with various fields for updating the publication.
+
+- This page is available only to authorized users of the site who are the authors of the article
+
+- After updating, the post is initially submitted for approval to the administration (about which the user is notified) and the user is redirected to the main page of the site.
+
+- User history covered by this feature: 5, 13.
+- History of the site owner covered by this function: 1, 3.
+
+
+![Update Post Page](docs/features/update-post/update-post-1.jpg)
+![Update Post Page](docs/features/update-post/update-post-2.jpg)
+![Update Post Page](docs/features/update-post/update-post-3.jpg)
+![Update Post Page](docs/features/detail-post/detail-post-4.jpg)
+![Update Post Page](docs/features/detail-post/detail-post-5.jpg)
 
 <!-- #### Home Page
 

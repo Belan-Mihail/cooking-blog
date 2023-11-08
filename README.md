@@ -622,21 +622,57 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ![Home page](docs/features/home-page/home-page-3.jpg)
 ![Home page](docs/features/home-page/home-page-4.jpg)
 
-<!-- #### Home Page
 
-
-
-#### Create Post Page
+#### Create Post Page (Features)
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page displays a form with various fields for updating the post.
 
-#### Post Detail Page
+- This page is available only to authorized site users
 
-- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site
+- After creation, the post is initially submitted for approval to the administration (about which a notification is displayed to the user) and the user is redirected to the main page of the site
 
-- The main section displays the full text of the post with a cover image on the left and a description on the right. Below is a block with the date the post was created and the author. Below is a block with comments and a comment form for authorized users.
+
+- User Story covered with this feature: 1, 5, 10
+- Site Owner Story covered with this feature: 1, 3
+
+
+![Create Post Page](docs/features/create-post/create-post-1.jpg)
+![Create Post Page](docs/features/create-post/create-post-2.jpg)
+![Create Post Page](docs/features/create-post/create-post-3.jpg)
+![Create Post Page](docs/features/create-post/create-post-4.jpg)
+
+
+#### Detail Post Page (Features)
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section displays the full text of the publication with a cover image on the left and a description on the right. Below is a block with the date the post was created and the author, as well as the number of likes the user received. A block with comments is displayed even lower. The likes function is not available for non-authorized users.
+
+- An authorized user who is not the author of the post also sees the comment form. The likes function is available for such a user
+
+- For an authorized user who is the author of the post, buttons to update the recipe and delete the recipe are additionally displayed.
+
+- For the user who is the author of the comment, a button to delete the comment is additionally displayed.
+
+- After adding a comment, the comment requires approval by the administrator (about which a notification is displayed to the user)
+
+- User Story covered with this feature: 3, 4, 5, 6, 7, 13
+- Site Owner Story covered with this feature: 1, 2, 3, 4
+
+![Detail Post Page](docs/features/detail-post/detail-post-1.jpg)
+![Detail Post Page](docs/features/detail-post/detail-post-2.jpg)
+![Detail Post Page](docs/features/detail-post/detail-post-3.jpg)
+![Detail Post Page](docs/features/detail-post/detail-post-4.jpg)
+![Detail Post Page](docs/features/detail-post/detail-post-5.jpg)
+![Detail Post Page](docs/features/detail-post/detail-post-6.jpg)
+
+
+#### Update Detail Post Page (Features)
+
+<!-- #### Home Page
+
 
 #### Update Post Detail Page
 

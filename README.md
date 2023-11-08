@@ -176,7 +176,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
-- The main section of the page displays a form with various fields for creating post.
+- The main section of the page displays a form with various fields for creating profile.
 
 #### Contact Page
 
@@ -708,20 +708,59 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ![Delete Post Page](docs/features/detail-post/detail-post-4.jpg)
 ![Delete Post Page](docs/features/detail-post/detail-post-5.jpg)
 
-<!-- #### Home Page
 
 
+#### Categories Page (Features)
+
+- This page uses the home page template, but only displays posts from a specific category
 
 
-#### Delete Post Detail Page
+- User history covered by this feature: 9
+
+
+![Categories Page](docs/features/categories/categories-1.jpg)
+![Categories Page](docs/features/categories/categories-2.jpg)
+
+
+#### Create Profile Page (Features)
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
-- The main section of the page is a warning about deleting a post and buttons for deleting and canceling
+- The main section of the page displays a form with various fields for creating profile.
 
-#### Categories Page
+- The page is only available to registered users without a profile
 
-- This page uses the home page template, but only displays posts from a specific category
+
+- User history covered by this feature: 10, 11
+- History of the site owner covered by this function: 1,
+
+
+![Logo an Navbar](docs/features/navbars/logo-and-navigation-2.jpg)
+![Create Profile Page](docs/features/create-profile/create-profile-1.jpg)
+![Create Profile Page](docs/features/create-profile/create-profile-2.jpg)
+
+
+#### Profile Page (Features)
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- - The main page is conditionally divided into two parts. The first part contains the user's avatar and brief information about him. The second part contains a list of the user’s posts with a picture and a brief description or, if the user has no posts display a message about the presence and a button to add a post.
+
+- The page is only available to registered users with a created profile
+
+
+- User history covered by this feature: 10, 11
+- History of the site owner covered by this function: 1,
+
+
+![Logo an Navbar](docs/features/navbars/logo-and-navigation-3.jpg)
+![Profile Page](docs/features/profile/profile-1.jpg)
+![Profile Page](docs/features/profile/profile-2.jpg)
+![Profile Page](docs/features/profile/profile-3.jpg)
+
+<!-- #### Home Page
+
+
 
 #### Profile Page
 

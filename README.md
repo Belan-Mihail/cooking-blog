@@ -144,13 +144,13 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The main section displays the full text of the post with a cover image on the left and a description on the right. Below is a block with the date the post was created and the author. Below is a block with comments and a comment form for authorized users.
 
-#### Update Post Detail Page
+#### Update Post Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page displays a form with various fields for updating the post.
 
-#### Delete Post Detail Page
+#### Delete Post Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
@@ -675,7 +675,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The main section of the page displays a form with various fields for updating the publication.
 
-- This page is available only to authorized users of the site who are the authors of the article
+- This page is available only to authorized users of the site who are the authors of the post
 
 - After updating, the post is initially submitted for approval to the administration (about which the user is notified) and the user is redirected to the main page of the site.
 
@@ -689,14 +689,29 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ![Update Post Page](docs/features/detail-post/detail-post-4.jpg)
 ![Update Post Page](docs/features/detail-post/detail-post-5.jpg)
 
+
+#### Delete Post Page (Features)
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard throughout the site.
+
+- The main section of the page is a warning about deleting a post and buttons for deleting and canceling
+
+- This page is available only to authorized users of the site who are the authors of the post
+
+
+- User history covered by this feature: 5, 13.
+- History of the site owner covered by this function: 1, 3.
+
+
+![Delete Post Page](docs/features/delete-post/delete-post-1.jpg)
+![Delete Post Page](docs/features/delete-post/delete-post-2.jpg)
+![Delete Post Page](docs/features/detail-post/detail-post-4.jpg)
+![Delete Post Page](docs/features/detail-post/detail-post-5.jpg)
+
 <!-- #### Home Page
 
 
-#### Update Post Detail Page
 
-- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
-
-- The main section of the page displays a form with various fields for updating the post.
 
 #### Delete Post Detail Page
 

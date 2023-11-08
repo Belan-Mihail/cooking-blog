@@ -37,14 +37,16 @@ class CookingRecipesPostList(generic.ListView):
 
 class CookingRecipePostDetail(View):
     """
-    View for displaying a single post
+    View for displaying a single post and add comments to the post
     """
     model = CookingRecipePost
 
     def get(self, request, slug, *args, **kwargs):
         queryset = CookingRecipePost.objects.filter(status=1)
         post = get_object_or_404(queryset, slug=slug)
-        comments = post.comments.filter(approved=True).order_by("-created_on")
+        comments = post.comments.filter(
+            approved=True).order_by("-created_on"
+        )
         liked = False
         if post.likes.filter(id=self.request.user.id).exists():
             liked = True
@@ -108,13 +110,13 @@ class PostLike(View):
 
 class CookingRecipePostCreateView(SuccessMessageMixin, CreateView):
     """
-    View for create new post
+    View for creating new post
     """
     model = CookingRecipePost
     template_name = 'recipe_create.html'
     form_class = CookingRecipePostCreateForm
     success_url = '/'
-    success_message = 'Your recipe is is awaiting administrator approval'
+    success_message = 'Your recipe is awaiting administrator approval'
 
 
     def form_valid(self, form):
@@ -127,7 +129,7 @@ class CookingRecipePostUpdateView(SuccessMessageMixin,
                           UserPassesTestMixin,
                           UpdateView):
     """
-    A class view to update user posts
+    View for updating user posts
     """
     model = CookingRecipePost
     template_name = 'recipe_update.html'
@@ -144,7 +146,9 @@ class CookingRecipePostUpdateView(SuccessMessageMixin,
 
     def test_func(self):
         if self.request.user != self.get_object().cooking_recipe_author:
-                messages.info(self.request, 'Editing an article is available only to the author')
+                messages.info(
+                    self.request, 'Editing an article is available only to the author'
+                )
                 return False
         return True
 
@@ -153,7 +157,7 @@ class CookingRecipePostDeleteView(SuccessMessageMixin,
                           UserPassesTestMixin,
                           DeleteView):
     """
-    A class view to delete post
+    View for deleting post
     """
     model = CookingRecipePost
     success_url = '/'
@@ -164,7 +168,9 @@ class CookingRecipePostDeleteView(SuccessMessageMixin,
 
     def test_func(self):
         if self.request.user != self.get_object().cooking_recipe_author:
-                messages.info(self.request, 'Deleting an article is available only to the author')
+                messages.info(
+                    self.request, 'Deleting an article is available only to the author'
+                )
                 return False
         return True
 
@@ -181,14 +187,21 @@ def deletemycomment(request, id):
 
 
 class CookingRecipePostCategory(generic.ListView):
+    """
+    View fot displaying categories on home page
+    """
     model = CookingRecipePost
     template_name = 'index.html'
     context_object_name = 'cooking_recipes_post_list'
     
     def get_context_data(self,**kwargs):
-        context = super(CookingRecipePostCategory, self).get_context_data(**kwargs)
+        context = super(
+            CookingRecipePostCategory, self
+        ).get_context_data(**kwargs)
         context['categories'] = Category.objects.all()
         return context
  
     def get_queryset(self):
-        return CookingRecipePost.objects.filter(cat__slug=self.kwargs['cat_slug'])
+        return CookingRecipePost.objects.filter(
+            cat__slug=self.kwargs['cat_slug']
+        )

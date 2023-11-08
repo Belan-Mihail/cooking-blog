@@ -72,7 +72,7 @@ class Comment(models.Model):
 
 class Category(models.Model):
     """
-    Model for Category
+    Model for categories
     """
     name = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=255, unique=True, db_index=True)

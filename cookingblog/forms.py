@@ -5,7 +5,7 @@ from django import forms
 
 class CommentForm(forms.ModelForm):
     """
-    Form for comments
+    Form for Comments model
     """
     class Meta:
         model = Comment

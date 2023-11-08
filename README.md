@@ -585,9 +585,9 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 
 ![Logo an Navbar](docs/features/navbars/logo-and-navigation-1.jpg)
-![Logo an Navbar for authenticated user (without a profile)](docs/features/navbars/logo-and-navigation-2.jpg)
-![Logo an Navbar for authenticated user (with a profile)](docs/features/navbars/logo-and-navigation-3.jpg)
-![Logo an Navbar addaptive size](docs/features/navbars/logo-and-navigation-4.jpg)
+![Logo an Navbar](docs/features/navbars/logo-and-navigation-2.jpg)
+![Logo an Navbar](docs/features/navbars/logo-and-navigation-3.jpg)
+![Logo an Navbar](docs/features/navbars/logo-and-navigation-4.jpg)
 
 #### Footer
 
@@ -599,7 +599,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 ![Footer](docs/features/footer/footer.jpg)
 
-<!-- ### Blocks are not typical for all pages
+### Blocks are not typical for all pages
 
 #### Home Page (Features)
 
@@ -607,15 +607,24 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The main section displays posts published by site users (main picture, short description of the recipe, date of creation, author and number of likes)
 
-- Right-side section contains a list of post categories, as well as a block with quotes about food. -->
+- Right-side section contains a list of post categories, as well as a block with quotes about food.
+
+- For authorized users, a stick notification about authorization is displayed in the right corner
+
+- When the user performs authorization and other actions as a result of which he is redirected to the main page, a notification appears about the implementation of the corresponding actions by the user
+
+- If the number of posts on the main page exceeds 5, the page pagination function is triggered
+
+- User Story covered with this feature: 2, 4, 8, 10, 12,
+
+![Home page](docs/features/home-page/home-page-1.jpg)
+![Home page](docs/features/home-page/home-page-2.jpg)
+![Home page](docs/features/home-page/home-page-3.jpg)
+![Home page](docs/features/home-page/home-page-4.jpg)
 
 <!-- #### Home Page
 
-- The main page consists of three sections: navigation menu, main section, right additional section and footer.
 
-- The main section displays posts published by site users (main picture, short description of the recipe, date of creation, author and number of likes)
-
-- Right-side section contains a list of post categories, as well as a block with quotes about food.
 
 #### Create Post Page
 

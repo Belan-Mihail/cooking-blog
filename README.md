@@ -126,11 +126,11 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 #### Home Page
 
-- The main page consists of three sections: navigation menu, main section, right additional section and footer.
+- The home page consists of three sections: navigation menu, main section, right additional section and footer.
 
 - The main section displays posts published by site users (main picture, short description of the recipe, date of creation, author and number of likes)
 
-- Additional rights section contains a list of post categories, as well as a block with quotes about food.
+- Right-side section contains a list of post categories, as well as a block with quotes about food.
 
 #### Create Post Page
 
@@ -580,12 +580,34 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 - An authenticated user (having a profile), instead of a link to the profile creation page, sees a link to the profile page in the drop-down link block
 - The navigation bar is adaptive and turns into a “hamburger menu” on small screens.
 
+- User Story covered with this feature: 1, 5, 10
+- Site Owner Story covered with this feature: 1, 5
+
+
 ![Logo an Navbar](docs/features/navbars/logo-and-navigation-1.jpg)
 ![Logo an Navbar for authenticated user (without a profile)](docs/features/navbars/logo-and-navigation-2.jpg)
 ![Logo an Navbar for authenticated user (with a profile)](docs/features/navbars/logo-and-navigation-3.jpg)
 ![Logo an Navbar addaptive size](docs/features/navbars/logo-and-navigation-4.jpg)
 
+#### Footer
 
+- The footer is displayed on all pages of the site
+
+- The footer contains links to social networks that open in a new tab.
+
+- Site Owner Story covered with this feature: 6
+
+![Footer](docs/features/footer/footer.jpg)
+
+<!-- ### Blocks are not typical for all pages
+
+#### Home Page (Features)
+
+- The main page consists of three sections: navigation menu, main section, right additional section and footer.
+
+- The main section displays posts published by site users (main picture, short description of the recipe, date of creation, author and number of likes)
+
+- Right-side section contains a list of post categories, as well as a block with quotes about food. -->
 
 <!-- #### Home Page
 
@@ -593,7 +615,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The main section displays posts published by site users (main picture, short description of the recipe, date of creation, author and number of likes)
 
-- Additional rights section contains a list of post categories, as well as a block with quotes about food.
+- Right-side section contains a list of post categories, as well as a block with quotes about food.
 
 #### Create Post Page
 

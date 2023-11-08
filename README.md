@@ -111,8 +111,8 @@ The site was created in such a way as to maximize the interest of users and prov
 
 The main color palette was chosen in accordance with the basic colors of the bootstrap framework. The dark background includes contrasting white font. To draw attention to certain content on the site, two bright accent colors are used
 
-<details><summary>Add</summary>
-<img src="add">
+<details><summary>Colour pallet</summary>
+<img src="docs/colors.png">
 </details>
 
 ### Fonts
@@ -541,3 +541,24 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 - message
    - type: TextField
    - validation: max_length=1000 
+
+### Agile 
+
+- steps taken:
+   1. created User Story Template
+   <details><summary>User story template</summary>
+   <img src="docs/agile/user-story-template.jpg">
+   </details>
+   2. project created [Link to project](https://github.com/users/Belan-Mihail/projects/5/)
+   3. based on the user story template, issues were created. A total of 41 issues were created the main part of which was created at the very beginning of the project development process, others during the development process (which corresponds to the principles of agile development)
+   <details><summary>Issues</summary>
+   <img src="docs/agile/issues.jpg">
+   </details>
+   4. main labels have been created for marking issues and marked issues in accordance with Moscow Prioritisation
+   5. Kanban Board was created to visualize the process of completing tasks
+   <details><summary>Kanban Board</summary>
+   <img src="docs/agile/kanban-board.jpg">
+   </details>
+
+
+- This project was the first time I used agile development methods. The importance of these principles is beyond doubt. There may have been certain inaccuracies in the use of all the principles of this methodology.

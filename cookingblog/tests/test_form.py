@@ -4,9 +4,10 @@ from django.core.files.uploadedfile import SimpleUploadedFile
 from cookingblog.models import Category
 
 class TestCommentForm(TestCase):
-    """Test CommentForm"""
+    """Test for CommentForm"""
 
     def test_commentform_fields(self):
+        """ Test CommentForm fields"""
         form = CommentForm()
         self.assertTrue(form.fields['body'])
     
@@ -26,9 +27,10 @@ class TestCommentForm(TestCase):
 
 
 class TestCookingRecipePostCreateForm(TestCase):
-    """Test CookingRecipePostCreateForm"""
+    """Test for CookingRecipePostCreateForm"""
 
     def test_cookingrecipepostcreateform_fields(self):
+        """ Test CookingRecipePostCreateForm fields"""
         form = CookingRecipePostCreateForm()
         self.assertIn("cooking_recipe_title", form.fields)
         self.assertIn("cat", form.fields)
@@ -62,7 +64,6 @@ class TestCookingRecipePostCreateForm(TestCase):
             'cooking_recipe_image': SimpleUploadedFile("image.jpg", b"file data"),
             'excerpt': 'test',
             'cooking_recipe_body': 'content',
-
         })
         self.assertFalse(form.is_valid())
     
@@ -82,7 +83,7 @@ class TestCookingRecipePostCreateForm(TestCase):
 
 
 class CookingRecipePostUpdateForm(TestCase):
-    """Test CookingRecipePostUpdateForm"""
+    """Test for CookingRecipePostUpdateForm"""
 
     def test_cookingrecipepostupdateform_fields(self):
         form = CookingRecipePostCreateForm()

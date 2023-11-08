@@ -13,9 +13,10 @@
                 <div class="image-container-home-page">
                     {% if "placeholder" in post.cooking_recipe_image.url %}
                     <img class="card-img-home-page"
-                        src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1696967358/project/lgzihdcgkyvtnpwmpugr.jpg">
+                        src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1696967358/project/lgzihdcgkyvtnpwmpugr.jpg"
+                        alt="default post image">
                     {% else %}
-                    <img class="card-img-home-page" src=" {{ post.cooking_recipe_image.url }}">
+                    <img class="card-img-home-page" src=" {{ post.cooking_recipe_image.url }}" alt="user post image">
                     {% endif %}
                 </div>
                 <h3 class="blog-post-title">{{ post.cooking_recipe_title }}</h3>

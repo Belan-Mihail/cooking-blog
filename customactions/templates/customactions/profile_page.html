@@ -6,9 +6,9 @@
             {% if "placeholder" in user.profile.avatar.url %}
             <img class="card-img-home-page"
             src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1698877007/pkqxehru83pznky2pksv.jpg"
-            alt="user-profile-avatar">
+            alt="default profile avatar">
             {% else %}
-            <img class="card-img-home-page" src=" {{ user.profile.avatar.url }}" alt="user-profile-avatar">
+            <img class="card-img-home-page" src=" {{ user.profile.avatar.url }}" alt="user profile avatar">
             {% endif %}
         </div>
     </div>

@@ -906,8 +906,28 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 <img src="docs/user-stories/first-user-story-evidence-1.jpg">
 </details> 
 
+---
+
+   2. As a site user, I want to be able to see a list of all site posts on the main page
+
+
+   **Action** | **Result** 
+ -----------| ----------  
+ 1.While on any page of the site, go to the main page and click on the logo located in the right-left corner of the page. | The main page of the site displays a list of all posts with pagination every 5 posts 
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories/second-user-story-evidence-1.jpg">
+<img src="docs/user-stories/second-user-story-evidence-2.jpg">
+</details>
+
+---
+
+
+
+
+
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
-2. As a site user, I want to be able to see a list of all site posts on the main page
+
 3. As a user of the site, I want to be able to view my posts as well as the posts of other users
 4. As a site user, I want the post to contain a photo of the dish and a description of the cooking process
 5. As a registered user of the site, I want to be able to post, update and delete posts in which I am the author

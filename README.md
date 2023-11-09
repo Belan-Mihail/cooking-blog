@@ -814,17 +814,26 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ![Thanks Page](docs/features/thanks-page/thanks-page-2.jpg)
 ![Thanks Page](docs/features/thanks-page/thanks-page-3.jpg)
 
-<!-- #### Home Page
 
 
-
-
-
-#### Thanks Page
+#### SignUp Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
-- The main section of the page is notification of sending a message and buttons to return to the main page and to write a new message
+- The main section of the page displays a form with various fields for registrate on the site.
+
+
+- History of the site owner covered by this function: 1
+
+
+![Thanks Page](docs/features/signup-page/signup-page-1.jpg)
+![Thanks Page](docs/features/signup-page/signup-page-2.jpg)
+![Thanks Page](docs/features/signup-page/signup-page-3.jpg)
+
+
+<!-- #### Home Page
+
+
 
 #### SignUp Page
 

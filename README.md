@@ -1119,12 +1119,25 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 ---
 
+### Site Owner Stories Testing
+
+
+   1. As the owner of the site, I want only authorized users to have access to all the functionality of the site
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ Register or log in to the site | As a registered user you will have access to the functions create a profile, contact administration, create a post, add a comment or rate a post
+ 
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/site-owner-stories/first-site-owner-story-evidence-1.jpg">
+<img src="docs/site-owner-stories/first-site-owner-story-evidence-2.jpg">
+</details>
+
+---
+
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
-
-
-
-
-13. As a user of the site, I would like to receive notifications about my actions
 
 
 ### Site Owner Stories

@@ -992,12 +992,34 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 </details>
 
 
+---
+
+   7. As a registered user of the site, I want to be able to comment on posts, as well as the ability to delete comments
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ While on any page of the site, click on the login or register button in the navigation menu and fill out the appropriate form | A button for adding a post will become available in the navigation menu 
+ Go to the page of the corresponding post | To add a comment, fill out the form and click the add comment button. You will receive notifications that your comment must be approved. after approval, the comment will appear on the site
+ While on the page of a previously commented post, click on the delete comment button | Your comment will be deleted
+
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories/seventh-user-story-evidence-1.jpg">
+<img src="docs/user-stories/seventh-user-story-evidence-2.jpg">
+<img src="docs/user-stories/seventh-user-story-evidence-3.jpg">
+<img src="docs/user-stories/seventh-user-story-evidence-4.jpg">
+<img src="docs/user-stories/seventh-user-story-evidence-5.jpg">
+<img src="docs/user-stories/seventh-user-story-evidence-6.jpg">
+<img src="docs/user-stories/seventh-user-story-evidence-7.jpg">
+</details>
+
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
 
 
 
 
-6. As a registered user of the site, I want to be able to rate posts
+
 7. As a registered user of the site, I want to be able to comment on posts, as well as the ability to delete comments
 8. As a site user, I want to see all possible categories of site posts on the main page
 9. As a site user, I can select a specific category of posts that are interesting to me

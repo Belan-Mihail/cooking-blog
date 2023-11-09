@@ -913,7 +913,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
    **Action** | **Result** 
  -----------| ----------  
- 1.While on any page of the site, go to the main page and click on the logo located in the right-left corner of the page. | The main page of the site displays a list of all posts with pagination every 5 posts 
+ While on any page of the site, go to the main page and click on the logo located in the right-left corner of the page. | The main page of the site displays a list of all posts with pagination every 5 posts 
 
 <details><summary>Screenshot evidences</summary>
 <img src="docs/user-stories/second-user-story-evidence-1.jpg">
@@ -1014,13 +1014,30 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 <img src="docs/user-stories/seventh-user-story-evidence-7.jpg">
 </details>
 
+---
+
+   8. As a site user, I want to see all possible categories of site posts on the main page
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ While on any page of the site, go to the main page and click on the logo located in the right-left corner of the page. | Possible categories of posts are displayed on the right side of the page 
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories/eighth-user-story-evidence-1.jpg">
+<img src="docs/user-stories/eighth-user-story-evidence-2.jpg">
+</details>
+
+---
+
+
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
 
 
 
 
 
-7. As a registered user of the site, I want to be able to comment on posts, as well as the ability to delete comments
+
 8. As a site user, I want to see all possible categories of site posts on the main page
 9. As a site user, I can select a specific category of posts that are interesting to me
 10. As a registered user of the site I can create and update profile page

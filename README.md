@@ -786,6 +786,8 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The page is only available to registered users
 
+- After sending the message the user is taken to the thanks page
+
 
 - History of the site owner covered by this function: 5
 
@@ -795,16 +797,28 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ![Contact Page](docs/features/contact-page/contact-page-3.jpg)
 
 
+#### Thanks Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page is notification of sending a message and buttons to return to the main page and to write a new message
+
+- The page is only available to registered users
+
+
+- User history covered by this feature: 13
+- History of the site owner covered by this function: 1, 5
+
+
+![Thanks Page](docs/features/thanks-page/thanks-page-1.jpg)
+![Thanks Page](docs/features/thanks-page/thanks-page-2.jpg)
+![Thanks Page](docs/features/thanks-page/thanks-page-3.jpg)
+
 <!-- #### Home Page
 
 
 
 
-#### Contact Page
-
-- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
-
-- The main section of the page displays a form with various fields for creating message.
 
 #### Thanks Page
 

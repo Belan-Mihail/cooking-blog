@@ -948,12 +948,34 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 <img src="docs/user-stories/fourth-user-story-evidence-2.jpg">
 </details>
 
+---
 
+   5. As a registered user of the site, I want to be able to post, update and delete posts in which I am the author
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ While on any page of the site, click on the login or register button in the navigation menu and fill out the appropriate form | A button for adding a post will become available in the navigation menu 
+ Go to the page of the corresponding post | The delete and update post buttons will be available
+ Click on the button you are interested in. |Depending on what you have chosen, you will be taken to the post deletion page or the post update page |
+ When on the post update page, fill out the fields you are interested in and click the update post button | You will be redirected to the main page of the site, where you will receive a notification that your updated post has been sent to the administrator for approval | 
+ When you are on the post deletion page, click on the button to confirm the deletion | Your post will be deleted
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories/fifth-user-story-evidence-1.jpg">
+<img src="docs/user-stories/fifth-user-story-evidence-2.jpg">
+<img src="docs/user-stories/fifth-user-story-evidence-3.jpg">
+<img src="docs/user-stories/fifth-user-story-evidence-4.jpg">
+<img src="docs/user-stories/fifth-user-story-evidence-5.jpg">
+<img src="docs/user-stories/fifth-user-story-evidence-6.jpg">
+<img src="docs/user-stories/fifth-user-story-evidence-7.jpg">
+<img src="docs/user-stories/fifth-user-story-evidence-8.jpg">
+</details>
 
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
 
 
-4. As a site user, I want the post to contain a photo of the dish and a description of the cooking process
+
 5. As a registered user of the site, I want to be able to post, update and delete posts in which I am the author
 6. As a registered user of the site, I want to be able to rate posts
 7. As a registered user of the site, I want to be able to comment on posts, as well as the ability to delete comments

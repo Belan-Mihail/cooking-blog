@@ -1087,6 +1087,23 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 ---
 
+
+
+   12. As a site user, I can select a specific category of posts that are interesting to me
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ While on any page of the site, go to the main page and click on the logo located in the right-left corner of the page. | On the right side of the site you will see quotes about food
+ 
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories/twelfth-user-story-evidence-1.jpg">
+<img src="docs/user-stories/twelfth-user-story-evidence-2.jpg">
+</details>
+
+---
+
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
 
 
@@ -1097,7 +1114,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 
 
-11. As a registered user of the site, I can see all my published posts on the portfolio page
+
 12. As a user of the site I can see interesting quotes and aphorisms about food
 13. As a user of the site, I would like to receive notifications about my actions
 

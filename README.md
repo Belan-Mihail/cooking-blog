@@ -888,3 +888,44 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 - [Google Fonts](https://fonts.google.com/) - for typography in project
 - [Fontawesome](https://fontawesome.com/) - for displaying beautiful icons on the site (for example, like hearts)
 - [Coolors](https://coolors.co/) - to create a color palette for the site
+
+## Validation
+
+## Testing
+
+### User Story Testing
+
+
+   1. As User I can use navigation bar so that I can easy to navigate the site
+
+   **Action** | **Result** 
+ -----------| ----------  
+ 1.Being on the any site pages, on the top of the page you can see navbars. | By clicking on the buttons you can easily navigate the site 
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories/first-user-story-evidence-1.jpg">
+</details> 
+
+<!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
+2. As a site user, I want to be able to see a list of all site posts on the main page
+3. As a user of the site, I want to be able to view my posts as well as the posts of other users
+4. As a site user, I want the post to contain a photo of the dish and a description of the cooking process
+5. As a registered user of the site, I want to be able to post, update and delete posts in which I am the author
+6. As a registered user of the site, I want to be able to rate posts
+7. As a registered user of the site, I want to be able to comment on posts, as well as the ability to delete comments
+8. As a site user, I want to see all possible categories of site posts on the main page
+9. As a site user, I can select a specific category of posts that are interesting to me
+10. As a registered user of the site I can create and update profile page
+11. As a registered user of the site, I can see all my published posts on the portfolio page
+12. As a user of the site I can see interesting quotes and aphorisms about food
+13. As a user of the site, I would like to receive notifications about my actions
+
+
+### Site Owner Stories
+
+1. As the owner of the site, I want only authorized users to have access to all the functionality of the site
+2. As the owner of the site, I want the registered user to be able to update and delete posts only if he is the author
+3. As a site owner, I want to be able to pre-approve user posts and comments to avoid publishing inappropriate content
+4. As the owner of the site, I want the post to contain a photo of the dish and a description of the cooking process
+5. As the owner of the site I can receive feedback from registered users
+6. As the owner of the site, I can place links to the project’s social pages on every page of the site -->

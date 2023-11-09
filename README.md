@@ -778,21 +778,27 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ![Update Profile Page](docs/features/update-profile/update-profile-3.jpg)
 
 
+#### Contact Page
+
+- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+
+- The main section of the page displays a form with various fields for creating message.
+
+- The page is only available to registered users
+
+
+- History of the site owner covered by this function: 5
+
+
+![Contact Page](docs/features/contact-page/contact-page-1.jpg)
+![Contact Page](docs/features/contact-page/contact-page-2.jpg)
+![Contact Page](docs/features/contact-page/contact-page-3.jpg)
+
+
 <!-- #### Home Page
 
 
 
-#### Update Profile Page
-
-- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
-
-- The main section of the page displays a form with various fields for updating the profile.
-
-#### Create Profile Page
-
-- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
-
-- The main section of the page displays a form with various fields for creating post.
 
 #### Contact Page
 

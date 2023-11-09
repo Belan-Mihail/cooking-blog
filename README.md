@@ -934,12 +934,25 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 <img src="docs/user-stories/third-user-story-evidence-2.jpg">
 </details>
 
+---
+
+   4. As a site user, I want the post to contain a photo of the dish and a description of the cooking process
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ While on the main page of the site, you can select any post that interests you and click. | On the post detail page you will see a picture of the recipe and a description of the recipe
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories/fourth-user-story-evidence-1.jpg">
+<img src="docs/user-stories/fourth-user-story-evidence-2.jpg">
+</details>
 
 
 
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
 
-3. As a user of the site, I want to be able to view my posts as well as the posts of other users
+
 4. As a site user, I want the post to contain a photo of the dish and a description of the cooking process
 5. As a registered user of the site, I want to be able to post, update and delete posts in which I am the author
 6. As a registered user of the site, I want to be able to rate posts

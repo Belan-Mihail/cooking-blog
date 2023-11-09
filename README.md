@@ -1137,12 +1137,28 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 ---
 
+
+   2. As the owner of the site, I want the registered user to be able to update and delete posts only if he is the author
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ Register or log in to the site | You can delete or update a post but only if you are the author of the post
+ 
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/site-owner-stories/second-site-owner-story-evidence-1.jpg">
+<img src="docs/site-owner-stories/second-site-owner-story-evidence-2.jpg">
+</details>
+
+---
+
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
 
 
 ### Site Owner Stories
 
-1. As the owner of the site, I want only authorized users to have access to all the functionality of the site
+
 2. As the owner of the site, I want the registered user to be able to update and delete posts only if he is the author
 3. As a site owner, I want to be able to pre-approve user posts and comments to avoid publishing inappropriate content
 4. As the owner of the site, I want the post to contain a photo of the dish and a description of the cooking process

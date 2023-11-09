@@ -206,7 +206,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
-- The main section of the page is notification of leaving the site and buttons for confirmation and cancellation
+- The main section of the page is notification of leaving the site and button for confirmation 
 
 ### Wireframes
 
@@ -831,24 +831,31 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ![Thanks Page](docs/features/signup-page/signup-page-3.jpg)
 
 
-<!-- #### Home Page
-
-
-
-#### SignUp Page
+#### LogIn Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
 - The main section of the page displays a form with various fields for registrate on the site.
 
-#### LogIn Page
 
-- The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
+- History of the site owner covered by this function: 1
 
-- The main section of the page displays a form with various fields for log in on the site.
+
+![Thanks Page](docs/features/login-page/login-page-1.jpg)
+![Thanks Page](docs/features/login-page/login-page-2.jpg)
+![Thanks Page](docs/features/login-page/login-page-3.jpg)
+
 
 #### LogOut Page
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
-- The main section of the page is notification of leaving the site and buttons for confirmation and cancellation -->
+- The main section of the page displays a notification of leaving the site as well as the corresponding button.
+
+
+- History of the site owner covered by this function: 1
+
+
+![Thanks Page](docs/features/logout-page/logout-page-1.jpg)
+![Thanks Page](docs/features/logout-page/logout-page-2.jpg)
+![Thanks Page](docs/features/logout-page/logout-page-3.jpg)

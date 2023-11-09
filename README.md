@@ -1069,6 +1069,24 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 ---
 
+
+
+   11. As a registered user of the site I can create and update profile page
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ As a registered user with a profile, go to the profile page | If you have posts, they will be displayed under the profile information, if you do not have aposts yet, then a corresponding message will be displayed
+ 
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories/eleventh-user-story-evidence-1.jpg">
+<img src="docs/user-stories/eleventh-user-story-evidence-2.jpg">
+<img src="docs/user-stories/eleventh-user-story-evidence-3.jpg">
+</details>
+
+---
+
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
 
 
@@ -1078,7 +1096,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 
 
-10. As a registered user of the site I can create and update profile page
+
 11. As a registered user of the site, I can see all my published posts on the portfolio page
 12. As a user of the site I can see interesting quotes and aphorisms about food
 13. As a user of the site, I would like to receive notifications about my actions

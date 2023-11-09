@@ -859,3 +859,32 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ![Thanks Page](docs/features/logout-page/logout-page-1.jpg)
 ![Thanks Page](docs/features/logout-page/logout-page-2.jpg)
 ![Thanks Page](docs/features/logout-page/logout-page-3.jpg)
+
+
+## Technologies Used
+
+### Languages & Frameworks
+
+- HTML
+- CSS
+- Javascript
+- JQuery
+- Boostrap 5
+- Python 3.12.0
+- Django 3.2
+
+### Libraries & Tools
+
+- [Am I Responsive](http://ami.responsivedesign.is/) was usedfor creating mock-up 
+- [Cloudinary](https://cloudinary.com/) to store static images files
+- [Summernote](https://summernote.org/) to style the admin page 
+- [Balsamiq](https://balsamiq.com/) to create the projects wireframes
+- [Bootstrap 5](https://getbootstrap.com/). to style various website components
+- [Api Ninjas](https://api-ninjas.com/) to displaying food quotes on the home page
+- [Favicon.io](https://favicon.io) for site favicon
+- [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/) was used for checking sites components styles 
+- [GitPod](https://www.gitpod.io/) was used for writing code.
+- [GitHub](https://github.com/) was used as a remote repository to store project code
+- [Google Fonts](https://fonts.google.com/) - for typography in project
+- [Fontawesome](https://fontawesome.com/) - for displaying beautiful icons on the site (for example, like hearts)
+- [Coolors](https://coolors.co/) - to create a color palette for the site

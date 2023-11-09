@@ -1153,13 +1153,30 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 ---
 
+   3. As a site owner, I want to be able to pre-approve user posts and comments to avoid publishing inappropriate content
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ Create a post as a registered user | Your post will appear on the site only after approval by the administrator
+ Create a comment as a registered user | Your comment will appear on the site only after approval by the administrator
+ 
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/site-owner-stories/third-site-owner-story-evidence-1.jpg">
+<img src="docs/site-owner-stories/third-site-owner-story-evidence-2.jpg">
+<img src="docs/site-owner-stories/third-site-owner-story-evidence-3.jpg">
+<img src="docs/site-owner-stories/third-site-owner-story-evidence-4.jpg">
+</details>
+
+---
+
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
 
 
 ### Site Owner Stories
 
 
-2. As the owner of the site, I want the registered user to be able to update and delete posts only if he is the author
 3. As a site owner, I want to be able to pre-approve user posts and comments to avoid publishing inappropriate content
 4. As the owner of the site, I want the post to contain a photo of the dish and a description of the cooking process
 5. As the owner of the site I can receive feedback from registered users

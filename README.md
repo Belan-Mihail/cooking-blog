@@ -972,11 +972,31 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 <img src="docs/user-stories/fifth-user-story-evidence-8.jpg">
 </details>
 
+---
+
+   6. As a registered user of the site, I want to be able to rate posts
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ While on any page of the site, click on the login or register button in the navigation menu and fill out the appropriate form | A button for adding a post will become available in the navigation menu 
+ Go to the page of the corresponding post | To rate a post, click on the heart icon.
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories/sixth-user-story-evidence-1.jpg">
+<img src="docs/user-stories/sixth-user-story-evidence-2.jpg">
+<img src="docs/user-stories/sixth-user-story-evidence-3.jpg">
+<img src="docs/user-stories/sixth-user-story-evidence-4.jpg">
+<img src="docs/user-stories/sixth-user-story-evidence-5.jpg">
+<img src="docs/user-stories/sixth-user-story-evidence-6.jpg">
+</details>
+
+
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
 
 
 
-5. As a registered user of the site, I want to be able to post, update and delete posts in which I am the author
+
 6. As a registered user of the site, I want to be able to rate posts
 7. As a registered user of the site, I want to be able to comment on posts, as well as the ability to delete comments
 8. As a site user, I want to see all possible categories of site posts on the main page

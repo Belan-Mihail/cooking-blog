@@ -922,6 +922,17 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 ---
 
+   3. As a user of the site, I want to be able to view my posts as well as the posts of other users
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ While on the main page of the site, you can select any post that interests you. | Click on the corresponding picture and you will be taken to the corresponding post page
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories/third-user-story-evidence-1.jpg">
+<img src="docs/user-stories/third-user-story-evidence-2.jpg">
+</details>
 
 
 

@@ -1031,7 +1031,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ---
 
 
-   8. As a site user, I can select a specific category of posts that are interesting to me
+   9. As a site user, I can select a specific category of posts that are interesting to me
 
 
    **Action** | **Result** 
@@ -1048,6 +1048,27 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ---
 
 
+   10. As a registered user of the site I can create and update profile page
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ As a user who does not have a profile, go to the profile creation page | You will be taken to the profile creation page
+ Fill out the profile form and click on the create profile button  | Your profile will be created
+ To update your profile, go to your profile page | Your profile will be shown
+ While on the profile page, click on the update profile button  | The profile update page will open
+ Fill out the profile update form and click on the update button | Your profile will be updated
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories/tenth-user-story-evidence-1.jpg">
+<img src="docs/user-stories/tenth-user-story-evidence-2.jpg">
+<img src="docs/user-stories/tenth-user-story-evidence-3.jpg">
+<img src="docs/user-stories/tenth-user-story-evidence-4.jpg">
+<img src="docs/user-stories/tenth-user-story-evidence-5.jpg">
+</details>
+
+---
+
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
 
 
@@ -1056,7 +1077,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 
 
-9. As a site user, I can select a specific category of posts that are interesting to me
+
 10. As a registered user of the site I can create and update profile page
 11. As a registered user of the site, I can see all my published posts on the portfolio page
 12. As a user of the site I can see interesting quotes and aphorisms about food

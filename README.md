@@ -1104,18 +1104,26 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 ---
 
+
+   13. As a user of the site, I would like to receive notifications about my actions
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ You can perform any registration action | Based on the results, a corresponding notification will be displayed
+ 
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/user-stories/thirteenth-user-story-evidence-1.jpg">
+</details>
+
+---
+
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
 
 
 
 
-
-
-
-
-
-
-12. As a user of the site I can see interesting quotes and aphorisms about food
 13. As a user of the site, I would like to receive notifications about my actions
 
 

@@ -1510,4 +1510,23 @@ Note: Lines 132, 135, 138, 141, 164 contain important settings data that cannot 
 
    **Status**: bug fixed;
 
-   <!-- the file metadata lacked description tags and keywords, which was incorrect from the point of view of semantic markup rules -->
+
+  - all views, models, and forms files for both applications in the project had lines longer than 79 characters, causing code review to fail
+
+   **Actions**: implemented views, models and forms of both project applications in places where there were lines longer than 79 characters. 
+
+   **Result**:  All files have been validated
+
+
+   **Status**: bug fixed;
+
+
+  - there was no alt argument in the image tags in the page profile.html, which led to violations of markup rules
+
+   **Actions**: added alt argument to image tags in the page profile file. 
+
+   **Result**:  HTML markup rules are not violated
+
+
+   **Status**: bug fixed;
+

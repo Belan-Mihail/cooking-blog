@@ -4,6 +4,7 @@ from django.core.files.uploadedfile import SimpleUploadedFile
 from customactions.models import Profile
 from django.contrib.auth.models import User
 
+
 class TestProfileForm(TestCase):
     """Test ProfileForm"""
 
@@ -19,7 +20,6 @@ class TestProfileForm(TestCase):
         self.assertIn("region", form.fields)
         self.assertIn("occupation", form.fields)
 
-
     def test_profileform_with_valid_data(self):
         """test ProfileForm with valid data"""
         form = ProfileForm(data={
@@ -29,10 +29,8 @@ class TestProfileForm(TestCase):
             'birth_date': '1988-08-14',
             'region': 'test-region',
             'occupation': 'test-occupation'
-
         })
         self.assertTrue(form.is_valid())
-    
 
     def test_profileform_with_blank_fields_data(self):
         """
@@ -41,7 +39,6 @@ class TestProfileForm(TestCase):
         """
         form = ProfileForm(data={})
         self.assertTrue(form.is_valid())
-
 
     def test_profileform_with_invalid_data(self):
         """test ProfileForm with invalid data"""
@@ -56,7 +53,6 @@ class TestProfileForm(TestCase):
         })
         self.assertFalse(form.is_valid())
 
-
     def test_profileform_invalid_format_of_birth_date(self):
         """test ProfileForm with invalid data"""
         form = ProfileForm(data={
@@ -64,7 +60,7 @@ class TestProfileForm(TestCase):
             'birth_date': '1988-08-41',
         })
         self.assertFalse(form.is_valid())
-    
+
 
 class TestContactForm(TestCase):
     """Test ContactForm"""
@@ -77,7 +73,6 @@ class TestContactForm(TestCase):
         self.assertIn("name", form.fields)
         self.assertIn("email", form.fields)
         self.assertIn("message", form.fields)
-    
 
     def test_contactform_with_valid_data(self):
         """test ContactForm with valid data"""
@@ -87,13 +82,11 @@ class TestContactForm(TestCase):
             'message': 'test message',
         })
         self.assertTrue(form.is_valid())
-    
 
     def test_contactform_with_invalid_data(self):
         """test ContactForm with invalid data"""
         form = ContactForm(data={})
         self.assertFalse(form.is_valid())
-    
 
     def test_contactform_name_more_then_max_length(self):
         """test ContactForm with name length 121 symbol"""
@@ -103,7 +96,6 @@ class TestContactForm(TestCase):
             'message': 'test message',
         })
         self.assertFalse(form.is_valid())
-    
 
     def test_contactform_message_more_then_max_length(self):
         """test ContactForm with name length 121 symbol"""

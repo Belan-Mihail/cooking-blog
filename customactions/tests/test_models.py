@@ -2,6 +2,7 @@ from django.test import TestCase
 from customactions.models import Profile, Contact
 from django.contrib.auth.models import User
 
+
 class TestProfileModel(TestCase):
     """
     Test for Profile Model
@@ -15,10 +16,9 @@ class TestProfileModel(TestCase):
             nickname="administrator",
             bio='bio',
             user_id=1,
-            region = "Germany",
+            region="Germany",
             occupation='developper',
-            )
-
+        )
 
     def test_profile_str(self):
         """
@@ -26,15 +26,13 @@ class TestProfileModel(TestCase):
         """
         obj = self.profile
         self.assertEqual(str(obj), "admin")
-    
 
     def test_checking_object_profile(self):
         """
-        Check test model belongs profile Model 
+        Check test model belongs profile Model
         """
         obj = self.profile
         self.assertTrue(isinstance(obj, Profile))
-    
 
     def test_profile_has_correctly_nickname(self):
         """
@@ -56,8 +54,7 @@ class TestContactModel(TestCase):
             name='mike',
             email='test@gmail.com',
             message='message',
-            )
-
+        )
 
     def test_contact_str(self):
         """
@@ -65,15 +62,13 @@ class TestContactModel(TestCase):
         """
         obj = self.contact
         self.assertEqual(str(obj), "mike")
-    
 
     def test_checking_object_contact(self):
         """
-        Check test model belongs contact Model 
+        Check test model belongs contact Model
         """
         obj = self.contact
         self.assertTrue(isinstance(obj, Contact))
-    
 
     def test_contact_has_correctly_message(self):
         """
@@ -81,4 +76,3 @@ class TestContactModel(TestCase):
         """
         obj = self.contact
         self.assertEqual(obj.message, 'message')
-    

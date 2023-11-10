@@ -1045,6 +1045,41 @@ Note: Lines 132, 135, 138, 141, 164 contain important settings data that cannot 
 <img src="docs/validation/python-validation/cookingblog/test-view-py.jpg">
 </details>
 
+##### Customactions
+
+<details><summary>admin.py</summary>
+<img src="docs/validation/python-validation/customactions/admin-py.jpg">
+</details>
+
+<details><summary>forms.py</summary>
+<img src="docs/validation/python-validation/customactions/forms-py.jpg">
+</details>
+
+<details><summary>models.py</summary>
+<img src="docs/validation/python-validation/customactions/models-py.jpg">
+</details>
+
+<details><summary>urls.py</summary>
+<img src="docs/validation/python-validation/customactions/urls-py.jpg">
+</details>
+
+<details><summary>views.py</summary>
+<img src="docs/validation/python-validation/customactions/views-py.jpg">
+</details>
+
+<details><summary>test_form.py</summary>
+<img src="docs/validation/python-validation/customactions/test-form-py.jpg">
+</details>
+
+<details><summary>test_models.py</summary>
+<img src="docs/validation/python-validation/customactions/test-models-py.jpg">
+</details>
+
+<details><summary>test_view.py</summary>
+<img src="docs/validation/python-validation/customactions/test-view-py.jpg">
+</details>
+
+
 ## Testing
 
 ### User Story Testing

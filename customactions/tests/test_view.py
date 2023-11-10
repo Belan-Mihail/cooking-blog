@@ -9,6 +9,9 @@ class TestView(TestCase):
     Class for test views
     """
     def setUp(self):
+        """
+        Create test model
+        """
         self.user = User.objects.create_user(username='admin', password='abc564!')
         self.profile = Profile.objects.create(
             nickname="administrator",
@@ -20,7 +23,8 @@ class TestView(TestCase):
 
     def test_create_profile_used_template(self):
         """
-        This tests display of the create_post page
+        This tests check status code 
+        and used template CreateProfileView
         """
         response = self.client.get(reverse('create_profile'))
         self.assertEqual(response.status_code, 200)
@@ -30,7 +34,8 @@ class TestView(TestCase):
 
     def test_view_profile_used_template(self):
         """
-        This tests display of the create_post page
+        This tests check status code 
+        and used template ProfilePageView
         """
         response = self.client.get(reverse('profile_page'))
         self.assertEqual(response.status_code, 200)
@@ -40,7 +45,8 @@ class TestView(TestCase):
 
     def test_update_profile_used_template(self):
         """
-        This tests display of the create_post page
+        This tests check status code 
+        and used template UpdateProfile
         """
         login = self.client.login(username='admin', password='abc564!')
         self.assertTrue(login)
@@ -53,10 +59,11 @@ class TestView(TestCase):
 
     def test_contact_used_template(self):
         """
-        This tests display of the create_post page
+        This tests check status code 
+        and used template contact
         """
-
         response = self.client.get(reverse('contact'))
         self.assertEqual(response.status_code, 200)
         self.assertTrue(response, 'customactions/contact.html' in (t.name for t in response.templates))
         self.assertTrue(response, 'base.html' in (t.name for t in response.templates))
+        

@@ -7,6 +7,9 @@ class TestProfileModel(TestCase):
     Test for Profile Model
     """
     def setUp(self):
+        """
+        Create test model
+        """
         User.objects.create(username='admin',),
         self.profile = Profile.objects.create(
             nickname="administrator",
@@ -46,6 +49,9 @@ class TestContactModel(TestCase):
     Test for Contact Model
     """
     def setUp(self):
+        """
+        Create testing model
+        """
         self.contact = Contact.objects.create(
             name='mike',
             email='test@gmail.com',

@@ -49,11 +49,10 @@ class TestProfileForm(TestCase):
             'nickname': 'test nickname',
             'avatar': SimpleUploadedFile("image.jpg", b"file data"),
             'bio': 'test',
-            # add invilid format of birth_date
+            # add invalid format of birth_date
             'birth_date': '14-08-1988',
             'region': 'test-region',
             'occupation': 'test-occupation'
-
         })
         self.assertFalse(form.is_valid())
 
@@ -61,7 +60,7 @@ class TestProfileForm(TestCase):
     def test_profileform_invalid_format_of_birth_date(self):
         """test ProfileForm with invalid data"""
         form = ProfileForm(data={
-            # add invilid format of birth_date
+            # add invalid format of birth_date
             'birth_date': '1988-08-41',
         })
         self.assertFalse(form.is_valid())
@@ -74,7 +73,6 @@ class TestContactForm(TestCase):
         """
         test ContactForm fields
         """
-
         form = ContactForm()
         self.assertIn("name", form.fields)
         self.assertIn("email", form.fields)

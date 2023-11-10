@@ -889,6 +889,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 - [Fontawesome](https://fontawesome.com/) - for displaying beautiful icons on the site (for example, like hearts)
 - [Coolors](https://coolors.co/) - to create a color palette for the site
 - [Paint.NET](https://getpaint.net/) - Used to process screenshots and pictures.
+- [CI Python Linter](https://pep8ci.herokuapp.com/) - Used to test Python code;
 - [JSHint](https://jshint.com/) - Used to test JS code;
 - [Lighthouse](https://main--developer-chrome-com.netlify.app/docs/devtools/lighthouse/) - Used to test Perfomance;
 - [W3C Markup validation service](https://validator.w3.org/) - Used to test HTML code

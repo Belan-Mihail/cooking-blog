@@ -1235,10 +1235,85 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
   - In the model CookingRecipePost lacked a method for creating slugs for new posts, which caused an error when adding posts to the site
 
-    **Actions**: a method for creating slugs for new posts was added to the model (method save);
+   **Actions**: a method for creating slugs for new posts was added to the model (method save);
 
 
-    **Result**: automatic slug began to appear for new posts in accordance with the title of the post;
+   **Result**: automatic slug began to appear for new posts in accordance with the title of the post;
+
+   **Status**: bug fixed;
 
 
-    **Status**: bug fixed;
+  - When updating posts, an old slug remained, which could lead to bugs
+
+   **Actions**: in the CookingRecipePostUpdateView the form_valid method was changed with the addition of slug cleaning;
+
+
+   **Result**: automatic slug began to appear for updated posts in accordance with the title of the post;
+
+   **Status**: bug fixed;
+
+
+  - In the profilefor form widget, the nickname field was specified twice, which led to a crash
+
+   **Actions**: Removed extra nickname field.
+
+
+   **Result**: the error stopped appearing;
+
+
+   **Status**: bug fixed;
+
+
+  - based on the educational project, a model named in the educational project was added without updating the name in accordance with the current project
+
+   **Actions**: this model has been renamed, other models have been checked for correct naming
+
+
+   **Result**: the error stopped appearing;
+
+
+   **Status**: bug fixed;
+
+
+  - Based on the tutorial project and the tutor's comments to the project volume in the settings. py was accidentally added as an application 'crispy_bootstrap4', which caused the main project to crash (ModuleNotFoundError: No module named 'crispy_bootstrap4')
+
+   **Actions**: accidentally added as an application 'crispy_bootstrap4' was deleted
+
+
+   **Result**: the error stopped appearing;
+
+
+   **Status**: bug fixed;
+
+
+  - There was no closing article tag in the post detail file, which led to a violation of semantics rules
+
+   **Actions**: a closing article tag has been added to the file. 
+
+
+   **Result**: violations of the rules of semantics ceased to exist
+
+
+   **Status**: bug fixed;
+
+
+  - when creating tests for views, the primary test was copied several times, which led to the presence of identical and inaccurate comments for a number of tests
+
+   **Actions**: comments on the presentation have been clarified. 
+
+
+   **Result**: the inaccuracy in the comments has been corrected
+
+
+   **Status**: bug fixed;
+
+
+  - supporting comments were not added to many functions, loops and conditional objections in various project files, which would make the code difficult to understand
+
+   **Actions**: supporting comments have been added in the appropriate places. 
+
+
+   **Result**: the code has become easier to understand 
+
+
+   **Status**: bug fixed;

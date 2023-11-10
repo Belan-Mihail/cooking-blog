@@ -947,6 +947,15 @@ The W3C Markup Validation Service was used to validate the HTML of the website.
 <img src="docs/validation/html-validation/validation-signup-html.jpg">
 </details>
 
+<details><summary>Create Profile</summary>
+<img src="docs/validation/html-validation/validation-create-profile-html.jpg">
+</details>
+
+<details><summary>Profile Page</summary>
+<img src="docs/validation/html-validation/validation-profile-page-html.jpg">
+</details>
+
+
 ## Testing
 
 ### User Story Testing

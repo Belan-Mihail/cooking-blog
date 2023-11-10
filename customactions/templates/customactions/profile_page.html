@@ -4,9 +4,8 @@
     <div class="col-12 col-sm-6 col-md-4">
         <div class="image-container-home-page">
             {% if "placeholder" in user.profile.avatar.url %}
-            <img class="card-img-home-page"
-            src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1698877007/pkqxehru83pznky2pksv.jpg"
-            alt="default profile avatar">
+            <img class="card-img-home-page" alt="default profile avatar"
+            src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1698877007/pkqxehru83pznky2pksv.jpg">
             {% else %}
             <img class="card-img-home-page" src=" {{ user.profile.avatar.url }}" alt="user profile avatar">
             {% endif %}
@@ -14,7 +13,7 @@
     </div>
     <div class="col-12 col-sm-6 col-md-8">
         <strong>User Name:</strong><h2 class="h4 text-capitalize font-weight-bold">{{user.username}}</h2>
-
+        <!-- Check iser bio is empty -->
         {% if user.profile.bio == '' %}
         <p><strong>User bio:</strong>dates are empted</p>
         {% else %}
@@ -30,7 +29,8 @@
     </div>
 </div>
 
-    <h3 class="profile-posts-title">User Posts:</h3>
+<!-- Display users posts if not empty -->
+<h3 class="profile-posts-title">User Posts:</h3>
 
 {% for post in cooking_recipes_post %}
 <div class="row row-profile-posts">
@@ -38,10 +38,10 @@
         <a class="post-link" href="{% url 'cooking_recipe_post_detail' post.slug  %}">
             <div class="image-container-home-page">
                 {% if "placeholder" in post.cooking_recipe_image.url %}
-                <img class="card-img-home-page"
+                <img class="card-img-home-page" alt="default post image"
                     src="https://res.cloudinary.com/dtnxukqxl/image/upload/v1696967358/project/lgzihdcgkyvtnpwmpugr.jpg">
                 {% else %}
-                <img class="card-img-home-page" src=" {{ post.cooking_recipe_image.url }}">
+                <img class="card-img-home-page" alt="" src=" {{ post.cooking_recipe_image.url }}">
                 {% endif %}
             </div>
         </a>
@@ -51,10 +51,8 @@
         <p class="blog-post-meta text-muted"> Post creaeted {{ post.created_on}} by 
             <a class="link-accent-color" href="#"><strong>{{ post.cooking_recipe_author}}</strong></a>
         </p>
-    
         <p>{{ post.excerpt }}</p>
         <hr>
-    
         <p class="card-text text-muted h6"> Post updated {{ post.updated_on}}
             <i class="far fa-heart"></i>{{ post.number_of_likes }}
         </p>
@@ -82,5 +80,4 @@
 </div>
 
 {% endfor %}
-
 {%endblock%}

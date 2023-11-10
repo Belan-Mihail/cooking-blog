@@ -888,6 +888,12 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 - [Google Fonts](https://fonts.google.com/) - for typography in project
 - [Fontawesome](https://fontawesome.com/) - for displaying beautiful icons on the site (for example, like hearts)
 - [Coolors](https://coolors.co/) - to create a color palette for the site
+- [Paint.NET](https://getpaint.net/) - Used to process screenshots and pictures.
+- [JSHint](https://jshint.com/) - Used to test JS code;
+- [Lighthouse](https://main--developer-chrome-com.netlify.app/docs/devtools/lighthouse/) - Used to test Perfomance;
+- [W3C Markup validation service](https://validator.w3.org/) - Used to test HTML code
+- [W3C Jigsaw CSS validation service](https://jigsaw.w3.org/css-validator/)  Used to test css;
+- [WAVE WebAIM web accessibility evaluation tool](https://wave.webaim.org/) - Used to test accessibility
 
 ## Validation
 
@@ -1220,7 +1226,19 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 ---
 
-<!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
+### Device Testing
 
 
-6. As the owner of the site, I can place links to the project’s social pages on every page of the site -->
+### Browser compatibility
+
+## Bugs
+
+  - In the model CookingRecipePost lacked a method for creating slugs for new posts, which caused an error when adding posts to the site
+
+    **Actions**: a method for creating slugs for new posts was added to the model (method save);
+
+
+    **Result**: automatic slug began to appear for new posts in accordance with the title of the post;
+
+
+    **Status**: bug fixed;

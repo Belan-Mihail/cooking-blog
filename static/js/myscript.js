@@ -1,4 +1,4 @@
-var category = 'food'
+var category = 'food';
 setInterval(function () {
 $.ajax({
     method: 'GET',
@@ -11,7 +11,7 @@ $.ajax({
     error: function ajaxError(jqXHR) {
         console.error('Error: ', jqXHR.responseText);
     }
-})
+});
 }, 30000);
 
 
@@ -27,7 +27,7 @@ if ($('#quote').length > 0){
         error: function ajaxError(jqXHR) {
             console.error('Error: ', jqXHR.responseText);
         }
-    })
+    });
 }
 
 $('#quote-btn').click(function() {
@@ -42,6 +42,6 @@ $('#quote-btn').click(function() {
         error: function ajaxError(jqXHR) {
             console.error('Error: ', jqXHR.responseText);
         }
-    })
+    });
 });
 

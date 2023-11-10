@@ -975,6 +975,22 @@ Jigsaw W3 Validator was used to validate the css in the project. Validator with 
 <img src="docs/validation/css-validation/validation-style-css.jpg">
 </details>
 
+### JS
+
+JShint Validator was used to validate the js and jquery in the project. Validator with no errors.
+
+Note: in file main.js one undefined variable "bootstrap" is an external library used
+
+<details><summary>JS</summary>
+<img src="docs/validation/js-validation/validation-main-js.jpg">
+</details>
+
+Note: in file myscript.js one undefined variable "$" which is jQuery selectors
+
+<details><summary>jQuery</summary>
+<img src="docs/validation/js-validation/validation-myscript-js.jpg">
+</details>
+
 ## Testing
 
 ### User Story Testing

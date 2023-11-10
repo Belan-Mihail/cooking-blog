@@ -897,7 +897,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 ## Validation
 
-### The W3C Markup Validation Service
+### HTML
 
 The W3C Markup Validation Service was used to validate the HTML of the website.
 
@@ -967,6 +967,13 @@ The W3C Markup Validation Service was used to validate the HTML of the website.
 <img src="docs/validation/html-validation/validation-contact-html.jpg">
 </details>
 
+### CSS
+
+Jigsaw W3 Validator was used to validate the css in the project. Validator with no errors.
+
+<details><summary>CSS</summary>
+<img src="docs/validation/css-validation/validation-style-css.jpg">
+</details>
 
 ## Testing
 

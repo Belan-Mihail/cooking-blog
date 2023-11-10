@@ -1409,10 +1409,24 @@ Note: Lines 132, 135, 138, 141, 164 contain important settings data that cannot 
 
 ---
 
-### Device Testing
+### Device testing
 
+The website was tested on the following devices:
+
+   - Iphone 7;
+   - Iphone 12 Pro;
+
+
+In addition, the website was tested using Google Chrome Developer Tools Device Toggeling option for all available device options.
 
 ### Browser compatibility
+
+The website was tested on the following browsers:
+
+   - Google Chrome;
+   - Yandex Browser;
+   - Mozilla Firefox;
+
 
 ## Bugs
 

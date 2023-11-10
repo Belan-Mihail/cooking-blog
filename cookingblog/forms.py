@@ -2,7 +2,6 @@ from .models import Comment, CookingRecipePost
 from django import forms
 
 
-
 class CommentForm(forms.ModelForm):
     """
     Form for Comments model
@@ -18,7 +17,13 @@ class CookingRecipePostCreateForm(forms.ModelForm):
     """
     class Meta:
         model = CookingRecipePost
-        fields = ('cooking_recipe_title', 'cat', 'cooking_recipe_image', 'excerpt', 'cooking_recipe_body')
+        fields = (
+            'cooking_recipe_title',
+            'cat',
+            'cooking_recipe_image',
+            'excerpt',
+            'cooking_recipe_body'
+        )
 
 
 class CookingRecipePostUpdateForm(forms.ModelForm):
@@ -27,6 +32,10 @@ class CookingRecipePostUpdateForm(forms.ModelForm):
     """
     class Meta:
         model = CookingRecipePost
-        fields = ('cooking_recipe_title', 'cat', 'cooking_recipe_image', 'excerpt', 'cooking_recipe_body')
-
-
+        fields = (
+            'cooking_recipe_title',
+            'cat',
+            'cooking_recipe_image',
+            'excerpt',
+            'cooking_recipe_body'
+        )

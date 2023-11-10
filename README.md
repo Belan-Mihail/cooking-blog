@@ -1011,6 +1011,40 @@ Note: Lines 132, 135, 138, 141, 164 contain important settings data that cannot 
 <img src="docs/validation/python-validation/cookingproject/views-py.jpg">
 </details>
 
+##### Cookingblock
+
+<details><summary>admin.py</summary>
+<img src="docs/validation/python-validation/cookingblog/admin-py.jpg">
+</details>
+
+<details><summary>forms.py</summary>
+<img src="docs/validation/python-validation/cookingblog/forms-py.jpg">
+</details>
+
+<details><summary>models.py</summary>
+<img src="docs/validation/python-validation/cookingblog/models-py.jpg">
+</details>
+
+<details><summary>urls.py</summary>
+<img src="docs/validation/python-validation/cookingblog/urls-py.jpg">
+</details>
+
+<details><summary>views.py</summary>
+<img src="docs/validation/python-validation/cookingblog/views-py.jpg">
+</details>
+
+<details><summary>test_form.py</summary>
+<img src="docs/validation/python-validation/cookingblog/test-form-py.jpg">
+</details>
+
+<details><summary>test_models.py</summary>
+<img src="docs/validation/python-validation/cookingblog/test-models-py.jpg">
+</details>
+
+<details><summary>test_view.py</summary>
+<img src="docs/validation/python-validation/cookingblog/test-view-py.jpg">
+</details>
+
 ## Testing
 
 ### User Story Testing

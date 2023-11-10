@@ -7,6 +7,7 @@ from django.urls import reverse
 # Field status from CookingRecipeModel
 STATUS = ((0, "Draft"), (1, "Published"))
 
+
 class CookingRecipePost(models.Model):
     """
     Model for posts
@@ -14,7 +15,8 @@ class CookingRecipePost(models.Model):
     cooking_recipe_title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     cooking_recipe_author = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="cooking_recipe_blog_posts"
+        User, on_delete=models.CASCADE,
+        related_name="cooking_recipe_blog_posts"
     )
     cooking_recipe_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
@@ -24,8 +26,9 @@ class CookingRecipePost(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
     likes = models.ManyToManyField(
         User, related_name='cookingrecipepost_like', blank=True)
-    cat = models.ForeignKey('Category', on_delete=models.PROTECT, related_name="categories")
-    
+    cat = models.ForeignKey(
+        'Category', on_delete=models.PROTECT, related_name="categories"
+    )
 
     class Meta:
         ordering = ["-created_on"]
@@ -34,17 +37,16 @@ class CookingRecipePost(models.Model):
 
     def __str__(self):
         return self.cooking_recipe_title
-    
 
     def get_absolute_url(self):
-        return reverse('cooking_recipe_post_detail', kwargs={'slug': self.slug})
+        return reverse(
+            'cooking_recipe_post_detail', kwargs={'slug': self.slug}
+        )
 
-
-    def save(self, *args, **kwargs):  
+    def save(self, *args, **kwargs):
         if not self.slug:
             self.slug = slugify(self.cooking_recipe_title)
         return super().save(*args, **kwargs)
-
 
     def number_of_likes(self):
         return self.likes.count()
@@ -54,7 +56,9 @@ class Comment(models.Model):
     """
     Model for comments
     """
-    cooking_recipe_post = models.ForeignKey(CookingRecipePost, on_delete=models.CASCADE, related_name="comments")
+    cooking_recipe_post = models.ForeignKey(
+        CookingRecipePost, on_delete=models.CASCADE, related_name="comments"
+    )
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField(max_length=500)

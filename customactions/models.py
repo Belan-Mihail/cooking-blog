@@ -15,19 +15,17 @@ class Profile(models.Model):
     region = models.CharField(blank=True, max_length=50)
     occupation = models.CharField(blank=True, max_length=50)
 
-
     def __str__(self):
         return self.user.username
 
 
 class Contact(models.Model):
     """
-    Model for feedback messages 
+    Model for feedback messages
     """
     name = models.CharField(max_length=120)
     email = models.EmailField()
     message = models.TextField(max_length=1000)
-
 
     def __str__(self):
         return self.name

@@ -20,7 +20,6 @@ class CreateProfileView(SuccessMessageMixin, CreateView):
     template_name = 'customactions/create_profile.html'
     success_message = 'Your profile has been created successfully!'
 
-
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
@@ -33,15 +32,17 @@ class ProfilePageView(DetailView):
     """
     model = Profile
     template_name = 'customactions/profile_page.html'
-    
-    
+
     def get_object(self, *args, **kwargs):
         return self.request.user
 
-
-    def get_context_data(self,**kwargs):
+    def get_context_data(self, **kwargs):
         context = super(ProfilePageView, self).get_context_data(**kwargs)
-        context['cooking_recipes_post'] = CookingRecipePost.objects.filter(cooking_recipe_author__id=self.request.user.id, status=1).order_by("-created_on")
+        context[
+            'cooking_recipes_post'
+        ] = CookingRecipePost.objects.filter(
+            cooking_recipe_author__id=self.request.user.id, status=1
+        ).order_by("-created_on")
         return context
 
 

@@ -1,6 +1,6 @@
 from django import forms
-
 from .models import Profile, Contact
+
 
 class ProfileForm(forms.ModelForm):
     """
@@ -9,7 +9,9 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = Profile
-        fields = ['nickname', 'avatar', 'bio', 'birth_date', 'region', 'occupation']
+        fields = [
+            'nickname', 'avatar', 'bio', 'birth_date', 'region', 'occupation'
+        ]
 
         widgets = {
             'nickname': forms.TextInput(

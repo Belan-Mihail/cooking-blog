@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Main */
 .main-body {
-    min-height: 30rem;
+    min-height: 75vh;
 }
 
 .main-container {

@@ -1530,3 +1530,22 @@ Note: Lines 132, 135, 138, 141, 164 contain important settings data that cannot 
 
    **Status**: bug fixed;
 
+
+  - there was no alt argument in the image tags in the page profile.html, which led to violations of markup rules
+
+   **Actions**: added alt argument to image tags in the page profile file. 
+
+   **Result**:  HTML markup rules are not violated
+
+
+   **Status**: bug fixed;
+
+
+  - the notification that your comment is being approved by the administrator did not disappear after a while
+
+   **Actions**: Added afdi message to the markup that displays the notification, which is tracked by the javascript function 
+
+   **Result**:  comment notifications began to disappear after the timing specified by the js function
+
+
+   **Status**: bug fixed;

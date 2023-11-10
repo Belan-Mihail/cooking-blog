@@ -992,6 +992,25 @@ Note: in file myscript.js one undefined variable "$" which is jQuery selectors
 <img src="docs/validation/js-validation/validation-myscript-js.jpg">
 </details>
 
+### Python
+
+CI Python Linter was used for validation of python files.
+
+##### Cookingproject
+
+<details><summary>settings.py</summary>
+Note: Lines 132, 135, 138, 141, 164 contain important settings data that cannot be changed, therefore exceeding the line limit is justified 
+<img src="docs/validation/python-validation/cookingproject/settings-py.jpg">
+</details>
+
+<details><summary>urls.py</summary>
+<img src="docs/validation/python-validation/cookingproject/urls-py.jpg">
+</details>
+
+<details><summary>views.py</summary>
+<img src="docs/validation/python-validation/cookingproject/views-py.jpg">
+</details>
+
 ## Testing
 
 ### User Story Testing

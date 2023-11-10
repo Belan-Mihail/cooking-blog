@@ -33,7 +33,13 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cookingblognew-0b91b3c6b01a.herokuapp.com', 'localhost', '8000-belanmihail-cookingblog-0mjo0zedycj.ws-eu105.gitpod.io', '8000-belanmihail-cookingblog-nkthurm7uq0.ws-eu105.gitpod.io', '8000-belanmihail-cookingblog-nkthurm7uq0.ws-eu106.gitpod.io']
+ALLOWED_HOSTS = [
+    'cookingblognew-0b91b3c6b01a.herokuapp.com',
+    'localhost',
+    '8000-belanmihail-cookingblog-0mjo0zedycj.ws-eu105.gitpod.io',
+    '8000-belanmihail-cookingblog-nkthurm7uq0.ws-eu105.gitpod.io',
+    '8000-belanmihail-cookingblog-nkthurm7uq0.ws-eu106.gitpod.io'
+]
 
 
 # Application definition
@@ -169,4 +175,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
-

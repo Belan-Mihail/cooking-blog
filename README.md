@@ -897,6 +897,15 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 ## Validation
 
+### The W3C Markup Validation Service
+
+The W3C Markup Validation Service was used to validate the HTML of the website.
+
+
+<details><summary>Base</summary>
+<img src="docs/validation/html-valiation/validation-base.html.jpg">
+</details>
+
 ## Testing
 
 ### User Story Testing
@@ -1317,3 +1326,14 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 
    **Status**: bug fixed;
+
+  - base.html metadata lacked description tags and keywords, which was incorrect from the point of view of semantic markup rules
+
+   **Actions**: Description tags and keywords have been added to the file metadata.
+
+   **Result**:  semantic markup errors fixed  
+
+
+   **Status**: bug fixed;
+
+   <!-- the file metadata lacked description tags and keywords, which was incorrect from the point of view of semantic markup rules -->

@@ -927,6 +927,26 @@ The W3C Markup Validation Service was used to validate the HTML of the website.
 <img src="docs/validation/html-validation/validation-recipe-update-html.jpg">
 </details>
 
+<details><summary>500</summary>
+<img src="docs/validation/html-validation/validation-500-html.jpg">
+</details>
+
+<details><summary>404</summary>
+<img src="docs/validation/html-validation/validation-404-html.jpg">
+</details>
+
+<details><summary>LogIn</summary>
+<img src="docs/validation/html-validation/validation-login-html.jpg">
+</details>
+
+<details><summary>LogOut</summary>
+<img src="docs/validation/html-validation/validation-logout-html.jpg">
+</details>
+
+<details><summary>SignUp</summary>
+<img src="docs/validation/html-validation/validation-signup-html.jpg">
+</details>
+
 ## Testing
 
 ### User Story Testing

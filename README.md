@@ -1205,11 +1205,22 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 ---
 
+
+   6. As the owner of the site, I can place links to the project’s social pages on every page of the site
+
+
+   **Action** | **Result** 
+   -----------| ----------  
+ On any page of the site, scroll down to the footer | The site footer contains links to social networks.
+ 
+
+<details><summary>Screenshot evidences</summary>
+<img src="docs/site-owner-stories/sixth-site-owner-story-evidence-1.jpg">
+</details>
+
+---
+
 <!-- 1. As User I can use navigation bar so that I can easy to navigate the site.
 
 
-### Site Owner Stories
-
-
-5. As the owner of the site I can receive feedback from registered users
 6. As the owner of the site, I can place links to the project’s social pages on every page of the site -->

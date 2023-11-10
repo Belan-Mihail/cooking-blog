@@ -901,9 +901,14 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 The W3C Markup Validation Service was used to validate the HTML of the website.
 
+**Note**: ***According to the results of the code check, there were no errors directly in the HTML code. errors associated with the use of template tags and URL-links in HTML files are hidden by filtering***
 
 <details><summary>Base</summary>
-<img src="docs/validation/html-valiation/validation-base.html.jpg">
+<img src="docs/validation/html-validation/validation-base-html.jpg">
+</details>
+
+<details><summary>Home</summary>
+<img src="docs/validation/html-validation/validation-home-html.jpg">
 </details>
 
 ## Testing

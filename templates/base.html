@@ -46,12 +46,14 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
+                    <!-- user authentication check -->
                 {% if user.is_authenticated %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle navbar-button" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             User Menu
                         </a>
                         <ul class="dropdown-menu">
+                            <!-- check user has profile -->
                             {% if user.profile %}
                             <li><a class="dropdown-item" href="{% url 'profile_page' %}">Profile</a></li>
                             {% else %}
@@ -86,6 +88,7 @@
     
     <!-- Main -->
     <main class="main-bg main-body">
+        <!-- user authentication check for greeting -->
         {% if user.is_authenticated %}
         <div class="user-greeting">
             <span>you login as <strong>{{ user }}</strong></span>

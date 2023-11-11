@@ -20,28 +20,80 @@
     2. [Colors](#colors)
     3. [Fonts](#fonts)
     4. [Structure](#structure)
-      1. [Home Page](#home-page)
-      2. [Create Post Page](#create-post-page)
-      3. [Post Detail Page](#post-detail-page)
-      4. [Update Post Detail Page](#update-post-detail-page)
-      5. [Delete Post Detail Page](#delete-post-detail-page)
-      6. [Categories Page](#categories-page)
-      7. [Profile Page](#profile-page)
-      8. [Update Profile Page](#update-profile-page)
-      9. [Create Profile Page](#create-profile-page)
-      10. [Contact Page](#contact-page)
-      11. [Thanks Page](#thanks-page)
-      12. [SignUp Page](#signup-page)
-      13. [LogIn Page](#login-page)
-      14. [LogOut Page](#logout-page)
+       1. [Home Page](#home-page)
+       2. [Create Post Page](#create-post-page)
+       3. [Post Detail Page](#post-detail-page)
+       4. [Update Post Detail Page](#update-post-detail-page)
+       5. [Delete Post Detail Page](#delete-post-detail-page)
+       6. [Categories Page](#categories-page)
+       7. [Profile Page](#profile-page)
+       8. [Update Profile Page](#update-profile-page)
+       9. [Create Profile Page](#create-profile-page)
+       10. [Contact Page](#contact-page)
+       11. [Thanks Page](#thanks-page)
+       12. [SignUp Page](#signup-page)
+       13. [LogIn Page](#login-page)
+       14. [LogOut Page](#logout-page)
     5. [Wireframes](#wireframes)
-    6. [Models Used](#models-used)
-      1. [User](#user)
-      2. [CookingRecipePost](#cookingrecipepost)
-      3. [Comment](#comment)
-      4. [Category](#category)
-      5. [Profile](#profile)
-      6. [Contact](#contact)
+5. [Database](#database)
+    1. [Models Used](#models-used)
+       1. [User](#user)
+       2. [CookingRecipePost](#cookingrecipepost)
+       3. [Comment](#comment)
+       4. [Category](#category)
+       5. [Profile](#profile)
+       6. [Contact](#contact)
+6. [Agile](#agile)
+7. [Features](#features)
+    1. [Blocks are typical for all pages](#blocks-are-typical-for-all-pages)
+        1. [Logo and Navbar](#logo-and-navbar)
+        2. [Footer](#footer)
+    2. [Blocks are not typical for all pages](#blocks-are-not-typical-for-all-pages)
+        1. [Home Page (Features)](#home-page-features)
+        2. [Create Post Page (Features)](#create-post-page-features)
+        3. [Detail Post Page (Features)](#delete-post-page-features)
+        4. [Update Post Page (Features)](#update-post-page-features)
+        5. [Delete Post Page (Features)](#delete-post-page-features)
+        6. [Categories Page (Features)](#categories-page-features)
+        7. [Create Profile Page (Features)](#create-post-page-features)
+        8. [Profile Page (Features)](#profile-page-features)
+        9. [Update Profile Page (Features)](#update-post-page-features)
+        10. [Contact Page (Features)](#contact-page-features)
+        11. [Thanks Page (Features)](#thanks-page-features)
+        12. [SignUp Page (Features)](#signup-page-features)
+        13. [LogIn Page (Features)](#login-page-features)
+        14. [LogOut Page (Features)](#logout-page-features)
+8. [Technologies Used](#technologies-used)
+    1. [Languages & Frameworks](#languages--frameworks)
+    2. [Libraries & Tools](#libraries--tools)
+9. [Validation](#validation)
+    1. [HTML](#html)
+    2. [CSS](#css)
+    3. [JS](#js)
+    4. [Python](#python)
+        1. [Cookingproject](#cookingproject)
+        2. [Cookingblock](#cookingblock)
+        3. [Customactions](#customactions)
+10. [Testing]
+    1. [User Story Testing](#user-story-testing)
+    2. [Site Owner Stories Testing](#site-owner-stories-testing)
+    3. [Device testing](#device-testing)
+    4. [Browser compatibility](#browser-compatibility)
+11. [Bugs](#bugs)
+12. [Deployment](#deployment)
+    1. [Workspace](#workspace)
+    2. [Heroku](#heroku)
+    3. [PostgreSQL](#postgresql)
+    4. [Cloudinary](#cloudinary)
+    5. [Last Deployment Steps](#last-deployment-steps)
+    6. [Cloning the repository](#cloning-the-repository)
+    7. [Forking the GitHub Repository](#forking-the-github-repository)
+13. [Credits](#credits)
+    1. [Content](#content)
+    2. [Media](#media)
+    3. [Code](#code)
+14. [Acknowledgements](#acknowledgements)
+
 
 
 
@@ -542,7 +594,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
    - type: TextField
    - validation: max_length=1000 
 
-### Agile 
+## Agile 
 
 - steps taken:
    1. created User Story Template
@@ -778,7 +830,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ![Update Profile Page](docs/features/update-profile/update-profile-3.jpg)
 
 
-#### Contact Page
+#### Contact Page (Features)
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
@@ -797,7 +849,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ![Contact Page](docs/features/contact-page/contact-page-3.jpg)
 
 
-#### Thanks Page
+#### Thanks Page (Features)
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
@@ -816,7 +868,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 
 
 
-#### SignUp Page
+#### SignUp Page (Features)
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
@@ -831,7 +883,7 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 ![Thanks Page](docs/features/signup-page/signup-page-3.jpg)
 
 
-#### LogIn Page
+#### LogIn Page (Features)
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
@@ -841,12 +893,12 @@ The site structure is designed to ensure maximum ease of use. Also, much attenti
 - History of the site owner covered by this function: 1
 
 
-![Thanks Page](docs/features/login-page/login-page-1.jpg)
-![Thanks Page](docs/features/login-page/login-page-2.jpg)
-![Thanks Page](docs/features/login-page/login-page-3.jpg)
+![Login Page](docs/features/login-page/login-page-1.jpg)
+![Login Page](docs/features/login-page/login-page-2.jpg)
+![Login Page](docs/features/login-page/login-page-3.jpg)
 
 
-#### LogOut Page
+#### LogOut Page (Features)
 
 - The page consists of three sections: header, main section and footer. The footer and header sections are standard for the entire site.
 
@@ -996,7 +1048,7 @@ Note: in file myscript.js one undefined variable "$" which is jQuery selectors
 
 CI Python Linter was used for validation of python files.
 
-##### Cookingproject
+#### Cookingproject
 
 <details><summary>settings.py</summary>
 Note: Lines 132, 135, 138, 141, 164 contain important settings data that cannot be changed, therefore exceeding the line limit is justified 
@@ -1011,7 +1063,7 @@ Note: Lines 132, 135, 138, 141, 164 contain important settings data that cannot 
 <img src="docs/validation/python-validation/cookingproject/views-py.jpg">
 </details>
 
-##### Cookingblock
+#### Cookingblock
 
 <details><summary>admin.py</summary>
 <img src="docs/validation/python-validation/cookingblog/admin-py.jpg">
@@ -1045,7 +1097,7 @@ Note: Lines 132, 135, 138, 141, 164 contain important settings data that cannot 
 <img src="docs/validation/python-validation/cookingblog/test-view-py.jpg">
 </details>
 
-##### Customactions
+#### Customactions
 
 <details><summary>admin.py</summary>
 <img src="docs/validation/python-validation/customactions/admin-py.jpg">

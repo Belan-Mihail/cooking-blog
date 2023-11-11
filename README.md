@@ -74,6 +74,8 @@
         1. [Cookingproject](#cookingproject)
         2. [Cookingblock](#cookingblock)
         3. [Customactions](#customactions)
+    5. [Lighthouse](#lighthouse) 
+    6. [Wave](#wave)
 10. [Testing]
     1. [User Story Testing](#user-story-testing)
     2. [Site Owner Stories Testing](#site-owner-stories-testing)
@@ -1148,19 +1150,19 @@ NOTE: The results of testing individual pages of the Lighthouse project (in term
 </details>
 
 <details><summary>Add post page</summary>
-<img src="docs/validation/lighthouse/lighthouse-add-post-page-html.jpg">
+<img src="docs/validation/lighthouse/lighthouse-add-post-html.jpg">
 </details>
 
 <details><summary>Contact page</summary>
-<img src="docs/validation/lighthouse/lighthouse-contact-page-html.jpg">
+<img src="docs/validation/lighthouse/lighthouse-contact-html.jpg">
 </details>
 
 <details><summary>Create profile page</summary>
-<img src="docs/validation/lighthouse/lighthouse-create-profile-page-html.jpg">
+<img src="docs/validation/lighthouse/lighthouse-create-profile-html.jpg">
 </details>
 
 <details><summary>Delete post page</summary>
-<img src="docs/validation/lighthouse/lighthouse-delete-post-page-html.jpg">
+<img src="docs/validation/lighthouse/lighthouse-delete-post-html.jpg">
 </details>
 
 <details><summary>Login page</summary>
@@ -1172,7 +1174,7 @@ NOTE: The results of testing individual pages of the Lighthouse project (in term
 </details>
 
 <details><summary>Signup page</summary>
-<img src="docs/validation/lighthouse/lighthouse-signup-html.jpg">
+<img src="docs/validation/lighthouse/lighthouse-sign-up-html.jpg">
 </details>
 
 <details><summary>Profile page</summary>
@@ -1583,6 +1585,18 @@ The website was tested on the following browsers:
    - Google Chrome;
    - Yandex Browser;
    - Mozilla Firefox;
+
+### Automated testing
+
+Automated testing was done using module: unittest. A total of 52 tests were created.
+
+<details><summary>Cookingblog App Test Report</summary>
+<img src="docs/cookingblog-tests-report.jpg">
+</details>
+
+<details><summary>Customactions App Test Report</summary>
+<img src="docs/customactions-tests-report.jpg">
+</details>
 
 
 ## Bugs

@@ -1563,3 +1563,20 @@ The website was tested on the following browsers:
 
 
    **Status**: bug fixed;
+
+
+## Deployment 
+
+### Inside Workspace
+1. Install django gunicorn - gunicorn is the server that we're going to use to run Django on Heroku. (pip3 install django gunicorn)
+2.  Install the supporting libraries:
+
+### 
+
+### Heroku
+
+1. Go to [Heroku](https://dashboard.heroku.com/)
+2. Create account or LogIn
+3. Create new app (click on the button)
+4. Choose a unique name for your app, select region 
+5. click on Create App

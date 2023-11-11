@@ -1133,6 +1133,8 @@ Note: Lines 132, 135, 138, 141, 164 contain important settings data that cannot 
 
 ### Lighthouse
 
+NOTE: The results of testing individual pages of the Lighthouse project (in terms of performance) may be underestimated and contradictory, primarily due to the fact that the computer used for testing was quite old (2010), which could affect the results. Additionally, performance degradation on individual pages may be due to the functionality of user-loaded images. Hosting a project on Heroku may affect results (server response time, caching, and network latency). Also, additional external libraries reduce the response of the site. At the same time, the performance level of all pages remains quite high
+
 <details><summary>Home page</summary>
 <img src="docs/validation/lighthouse/lighthouse-index-html.jpg">
 </details>
@@ -1184,6 +1186,56 @@ Note: Lines 132, 135, 138, 141, 164 contain important settings data that cannot 
 <details><summary>Update profile page</summary>
 <img src="docs/validation/lighthouse/lighthouse-update-profile-html.jpg">
 </details>
+
+### Wave
+
+NOTE: due to technical problems, validation Update profile, Update post, Logout, Delete post
+could not be carried out. But at the same time, all the main pages of the site were tested without errors (which, taking into account the identity of the site’s styles, may indicate the absence of errors on these pages)
+
+<details><summary>Home page</summary>
+<img src="docs/validation/wave/wave-index-html.jpg">
+</details>
+
+<details><summary>Post detail page</summary>
+<img src="docs/validation/wave/wave-post-detail-html.jpg">
+</details>
+
+<details><summary>Profile page</summary>
+<img src="docs/validation/wave/wave-profile-html.jpg">
+</details>
+
+<details><summary>Add post page</summary>
+<img src="docs/validation/wave/wave-add-post-html.jpg">
+</details>
+
+<details><summary>Category page</summary>
+<img src="docs/validation/wave/wave-category-html.jpg">
+</details>
+
+<details><summary>Create profile page</summary>
+<img src="docs/validation/wave/wave-create-profile-html.jpg">
+</details>
+
+<details><summary>Contact page</summary>
+<img src="docs/validation/wave/wave-contact-html.jpg">
+</details>
+
+<details><summary>Login page</summary>
+<img src="docs/validation/wave/wave-login-html.jpg">
+</details>
+
+<details><summary>Signup page</summary>
+<img src="docs/validation/wave/wave-signup-html.jpg">
+</details>
+
+<details><summary>404 page</summary>
+<img src="docs/validation/wave/wave-404-html.jpg">
+</details>
+
+<details><summary>505 page</summary>
+<img src="docs/validation/wave/wave-505-html.jpg">
+</details>
+
 
 ## Testing
 

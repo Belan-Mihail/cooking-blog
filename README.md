@@ -1678,5 +1678,24 @@ steps created using description on [GitHub Docs](https://docs.github.com/en/repo
 1. Go to the GitHub repository
 2. Click on Fork button
 
+## Credits
+
+### Content
+The text content was provided by the site owner.
+
+### Media
+The images in the website are taken from [Unsplash](unsplash.com)
+
+### Code
+
+## Acknowledgements
+
+I would like to express my sincere gratitude:
+
+  - My mentor Mo Shami for his advice and support.
+  - Tutor support team for help in solving technical problems and advice (especially Joanna)
+  - My daughter Alisa and my wife Snizhana for always giving me inspiration and strength to go forward.
+  - The government of the city of Hamburg and the employees of the job center Mitti for my opportunity to study at these courses.
+  - To all people who are in solidarity and support Ukraine
 
 

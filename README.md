@@ -1131,6 +1131,59 @@ Note: Lines 132, 135, 138, 141, 164 contain important settings data that cannot 
 <img src="docs/validation/python-validation/customactions/test-view-py.jpg">
 </details>
 
+### Lighthouse
+
+<details><summary>Home page</summary>
+<img src="docs/validation/lighthouse/lighthouse-index-html.jpg">
+</details>
+
+<details><summary>Category page</summary>
+<img src="docs/validation/lighthouse/lighthouse-category-html.jpg">
+</details>
+
+<details><summary>Post detail page</summary>
+<img src="docs/validation/lighthouse/lighthouse-detail-page-html.jpg">
+</details>
+
+<details><summary>Add post page</summary>
+<img src="docs/validation/lighthouse/lighthouse-add-post-page-html.jpg">
+</details>
+
+<details><summary>Contact page</summary>
+<img src="docs/validation/lighthouse/lighthouse-contact-page-html.jpg">
+</details>
+
+<details><summary>Create profile page</summary>
+<img src="docs/validation/lighthouse/lighthouse-create-profile-page-html.jpg">
+</details>
+
+<details><summary>Delete post page</summary>
+<img src="docs/validation/lighthouse/lighthouse-delete-post-page-html.jpg">
+</details>
+
+<details><summary>Login page</summary>
+<img src="docs/validation/lighthouse/lighthouse-login-html.jpg">
+</details>
+
+<details><summary>Logout page</summary>
+<img src="docs/validation/lighthouse/lighthouse-logout-html.jpg">
+</details>
+
+<details><summary>Signup page</summary>
+<img src="docs/validation/lighthouse/lighthouse-signup-html.jpg">
+</details>
+
+<details><summary>Profile page</summary>
+<img src="docs/validation/lighthouse/lighthouse-profile-html.jpg">
+</details>
+
+<details><summary>Update post page</summary>
+<img src="docs/validation/lighthouse/lighthouse-update-post-html.jpg">
+</details>
+
+<details><summary>Update profile page</summary>
+<img src="docs/validation/lighthouse/lighthouse-update-profile-html.jpg">
+</details>
 
 ## Testing
 

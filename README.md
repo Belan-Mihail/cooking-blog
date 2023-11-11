@@ -1,9 +1,9 @@
 # Delicious recipes
 (Developer: Bilan Mykhailo)
 
-[Live webpage](add)
+[Live webpage](https://cookingblognew-0b91b3c6b01a.herokuapp.com/)
 
-![Mockup image](add)
+![Mockup image](docs/mockup.jpg)
 
 ## Table of Content
 1. [About Project](#about-project)

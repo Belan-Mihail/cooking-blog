@@ -1567,16 +1567,80 @@ The website was tested on the following browsers:
 
 ## Deployment 
 
-### Inside Workspace
-1. Install django gunicorn - gunicorn is the server that we're going to use to run Django on Heroku. (pip3 install django gunicorn)
-2.  Install the supporting libraries:
+We assume that the workspace will be located in [Gitpod](https://www.gitpod.io/), the database used will be [PostgreSQL](https://www.postgresql.org/), and the project will be deployed on the server [Heroku](https://heroku.com/)
 
-### 
+We have previously created a repository on [GitHub](https://github.com/) and we will use [Cloudinary](https://cloudinary.com/)
+
+### Workspace
+1. Install django gunicorn - gunicorn is the server that we're going to use to run Django on Heroku. (pip3 install 'django<4' gunicorn - in Terminal)
+2.  Install the supporting libraries:
+    1. pip3 install dj_database_url==0.5.0 psycopg2 (for installing PostgreSQL DB)(in Terminal)
+    2. pip3 install dj3-cloudinary-storage (for installing cloudinary)(in Terminal)
+    3. Create requirements.txt file
+    4. pip3 freeze --local > requirements.txt (in Terminal)
+3. Create a Django project with command: django-admin startproject <projectname> . (in Terminal)
+4. Create a Djsngo app with command: python3 manage.py startapp <blogname> (in Terminal)
+5. Add neww app in project app in settings.py
+6. Make migrations with command: python manage.py migrate (in Terminal)
+7. create a file <env.py>
+8. in <env.py> you need import os then:
+    1. create variable os.environ["DATABASE_URL"]="<copiedURL>" (URL should be taken from step 11 PostgreSQL section(below))
+    2. create variable os.environ["SECRET_KEY"]="<my_super^secret@key>" (you secret key be in the setting.py)
+    3. create variable os.environ['CLOUDINARY_URL'] ="<API Environment Varaible>" (<API Environment Varaible> should be taken from step 3 Cloudinary section(below))
+    (dont foget remove  "CLOUDINARY_URL =" from the beginning <API Environment Varaible>)
+9. add <env.py> to .gitignore file to save confidential data
+10. in <settings.py>:
+    1. import os
+    2. import dj_database_url
+    3. Add check: if os.path.isfile('env.py'): import env (it is important to maintain indentation in accordance with Python requirements)
+    4. Edit <SECRET_KEY> variable: SECRET_KEY = os.environ.get('SECRET_KEY')
+    5. Comment default <DATABASE> varaible
+    6. Add new <DATABASE> varaible: DATABASES = { 'default': dj_database_url.parse(os.environ.get("DATABASE_URL")) }
+    7. Save
+11. Make migrations with command: python manage.py migrate (in Terminal)
+12. in settings.py:
+    1. Add "cloudinary_storage" and "cloudinary" in project app in settings.py
+    2. 
+
+
 
 ### Heroku
 
-1. Go to [Heroku](https://dashboard.heroku.com/)
+1. Go to [Heroku](https://heroku.com/)
 2. Create account or LogIn
 3. Create new app (click on the button)
 4. Choose a unique name for your app, select region 
 5. click on Create App
+6. Go back to the Heroku dashboard open the Settings tab
+7. Click to "Reveal Config Vars" button
+8. Add Config Vars:
+   1. <DATABASE_URL> (value: <copiedURL> (URL should be taken from step 11 PostgreSQL))
+   2. <SECRET_KEY> (value: <my_super^secret@key>" (you secret key be in the env.py or settings.py))
+   3. <PORT> (value: 8000)
+   4. <CLOUDINARY_URL> (value: <API Environment Varaible> should be taken from step 8.3 Workspace section(above))
+   5. <DISABLE_COLLECT_STATIC> (value: 1)
+
+
+### PostgreSQL
+
+1. Go to the ElephantSQL website (https://www.elephantsql.com/) 
+2. Create account or LogIn
+3. Click "Create new instance" button
+4. Edit plan Name 
+5. Choose Plan project (the Tiny Turtle (Free) plan)
+6. Edit Tags (optionally)
+7. Select Region
+8. click “Review” button
+9. Check your details are correct and then click “Create instance” bitton.
+10. Return to the ElephantSQL dashboard and click on the database instance name for this project
+11. Find the connection details for your database and  click the copy icon to copy the <database URL>
+
+### Cloudinary
+1. [Cloudinary](https://cloudinary.com/)
+2. LogIn or Create Account
+3. Go to Dashbord and copy <API Environment Varaible>
+
+
+
+
+

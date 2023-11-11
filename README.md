@@ -1596,12 +1596,23 @@ We have previously created a repository on [GitHub](https://github.com/) and we 
     4. Edit <SECRET_KEY> variable: SECRET_KEY = os.environ.get('SECRET_KEY')
     5. Comment default <DATABASE> varaible
     6. Add new <DATABASE> varaible: DATABASES = { 'default': dj_database_url.parse(os.environ.get("DATABASE_URL")) }
-    7. Save
+    7. use command "save"
 11. Make migrations with command: python manage.py migrate (in Terminal)
 12. in settings.py:
     1. Add "cloudinary_storage" and "cloudinary" in project app in settings.py
-    2. 
-
+    2. STATIC_URL = '/static/'
+    3. STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
+    4. STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+    5. STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    6. MEDIA_URL = '/media/'
+    7. DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+    8. TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+    9. in TEMPLATES set value "[TEMPLATES_DIR]" to key "DIRS"
+    10. Add Heroku host  name into "ALLOWED_HOSTS" (your Heroku app  name followed by herokuapp.com.)
+    11. X_FRAME_OPTIONS = 'SAMEORIGIN'
+    12. DEBUG = False
+13. Create Procfile(remember the capital P on Procfile) with web: gunicorn <projectname>.wsgi
+14. Use commands: "save", "git add .", git commit -m "deploy commit", "git push"
 
 
 ### Heroku
@@ -1618,9 +1629,8 @@ We have previously created a repository on [GitHub](https://github.com/) and we 
    2. <SECRET_KEY> (value: <my_super^secret@key>" (you secret key be in the env.py or settings.py))
    3. <PORT> (value: 8000)
    4. <CLOUDINARY_URL> (value: <API Environment Varaible> should be taken from step 8.3 Workspace section(above))
-   5. <DISABLE_COLLECT_STATIC> (value: 1)
 
-
+   
 ### PostgreSQL
 
 1. Go to the ElephantSQL website (https://www.elephantsql.com/) 
@@ -1640,6 +1650,16 @@ We have previously created a repository on [GitHub](https://github.com/) and we 
 2. LogIn or Create Account
 3. Go to Dashbord and copy <API Environment Varaible>
 
+
+### LastSteps
+
+1. Open Heroku Dashboard
+2. Go to Deploy tab
+3. Select GitHub deployment method
+4. Connect to you Github Account
+5. Selecte project repository
+6. Click Deploy Branch button
+7. Click Open app button
 
 
 

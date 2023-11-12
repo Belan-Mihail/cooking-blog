@@ -1598,6 +1598,17 @@ Automated testing was done using module: unittest. A total of 52 tests were crea
 <img src="docs/customactions-tests-report.jpg">
 </details>
 
+### Manual Testing
+
+Due to the small number of tested entities written in JavaScript and jQuery code, a decision was made on the advisability of manual testing
+
+<details><summary>main.js testing</summary>
+<img src="docs/maunual-testing/manual-testing-main-js.jpg">
+</details>
+
+<details><summary>myscript.js testing</summary>
+<img src="docs/maunual-testing/manual-testing-myscript-js.jpg">
+</details>
 
 ## Bugs
 

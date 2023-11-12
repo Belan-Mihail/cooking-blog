@@ -1876,7 +1876,19 @@ Text content for posts was taken:
 
 
 ### Media
-The images in the website are taken from [Unsplash](unsplash.com)
+The images for posts were taken from: 
+- Post "BorBorscht "Classic" with prunessch" [link to recipe](https://unsplash.com/photos/a-bowl-of-soup-U9DW1GGTTXw)
+- Post "Gazpacho" [link to recipe](https://unsplash.com/photos/orange-sauce-in-bowl-M6baxXgSos8)
+- Post "Risotto with chicken and mushrooms" [link to recipe](https://unsplash.com/photos/a-white-bowl-filled-with-food-on-top-of-a-wooden-table-Gdb1BOuIwbk)
+- Post "Ratatouille" [link to recipe](https://unsplash.com/photos/a-pan-filled-with-sliced-up-vegetables-on-top-of-a-wooden-table-3vDJ--i7w88)
+- Post "Lasagna" [link to recipe](https://unsplash.com/photos/cooked-food-on-white-ceramic-plate--9ypyrRAjdw)
+- Post "Homemade cheesecake" [link to recipe](https://unsplash.com/photos/sliced-of-cake-on-black-plate-s8_7AqkzCWY)
+- Post "Chocolate cake" [link to recipe](https://unsplash.com/photos/chocolate-cake-on-white-ceramic-plate-dCnrR58HNlg)
+- Post "Classic cake "Napoleon" [link to recipe](https://unsplash.com/photos/a-plate-of-food-fWGxcZYRgxQ)
+
+The default image for recipes (used in the post "Solyanka with smoked meats") was taken from [link](https://unsplash.com/photos/avocado-tomatoes-eggs-mushrooms-spring-onions-and-leaves-uQs1802D0CQ)
+
+The default image for the user profile is drawn independently
 
 ### Code
 

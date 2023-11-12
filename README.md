@@ -1892,6 +1892,32 @@ The default image for the user profile is drawn independently
 
 ### Code
 
+NOTE:For the reliability of sources, the names of some sources are indicated in the original language
+
+1. The main ideas for cookingblog app were taken from the lesson [I Think Therefore I Blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/)
+
+2. to create and operate 404 and 500 pages [stackoverflow](https://stackoverflow.com/questions/17662928/django-creating-a-custom-500-404-error-page)
+
+3. regarding testing issues [The Dumbfounds](https://www.youtube.com/@thedumbfounds767), [Source code for django.test.testcases](https://docs.djangoproject.com/en/1.11/_modules/django/test/testcases/#SimpleTestCase.assertTemplateUsed), [UnitTest в Django – как проводить. С примером.](https://dvsemenov.ru/unittest-v-django-kak-provodit-s-primerom/)
+
+4. regarding external API connection issues [source](https://www.demo2s.com/javascript/jquery-if-innerhtml-length-is-greater-add-class-to-its-element.html), [Javascript.ru](https://learn.javascript.ru/settimeout-setinterval)
+
+5. on category issues [Creating a blog using Django 3 — Part 5 — Category view](https://medium.com/code-with-stein/creating-a-blog-using-django-3-part-5-category-view-8a161d66a671), [Древовидные категории в Django](https://tretyakov.net/post/drevovidnye-kategorii-v-django/)
+
+6. on issues related to slugs and urls [Добавляем слаги (slug) к URL-адресам](https://proproprogs.ru/django/dobavlyaem-slagi-slug-k-url-adresam)
+
+7. for questions related to the use of forms [Использование форм](https://proproprogs.ru/django/ispolzovanie-form-ne-svyazannyh-s-modelyami)
+
+8. for questions related to working with profiles [ Профиль пользователя - модель, сигналы](https://proghunter.ru/articles/django-base-2023-user-profile-16)
+
+9. Additionally, to develop the project and solve technical problems, I used the following resources:
+ - Python documentation
+ - Django project documentation
+ - Django video tutorials ([egoroff_channel](https://www.youtube.com/@egoroffchannel), [Школа itProger / Программирование](https://www.youtube.com/@itproger), [selfedu](https://www.youtube.com/@selfedu_rus), [Иван Викторович](https://www.youtube.com/@plugar_inf), [EngineerSpock - IT & программирование](https://www.youtube.com/@EngineerSpock))
+ - IT forums and websites with IT articles: [stackoverflow](https://stackoverflow.com/), [Хабр Q&A ](https://qna.habr.com/), [Medium](https://medium.com/)
+ - and also [Google Search](https://www.google.com/)
+
+
 ## Acknowledgements
 
 I would like to express my sincere gratitude:

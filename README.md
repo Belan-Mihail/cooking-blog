@@ -81,6 +81,8 @@
     2. [Site Owner Stories Testing](#site-owner-stories-testing)
     3. [Device testing](#device-testing)
     4. [Browser compatibility](#browser-compatibility)
+    5. [Automated testing](#automated-testing)
+    6. [Manual Testing](#manual-testing)
 11. [Bugs](#bugs)
 12. [Deployment](#deployment)
     1. [Workspace](#workspace)

@@ -1863,7 +1863,17 @@ steps created using description on [GitHub Docs](https://docs.github.com/en/repo
 ## Credits
 
 ### Content
-The text content was provided by the site owner.
+Text content for posts was taken:
+- Post "BorBorscht "Classic" with prunessch" [link to recipe](https://www.russianfood.com/recipes/recipe.php?rid=56092)
+- Post "Gazpacho" [link to recipe](https://www.russianfood.com/recipes/recipe.php?rid=171204)
+- Post "Solyanka with smoked meats" [link to recipe](https://www.russianfood.com/recipes/recipe.php?rid=125665)
+- Post "Risotto with chicken and mushrooms" [link to recipe](https://www.russianfood.com/recipes/recipe.php?rid=89221)
+- Post "Ratatouille" [link to recipe](https://www.russianfood.com/recipes/recipe.php?rid=157974)
+- Post "Lasagna" [link to recipe](https://www.russianfood.com/recipes/recipe.php?rid=153142)
+- Post "Homemade cheesecake" [link to recipe](https://www.russianfood.com/recipes/recipe.php?rid=137513)
+- Post "Chocolate cake" [link to recipe](https://www.russianfood.com/recipes/recipe.php?rid=115384)
+- Post "Classic cake "Napoleon" [link to recipe](https://www.russianfood.com/recipes/recipe.php?rid=145198)
+
 
 ### Media
 The images in the website are taken from [Unsplash](unsplash.com)
